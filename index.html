@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REV.INC — Bio-Electric Bodywork · Antwerp</title>
+  <meta name="description" content="REV.INC — Bio-electric bodywork. Reclaim the path of interiorized lightning. ZZAPP · REROOT · INTEGRATE. Based in Antwerp." />
+  <meta property="og:title" content="REV.INC — Bio-Electric Bodywork" />
+  <meta property="og:description" content="Reclaim the path of interiorized lightning. Rediscover the pathways of inner currency." />
+  <meta property="og:image" content="hero-groupwork.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Cormorant+Garamond:ital,wght@1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black:    #090909;
+      --obsidian: #111111;
+      --gold:     #C9A227;
+      --gold-dim: #8B6E1A;
+      --copper:   #B87333;
+      --green:    #1B3A2D;
+      --green-mid:#2A5540;
+      --electric: #1DE9F9;
+      --purple:   #4A1C6E;
+      --purple-lt:#7B3FA0;
+      --cream:    #F0E6C8;
+      --white:    #FAFAFA;
+      --font-display: 'Unbounded', sans-serif;
+      --font-body:    'Cormorant Garamond', serif;
+      --font-mono:    'DM Mono', monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--cream); font-family: var(--font-body); font-size: 18px; line-height: 1.7; overflow-x: hidden; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 2.5rem; background: rgba(9,9,9,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(201,162,39,0.12); transition: background 0.3s; }
+    .nav-logo { font-family: var(--font-display); font-size: 1rem; font-weight: 900; color: var(--gold); letter-spacing: 0.04em; text-decoration: none; }
+    .nav-logo span { color: var(--copper); }
+    .nav-right { display: flex; align-items: center; gap: 2rem; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--font-mono); font-size: 0.72rem; font-weight: 300; color: var(--cream); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.7; transition: opacity 0.2s, color 0.2s; }
+    .nav-links a:hover { opacity: 1; color: var(--gold); }
+    .lang-toggle { font-family: var(--font-mono); font-size: 0.7rem; font-weight: 300; background: none; border: 1px solid rgba(201,162,39,0.35); color: var(--gold); padding: 0.3rem 0.75rem; border-radius: 2px; cursor: pointer; letter-spacing: 0.1em; transition: background 0.2s; }
+    .lang-toggle:hover { background: rgba(201,162,39,0.1); }
+
+    /* HERO */
+    .hero { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 2.5rem 6rem; overflow: hidden; max-width: 100%; }
+    .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse at 62% 38%, rgba(88,18,132,0.97) 0%, transparent 55%), radial-gradient(ellipse at 8% 78%, rgba(18,72,42,0.95) 0%, transparent 52%), radial-gradient(ellipse at 85% 85%, rgba(201,162,39,0.18) 0%, transparent 45%), linear-gradient(rgba(9,9,9,0.55), rgba(9,9,9,0.48)), url('images/hero-groupwork.jpg') center/cover no-repeat; z-index: 0; }
+    .hero-bg::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(135deg, transparent 49.5%, rgba(29,233,249,0.07) 49.5%, rgba(29,233,249,0.07) 50.5%, transparent 50.5%), linear-gradient(45deg, transparent 49.5%, rgba(201,162,39,0.03) 49.5%, rgba(201,162,39,0.03) 50.5%, transparent 50.5%); background-size: 80px 80px, 60px 60px; animation: gridPulse 8s ease-in-out infinite; }
+    @keyframes gridPulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+    .hero-lightning { position: absolute; top: 12%; right: 8%; width: 280px; opacity: 0.18; animation: lightningFloat 6s ease-in-out infinite; z-index: 1; filter: drop-shadow(0 0 18px rgba(29,233,249,0.35)) drop-shadow(0 0 6px rgba(201,162,39,0.25)); }
+    @keyframes lightningFloat { 0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.06; } 50% { transform: translateY(-15px) rotate(2deg); opacity: 0.28; } }
+    .hero-content { position: relative; z-index: 2; max-width: 860px; }
+    .hero-prelude { font-family: var(--font-mono); font-size: 0.78rem; font-weight: 300; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(240,230,200,0.6); margin-bottom: 1.2rem; }
+    .hero-badge { display: inline-block; font-family: var(--font-mono); font-size: 0.68rem; font-weight: 300; letter-spacing: 0.2em; text-transform: uppercase; color: var(--electric); border: 1px solid rgba(29,233,249,0.3); padding: 0.3rem 0.8rem; border-radius: 2px; margin-bottom: 2rem; animation: pulseGlow 3s ease-in-out infinite; }
+    @keyframes pulseGlow { 0%, 100% { box-shadow: 0 0 0 rgba(29,233,249,0); } 50% { box-shadow: 0 0 12px rgba(29,233,249,0.2); } }
+    .hero-title { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 4.5rem); font-weight: 900; line-height: 1.08; letter-spacing: -0.02em; color: var(--white); margin-bottom: 1.5rem; }
+    .hero-title .accent { color: var(--gold); }
+    .hero-title .accent-copper { color: var(--copper); }
+    .hero-tagline { font-family: var(--font-body); font-style: italic; font-size: clamp(1.1rem, 2.2vw, 1.4rem); font-weight: 300; color: rgba(240,230,200,0.75); max-width: 600px; margin-bottom: 2.5rem; line-height: 1.6; }
+    .hero-pills { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .pill { font-family: var(--font-mono); font-size: 0.65rem; font-weight: 300; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-dim); border: 1px solid rgba(201,162,39,0.2); padding: 0.25rem 0.7rem; border-radius: 20px; }
+    .hero-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .btn-primary { font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: var(--black); background: var(--gold); padding: 0.9rem 1.8rem; border-radius: 2px; transition: background 0.2s, transform 0.2s; }
+    .btn-primary:hover { background: #E8B82E; transform: translateY(-2px); }
+    .btn-secondary { font-family: var(--font-display); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; color: var(--cream); background: transparent; border: 1px solid rgba(240,230,200,0.25); padding: 0.9rem 1.4rem; border-radius: 2px; transition: border-color 0.2s, color 0.2s, transform 0.2s; }
+    .btn-secondary:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+    .scroll-hint { position: absolute; bottom: 2.5rem; right: 2.5rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; z-index: 2; animation: scrollBounce 2.5s ease-in-out infinite; }
+    @keyframes scrollBounce { 0%, 100% { transform: translateY(0); opacity: 0.5; } 50% { transform: translateY(8px); opacity: 1; } }
+    .scroll-hint span { font-family: var(--font-mono); font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(240,230,200,0.4); }
+    .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, rgba(201,162,39,0.5), transparent); }
+
+    /* SECTIONS */
+    section { padding: 9rem 2.5rem; max-width: 1200px; margin: 0 auto; }
+    .section-label { font-family: var(--font-mono); font-size: 0.65rem; font-weight: 300; letter-spacing: 0.2em; text-transform: uppercase; color: var(--electric); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.75rem; }
+    .section-label::before { content: ''; display: inline-block; width: 24px; height: 1px; background: var(--electric); opacity: 0.5; }
+    .section-title { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 700; line-height: 1.1; color: var(--white); margin-bottom: 1.5rem; }
+    .section-subtitle { font-family: var(--font-body); font-style: italic; font-size: 1.2rem; font-weight: 300; color: var(--gold); margin-bottom: 2rem; }
+    .section-body { font-family: var(--font-body); font-size: 1.05rem; font-weight: 300; color: rgba(240,230,200,0.8); max-width: 620px; line-height: 1.8; }
+    .divider { width: 100%; height: 1px; background: linear-gradient(90deg, transparent, rgba(201,162,39,0.2), rgba(29,233,249,0.15), transparent); margin: 0 2.5rem; max-width: calc(1200px - 5rem); }
+
+    /* ELECTRIC LINE */
+    .electric-line { width: 100%; height: 60px; position: relative; overflow: hidden; }
+    .electric-line svg { width: 100%; height: 100%; opacity: 0.15; }
+
+    /* ZZAPP */
+    .zzapp-section { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .zzapp-image-wrap { position: relative; border-radius: 4px; overflow: hidden; }
+    .zzapp-image-wrap img { width: 100%; height: 500px; object-fit: cover; object-position: center 40%; display: block; filter: saturate(0.9) contrast(1.05); }
+    .zzapp-image-wrap::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(27,58,45,0.3) 0%, rgba(74,28,110,0.2) 100%); pointer-events: none; }
+    .image-caption { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(201,162,39,0.5); margin-top: 0.75rem; }
+    .zzapp-list { list-style: none; margin-top: 2rem; }
+    .zzapp-list li { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.2rem; font-family: var(--font-body); font-size: 1rem; color: rgba(240,230,200,0.8); line-height: 1.6; }
+    .zzapp-list li::before { content: '⚡'; font-size: 0.8rem; flex-shrink: 0; margin-top: 0.2rem; }
+
+    /* SERVICES */
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; margin-top: 3rem; border: 1px solid rgba(201,162,39,0.12); }
+    .service-card { background: var(--obsidian); padding: 2.5rem 2rem; border: 1px solid rgba(201,162,39,0.08); transition: border-color 0.3s, background 0.3s; position: relative; overflow: hidden; }
+    .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: 0; transition: opacity 0.3s; }
+    .service-card:hover { border-color: rgba(201,162,39,0.25); background: #141414; }
+    .service-card:hover::before { opacity: 1; }
+    .service-tag { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 20px; margin-bottom: 1.2rem; display: inline-block; }
+    .tag-b2b { color: var(--electric); border: 1px solid rgba(29,233,249,0.25); }
+    .tag-b2c { color: var(--gold); border: 1px solid rgba(201,162,39,0.25); }
+    .tag-group { color: var(--copper); border: 1px solid rgba(184,115,51,0.25); }
+    .service-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 1rem; line-height: 1.25; }
+    .service-body { font-family: var(--font-body); font-size: 0.95rem; color: rgba(240,230,200,0.65); line-height: 1.7; font-weight: 300; }
+    .service-price { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.1em; color: var(--gold-dim); margin-top: 1rem; }
+    .service-link { display: inline-block; margin-top: 1.5rem; font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); text-decoration: none; transition: opacity 0.2s; }
+    .service-link:hover { opacity: 0.7; }
+    .service-link::after { content: ' →'; }
+
+    /* FESTIVAL */
+    .festival-section { background: var(--green); margin: 0; padding: 7rem 2.5rem; max-width: 100%; border-top: 1px solid rgba(201,162,39,0.12); border-bottom: 1px solid rgba(201,162,39,0.12); }
+    .festival-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .festival-image-wrap { position: relative; border-radius: 4px; overflow: hidden; }
+    .festival-image-wrap img { width: 100%; height: 520px; object-fit: cover; display: block; filter: saturate(0.9); }
+    .festival-image-wrap::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 50%, rgba(27,58,45,0.6) 100%); pointer-events: none; }
+    .festival-content .section-title { color: var(--gold); }
+    .festival-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 2.5rem; }
+    .spec-item { padding: 1.2rem; border: 1px solid rgba(201,162,39,0.15); border-radius: 2px; }
+    .spec-label { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--electric); margin-bottom: 0.4rem; }
+    .spec-value { font-family: var(--font-display); font-size: 0.9rem; font-weight: 700; color: var(--cream); }
+
+    /* ABOUT */
+    .about-section { display: grid; grid-template-columns: 1fr 2fr; gap: 5rem; align-items: start; }
+    .about-portrait { width: 100%; max-width: 340px; aspect-ratio: 3/4; object-fit: cover; object-position: top center; filter: saturate(0.8) contrast(1.05); border: 1px solid rgba(201,162,39,0.15); }
+    .about-merkaba { display: none; }
+    @keyframes merkabaSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    .about-name { font-family: var(--font-display); font-size: 1.4rem; font-weight: 900; color: var(--gold); margin-bottom: 0.5rem; }
+    .about-role { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--electric); margin-bottom: 2rem; }
+    .about-quote { font-family: var(--font-body); font-style: italic; font-size: 1.25rem; font-weight: 300; color: var(--gold); line-height: 1.6; border-left: 2px solid var(--gold-dim); padding-left: 1.5rem; margin: 2rem 0; }
+
+    /* MANIFESTO BRIDGE */
+    .manifesto-bridge { text-align: center; padding: 5rem 2.5rem; max-width: 100%; background: linear-gradient(180deg, var(--black) 0%, rgba(27,58,45,0.08) 50%, var(--black) 100%); }
+    .manifesto-bridge-inner { max-width: 760px; margin: 0 auto; }
+    .manifesto-text { font-family: var(--font-body); font-style: italic; font-size: clamp(1.2rem, 2.5vw, 1.65rem); font-weight: 300; color: rgba(240,230,200,0.85); line-height: 1.75; }
+    .manifesto-text strong { font-style: normal; color: var(--gold); font-weight: 400; }
+
+    /* REROOT */
+    .reroot-section { text-align: center; background: linear-gradient(135deg, rgba(74,28,110,0.15) 0%, rgba(9,9,9,0) 50%, rgba(27,58,45,0.15) 100%); border: 1px solid rgba(201,162,39,0.1); border-radius: 4px; padding: 6rem 3rem !important; }
+    .reroot-symbol { font-size: 3rem; margin-bottom: 1.5rem; display: block; animation: rootPulse 4s ease-in-out infinite; }
+    @keyframes rootPulse { 0%, 100% { filter: brightness(1); } 50% { filter: brightness(1.4) sepia(0.3); } }
+    .reroot-eyebrow { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--purple-lt); margin-bottom: 1rem; }
+    .reroot-title { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 700; color: var(--white); margin-bottom: 1.5rem; }
+    .reroot-body { font-family: var(--font-body); font-style: italic; font-size: 1.1rem; font-weight: 300; color: rgba(240,230,200,0.75); max-width: 560px; margin: 0 auto 2.5rem; line-height: 1.85; }
+    .btn-reroot { font-family: var(--font-display); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-decoration: none; color: var(--white); background: rgba(74,28,110,0.6); border: 1px solid var(--purple-lt); padding: 1rem 2.5rem; border-radius: 2px; transition: background 0.2s, transform 0.2s; display: inline-block; }
+    .btn-reroot:hover { background: rgba(123,63,160,0.5); transform: translateY(-2px); }
+
+    /* BOOK */
+    .book-section { text-align: center; }
+    .booking-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 3rem auto 0; max-width: 800px; }
+    .booking-card { background: var(--obsidian); border: 1px solid rgba(201,162,39,0.12); border-radius: 2px; padding: 2.5rem 2rem; position: relative; overflow: hidden; transition: border-color 0.3s; }
+    .booking-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; }
+    .booking-card.b2c::before { background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+    .booking-card.b2b::before { background: linear-gradient(90deg, transparent, var(--electric), transparent); }
+    .booking-card:hover { border-color: rgba(201,162,39,0.3); }
+    .booking-card-label { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1rem; }
+    .booking-card.b2c .booking-card-label { color: var(--gold); }
+    .booking-card.b2b .booking-card-label { color: var(--electric); }
+    .booking-card-title { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem; }
+    .booking-card-body { font-family: var(--font-body); font-size: 0.9rem; color: rgba(240,230,200,0.6); margin-bottom: 1.5rem; line-height: 1.6; }
+    .btn-book { display: inline-block; font-family: var(--font-display); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 2px; transition: transform 0.2s, opacity 0.2s; }
+    .btn-book:hover { transform: translateY(-2px); opacity: 0.85; }
+    .btn-book.gold { background: var(--gold); color: var(--black); }
+    .btn-book.outline { background: transparent; border: 1px solid var(--electric); color: var(--electric); }
+
+    /* FOOTER */
+    footer { padding: 3rem 2.5rem; border-top: 1px solid rgba(201,162,39,0.1); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 0.85rem; font-weight: 900; color: var(--gold); }
+    .footer-tagline { font-family: var(--font-body); font-style: italic; font-size: 0.85rem; color: rgba(240,230,200,0.4); margin-top: 0.3rem; }
+    .footer-manifesto { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.12em; color: rgba(201,162,39,0.5); margin-top: 0.3rem; }
+    .social-links { display: flex; gap: 1.5rem; list-style: none; }
+    .social-links a { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(240,230,200,0.5); text-decoration: none; transition: color 0.2s; }
+    .social-links a:hover { color: var(--gold); }
+    .footer-copy { font-family: var(--font-mono); font-size: 0.58rem; color: rgba(240,230,200,0.2); letter-spacing: 0.08em; width: 100%; text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.04); }
+
+    /* WHATSAPP */
+    .wa-btn { position: fixed; bottom: 2rem; right: 2rem; z-index: 200; width: 52px; height: 52px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.3); transition: transform 0.2s, box-shadow 0.2s; }
+    .wa-btn:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(37,211,102,0.4); }
+    .wa-btn svg { width: 28px; height: 28px; fill: white; }
+
+    /* FADE IN */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* CURSOR */
+    .cursor-dot { position: fixed; width: 8px; height: 8px; background: var(--gold); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); mix-blend-mode: difference; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .hero { padding: 0 1.5rem 5rem; }
+      section { padding: 5rem 1.5rem; }
+      .zzapp-section, .festival-inner, .about-section { grid-template-columns: 1fr; gap: 3rem; }
+      .festival-section { padding: 5rem 1.5rem; }
+      .services-grid, .booking-grid { grid-template-columns: 1fr; }
+      .about-portrait { max-width: 100%; aspect-ratio: 4/3; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">REV<span>.</span>INC</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#zzapp" data-key="nav_zzapp">ZZAPP</a></li>
+        <li><a href="#science" data-key="nav_science">Science</a></li>
+        <li><a href="#services" data-key="nav_services">Services</a></li>
+        <li><a href="#events" data-key="nav_events">Events</a></li>
+        <li><a href="#about" data-key="nav_about">About</a></li>
+        <li><a href="#book" data-key="nav_book">Book</a></li>
+      </ul>
+      <button class="lang-toggle" id="langToggle">EN / NL</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-bg"></div>
+    <svg class="hero-lightning" viewBox="0 0 200 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="glow-z"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+      <!-- Z-vorm — verwijzing naar ZZAPP -->
+      <line x1="48" y1="30" x2="155" y2="30" stroke="#1DE9F9" stroke-width="2.5" stroke-linecap="round" filter="url(#glow-z)"/>
+      <line x1="155" y1="30" x2="48" y2="190" stroke="#C9A227" stroke-width="2.5" stroke-linecap="round" filter="url(#glow-z)"/>
+      <line x1="48" y1="190" x2="155" y2="190" stroke="#1DE9F9" stroke-width="2.5" stroke-linecap="round" filter="url(#glow-z)"/>
+      <!-- Stam naar spiraal -->
+      <line x1="100" y1="190" x2="100" y2="280" stroke="#C9A227" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+      <!-- Spiraal — kundalini/stroom -->
+      <path d="M100,280 C120,280 132,292 132,308 C132,326 118,338 100,338 C82,338 70,326 72,310 C74,296 84,288 96,290 C108,292 114,302 112,312" stroke="#C9A227" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <!-- Uranus-in-Stier symbool — klein, boven de Z -->
+      <circle cx="100" cy="8" r="5" stroke="#C9A227" stroke-width="1" fill="none" opacity="0.5"/>
+      <line x1="100" y1="13" x2="100" y2="20" stroke="#C9A227" stroke-width="1" opacity="0.5"/>
+      <line x1="95" y1="17" x2="105" y2="17" stroke="#C9A227" stroke-width="1" opacity="0.5"/>
+    </svg>
+    <div class="hero-content">
+      <p class="hero-prelude" data-key="hero_prelude">Your body runs on electricity. Always has.</p>
+      <div class="hero-badge" data-key="hero_badge">Bio-Electric Bodywork · Antwerp</div>
+      <h1 class="hero-title">
+        <span data-key="hero_title_1">Reclaim the path of interiorized lightning,</span><br/>
+        <span class="accent" data-key="hero_title_2">rediscover the pathways</span><br/>
+        <span class="accent-copper" data-key="hero_title_3">of inner currency.</span>
+      </h1>
+      <p class="hero-tagline" data-key="hero_tagline">Your nervous system isn't broken. It adapted. Now it can (r)evolve.</p>
+      <div class="hero-pills">
+        <span class="pill">ZZAPP</span>
+        <span class="pill">REROOT</span>
+        <span class="pill">INTEGRATE</span>
+      </div>
+      <div class="hero-ctas">
+        <a href="#book" class="btn-primary" data-key="cta_book">Book a session</a>
+        <a href="#events" class="btn-secondary" data-key="cta_events">Events & festivals</a>
+        <a href="#book" class="btn-secondary" data-key="cta_retreat">Retreat facilitation</a>
+        <a href="mailto:rev.incorporated@proton.me?subject=Residency%20—%20REV.INC" class="btn-secondary" data-key="cta_residency">Residency</a>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ELECTRIC LINE -->
+  <div class="electric-line">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <polyline points="0,30 120,10 200,50 320,20 440,45 560,15 680,40 800,20 920,45 1040,10 1160,35 1280,15 1440,30" stroke="#1DE9F9" stroke-width="1.5" fill="none"/>
+      <polyline points="0,35 180,55 300,25 420,50 540,20 660,50 780,25 900,50 1020,20 1140,50 1260,30 1440,35" stroke="#C9A227" stroke-width="1" fill="none" opacity="0.5"/>
+    </svg>
+  </div>
+
+  <!-- ZZAPP -->
+  <section id="zzapp">
+    <div class="zzapp-section fade-in">
+      <div>
+        <div class="zzapp-image-wrap">
+          <img src="images/dds-machine-plant.jpg" alt="Bio-electric stimulation — REV.INC" />
+        </div>
+        <p class="image-caption" data-key="img_caption_studio">Bio-electric stimulation · REV.INC · Antwerp</p>
+      </div>
+      <div>
+        <div class="section-label" data-key="label_zzapp">01 — ZZAPP</div>
+        <h2 class="section-title" data-key="zzapp_title">Bio-electric bodywork.</h2>
+        <p class="section-subtitle" data-key="zzapp_subtitle">Direct. Measurable. Never passive.</p>
+        <p class="section-body" data-key="zzapp_body">The DDS machine delivers bio-electric impulses directly to the nervous system. A current received as warmth, as tingling, as a slow spreading fullness — below the threshold of pain, well above the threshold of our feelings. The result: a nervous system that stops surviving and starts flourishing. Not therapy. Not relaxation. Saturation.</p>
+        <ul class="zzapp-list">
+          <li data-key="zzapp_point1">Microvolt stimulation via the DDS machine</li>
+          <li data-key="zzapp_point2">Direct regulation of the autonomic nervous system</li>
+          <li data-key="zzapp_point3">Scientifically grounded — emancipatory — no mystification required</li>
+          <li data-key="zzapp_point4">Mobile setup — studios, events, and festivals</li>
+        </ul>
+        <div style="margin-top:2.5rem; padding:1.5rem; border-left:2px solid rgba(201,162,39,0.4); background:rgba(201,162,39,0.04);">
+          <div style="font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;" data-key="pulse_label">+ PULSE — The Integration Layer</div>
+          <p style="font-family:var(--font-body);font-size:0.95rem;color:rgba(240,230,200,0.75);line-height:1.75;font-weight:300;" data-key="pulse_body">Every ZZAPP session includes PULSE: a structured integration conversation that bridges what the body just processed with how you live. The current does the work. PULSE ensures you carry it forward. Not optional — it is part of the protocol.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- SCIENCE -->
+  <section id="science">
+    <div class="fade-in">
+      <div class="section-label" data-key="label_science">02 — Science</div>
+      <h2 class="section-title" data-key="science_title">The evidence.</h2>
+      <p class="section-body" data-key="science_body">ZZAPP is not intuition. It is measurable. DDS microcurrent technology is backed by peer-reviewed research spanning cellular biology, neuroscience, and fascia studies. Three anchors:</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;">
+        <div style="padding:2rem;border:1px solid rgba(29,233,249,0.15);border-radius:2px;background:rgba(29,233,249,0.03);">
+          <div style="font-family:var(--font-display);font-size:2rem;font-weight:900;color:var(--electric);margin-bottom:0.75rem;">+500%</div>
+          <div style="font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--cream);margin-bottom:0.5rem;" data-key="sci_claim1_label">ATP Production</div>
+          <p style="font-family:var(--font-body);font-size:0.9rem;color:rgba(240,230,200,0.6);line-height:1.7;" data-key="sci_claim1_body">Microcurrent stimulation at the cellular level increases ATP synthesis by up to 500% — the direct fuel of cellular repair, tissue regeneration, and metabolic function.</p>
+        </div>
+        <div style="padding:2rem;border:1px solid rgba(201,162,39,0.15);border-radius:2px;background:rgba(201,162,39,0.03);">
+          <div style="font-family:var(--font-display);font-size:2rem;font-weight:900;color:var(--gold);margin-bottom:0.75rem;">ANS</div>
+          <div style="font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--cream);margin-bottom:0.5rem;" data-key="sci_claim2_label">Autonomic Regulation</div>
+          <p style="font-family:var(--font-body);font-size:0.9rem;color:rgba(240,230,200,0.6);line-height:1.7;" data-key="sci_claim2_body">DDS frequencies directly engage the parasympathetic nervous system — shifting the body out of chronic stress activation and into measurable recovery states within a single session.</p>
+        </div>
+        <div style="padding:2rem;border:1px solid rgba(184,115,51,0.15);border-radius:2px;background:rgba(184,115,51,0.03);">
+          <div style="font-family:var(--font-display);font-size:2rem;font-weight:900;color:var(--copper);margin-bottom:0.75rem;">FASCIA</div>
+          <div style="font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--cream);margin-bottom:0.5rem;" data-key="sci_claim3_label">Fascia Network</div>
+          <p style="font-family:var(--font-body);font-size:0.9rem;color:rgba(240,230,200,0.6);line-height:1.7;" data-key="sci_claim3_body">The fascia conducts bioelectric signals throughout the body as a continuous information network. ZZAPP works with — not against — this system. Stored tension is not a metaphor. It is a physical record.</p>
+        </div>
+      </div>
+      <div style="margin-top:2rem;">
+        <a href="https://rev-incorporated.github.io/tryp/" target="_blank" style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--electric);text-decoration:none;border-bottom:1px solid rgba(29,233,249,0.3);padding-bottom:2px;" data-key="science_link">Full scientific overview →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="fade-in">
+      <div class="section-label" data-key="label_services">03 — Services</div>
+      <h2 class="section-title" data-key="services_title">For who.</h2>
+      <p class="section-body" data-key="services_body">REV.INC works from highly-charged events to intimate one-on-one sessions. The current goes where it needs to go.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-tag tag-b2b" data-key="tag_b2b">B2B — Events & Festivals</span>
+          <h3 class="service-title" data-key="service_b2b_title">Bring the current to your people.</h3>
+          <p class="service-body" data-key="service_b2b_body">ZZAPP group sessions for festivals, retreats, studios, and events. Mobile, minimal setup. The work integrates body autonomy training, relational boundaries, and nervous system emancipation — not just bio-electricity. Regulated people change the field around them. Your audience feels it too.</p>
+          <a href="mailto:rev.incorporated@proton.me?subject=Event%20Collaboration%20—%20REV.INC" class="service-link" data-key="service_b2b_link">Partner with REV.INC</a>
+        </div>
+        <div class="service-card">
+          <span class="service-tag tag-b2c" data-key="tag_b2c">B2C — Individual</span>
+          <h3 class="service-title" data-key="service_b2c_title">One body. One activation.</h3>
+          <p class="service-body" data-key="service_b2c_body">1-on-1 ZZAPP sessions in Antwerp (Schrijnwerkersstraat 8). A direct act on your nervous system. Not a consultation. Not a massage. A re-initiation.</p>
+          <p class="service-price" data-key="service_b2c_price">Starting from €150</p>
+          <a href="#book" class="service-link" data-key="service_b2c_link">Book your session</a>
+        </div>
+        <div class="service-card">
+          <span class="service-tag tag-group" data-key="tag_group">B2C — Group</span>
+          <h3 class="service-title" data-key="service_group_title">The collective current.</h3>
+          <p class="service-body" data-key="service_group_body">ZZAPP in circle format. Multiple nervous systems regulating together — in community, in consent, in shared current. What one body releases, the field around it absorbs.</p>
+          <a href="#book" class="service-link" data-key="service_group_link">Join a group session</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FESTIVAL -->
+  <section class="festival-section" id="events">
+    <div class="festival-inner fade-in">
+      <div class="festival-image-wrap">
+        <img src="images/festival-field.jpg" alt="Aimé Schrauwen — field facilitation" />
+      </div>
+      <div class="festival-content">
+        <div class="section-label" data-key="label_events">04 — Events & Festivals</div>
+        <h2 class="section-title" data-key="events_title">Take the work into the field.</h2>
+        <p class="section-body" data-key="events_body">REV.INC is built for movement. The DDS machine is mobile, the setup is minimal, and the impact is immediate. The current has already traveled — from festival grounds in Bermuda to retreat spaces across the Americas, and back to Antwerp. If your event creates conditions for depth — REV.INC fits.</p>
+        <div style="margin-top:2.5rem;">
+          <div style="font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--electric);margin-bottom:1.2rem;">ZZAPP Festival Formats</div>
+          <div style="display:flex;flex-direction:column;gap:0.5rem;">
+            <div style="display:grid;grid-template-columns:1.6fr 0.8fr 0.8fr;gap:0.5rem;padding:0.7rem 0.9rem;border:1px solid rgba(201,162,39,0.1);background:rgba(0,0,0,0.25);">
+              <span style="font-family:var(--font-display);font-size:0.75rem;font-weight:700;color:var(--white);">ZZAPP CONTACT</span>
+              <span style="font-family:var(--font-mono);font-size:0.6rem;color:rgba(240,230,200,0.45);align-self:center;">1–2 min</span>
+              <span style="font-family:var(--font-mono);font-size:0.6rem;color:var(--electric);align-self:center;">Free / €5</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1.6fr 0.8fr 0.8fr;gap:0.5rem;padding:0.7rem 0.9rem;border:1px solid rgba(201,162,39,0.1);background:rgba(0,0,0,0.25);">
+              <span style="font-family:var(--font-display);font-size:0.75rem;font-weight:700;color:var(--white);">ZZAPP SPARK</span>
+              <span style="font-family:var(--font-mono);font-size:0.6rem;color:rgba(240,230,200,0.45);align-self:center;">15 min</span>
+              <span style="font-family:var(--font-mono);font-size:0.6rem;color:var(--gold);align-self:center;">€44</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1.6fr 0.8fr 0.8fr;gap:0.5rem;padding:0.7rem 0.9rem;border:1px solid rgba(201,162,39,0.1);background:rgba(0,0,0,0.25);">
+              <span style="font-family:var(--font-display);font-size:0.75rem;font-weight:700;color:var(--white);">ZZAPP CURRENT</span>
+              <span style="font-family:var(--font-mono);font-size:0.6rem;color:rgba(240,230,200,0.45);align-self:center;">45 min</span>
+              <span style="font-family:var(--font-mono);font-size:0.6rem;color:var(--gold);align-self:center;">€120</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1.6fr 0.8fr 0.8fr;gap:0.5rem;padding:0.7rem 0.9rem;border:1px solid rgba(201,162,39,0.1);background:rgba(0,0,0,0.25);">
+              <span style="font-family:var(--font-display);font-size:0.75rem;font-weight:700;color:var(--white);">ZZAPP CIRCUIT</span>
+              <span style="font-family:var(--font-mono);font-size:0.6rem;color:rgba(240,230,200,0.45);align-self:center;">Group</span>
+              <span style="font-family:var(--font-mono);font-size:0.6rem;color:var(--copper);align-self:center;">€35/person</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1.6fr 0.8fr 0.8fr;gap:0.5rem;padding:0.7rem 0.9rem;border:1px solid rgba(201,162,39,0.1);background:rgba(0,0,0,0.25);">
+              <span style="font-family:var(--font-display);font-size:0.75rem;font-weight:700;color:var(--white);">ZZAPP DEEP FIELD</span>
+              <span style="font-family:var(--font-mono);font-size:0.6rem;color:rgba(240,230,200,0.45);align-self:center;">90 min</span>
+              <span style="font-family:var(--font-mono);font-size:0.6rem;color:var(--gold);align-self:center;">€200</span>
+            </div>
+          </div>
+          <div style="margin-top:0.9rem;font-family:var(--font-mono);font-size:0.56rem;color:rgba(240,230,200,0.3);letter-spacing:0.1em;">Setup: 30 min · Mobile BE + EU · Direct payment on-site</div>
+        </div>
+        <br/>
+        <a href="mailto:rev.incorporated@proton.me?subject=Event%20Collaboration%20—%20REV.INC" class="btn-primary" data-key="cta_collab">Propose a collaboration</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-section fade-in">
+      <div>
+        <img src="images/aime-practitioner.jpg" class="about-portrait" alt="Aimé Schrauwen — REV.INC practitioner" />
+      </div>
+      <div>
+        <div class="section-label" data-key="label_about">05 — About</div>
+        <div class="about-name">Aimé Schrauwen</div>
+        <div class="about-role" data-key="about_role">Founder · Practitioner · Initiator</div>
+        <div style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(201,162,39,0.55);margin-bottom:1.5rem;">ABMMA Certified · Antwerp · BE + EU</div>
+        <p class="section-body" data-key="about_body1">The body has always run on electricity. Every nerve signal, every cellular repair, every felt sensation — these are bioelectric events. Measurable. Documented. Peer-reviewed. What Tesla understood — and what the dominant medical paradigm largely set aside — is that you can work directly with this current. Not metaphorically. Not spiritually. Electrically. The DDS machine does not add something foreign to the body. It speaks a language the body already knows.</p>
+        <blockquote class="about-quote" data-key="about_quote">"We recruit people to step into a higher charge — so there is more energy to give back to those we love and to our natural environment."</blockquote>
+        <p class="section-body" data-key="about_body2">Edison domesticated electricity for profit and locked it behind patents. A century later, pharmaceutical industry applied the same logic to your body's own chemistry: take what is already present in living systems, extract it, control it, sell it back. ZZAPP is the counter-move. Not alternative medicine — the reclamation of direct, measurable bio-electric science from the extractive logic that buried it. Kemetic science knew the conducting body before Tesla rediscovered it. Deleuze mapped the desire that moves through unblocked systems. Nietzsche named the life-force that cultures of control suppress. REV.INC works at the intersection where these traditions converge: science, philosophy, and the political act of returning electricity to the bodies it already belongs to.</p>
+        <p class="section-body" style="margin-top:1.2rem;" data-key="about_body3">REV.INC has facilitated at festivals, retreat spaces, and private events across Belgium and Europe — including a live demonstration for Tomorrowland. The current is already moving.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO BRIDGE -->
+  <div class="manifesto-bridge fade-in">
+    <div class="manifesto-bridge-inner">
+      <p class="manifesto-text" data-key="manifesto">The charge is not the destination. The destination is aliveness itself — <strong>ripening, expanding,</strong> moving in rhythm with what grows. The capacity to love more. Feel more. Want more. To be, fully.</p>
+    </div>
+  </div>
+
+  <!-- REROOT -->
+  <section class="reroot-section fade-in">
+    <span class="reroot-symbol"><svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle"><line x1="28" y1="4" x2="28" y2="36" stroke="#C9A227" stroke-width="2.5" stroke-linecap="round"/><polyline points="19,15 28,4 37,15" fill="none" stroke="#C9A227" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="9" y1="36" x2="47" y2="36" stroke="#9B7FCF" stroke-width="2.5" stroke-linecap="round"/><line x1="15" y1="43" x2="41" y2="43" stroke="#9B7FCF" stroke-width="2" stroke-linecap="round"/><line x1="21" y1="50" x2="35" y2="50" stroke="#9B7FCF" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+    <div class="reroot-eyebrow" data-key="reroot_eyebrow">now forming</div>
+    <h2 class="reroot-title">REROOT</h2>
+    <p class="reroot-body" data-key="reroot_body_intro">Your nervous system didn't break. It was shaped — by a culture that turns human charge into productivity, that domesticates bodies the way Edison domesticated electricity. You adapted. Beautifully. And at great cost.</p>
+    <p class="reroot-body" style="margin-top:1.2rem;" data-key="reroot_body_frame">REROOT is not recovery. Recovery implies a return to what was. REROOT is the work of building new ground — in your body, your relationships, your understanding of what you are.</p>
+    <div class="reroot-phases" data-key="reroot_phases">
+      <p class="reroot-body" style="margin-top:1.5rem;"><strong style="color:var(--gold);font-style:normal;">Ground.</strong> Your body learns to trust the current it carries. Not as a tool. As a living system with its own intelligence.</p>
+      <p class="reroot-body" style="margin-top:1rem;"><strong style="color:var(--gold);font-style:normal;">Untangle.</strong> Not through analysis alone — desire will be mapped, flow guided. Through the body's own discharge, and through the support and mirroring of systems of thought and symbol that are non-extractive. Frameworks that do not take from you — they recognize what is already alive in you.</p>
+      <p class="reroot-body" style="margin-top:1rem;"><strong style="color:var(--gold);font-style:normal;">Root.</strong> New ground forms. Bio-electric vitality as baseline, not exception. The capacity to love more, feel more, give more — not from depletion but from genuine overflow.</p>
+    </div>
+    <p class="reroot-body" style="margin-top:1.5rem;font-style:italic;opacity:0.7;" data-key="reroot_body_lineage">This is the work at the intersection of somatic science, relational intelligence, and knowledge that has been systematically kept from public access. Your lineage knew this. Your body knows this. We are simply remembering together.</p>
+    <p class="reroot-body" style="margin-top:1.5rem;" data-key="reroot_body_outro">Together we will find new lines of flight. Your energy wants to move — and so it will.<br/><br/>For those with a hunger for agency, liberation and impact.<br/>3, 6, or 12 months of guided liberation.</p>
+    <a href="mailto:rev.incorporated@proton.me?subject=REROOT%20Intake" class="btn-reroot" data-key="reroot_cta">UP//RE:ROOT — Request intake</a>
+  </section>
+
+  <!-- BOOK -->
+  <section id="book" class="book-section">
+    <div class="fade-in">
+      <div class="section-label" data-key="label_book">06 — Book</div>
+      <h2 class="section-title" data-key="book_title">Ready to receive.</h2>
+      <p class="section-body" style="margin: 0 auto; text-align:center;" data-key="book_body">Book your ZZAPP session, or reach out to explore a collaboration.</p>
+      <div class="booking-grid">
+        <div class="booking-card b2c">
+          <div class="booking-card-label" data-key="book_b2c_label">Individual · Group</div>
+          <div class="booking-card-title" data-key="book_b2c_title">Book a session</div>
+          <p class="booking-card-body" data-key="book_b2c_body">New clients: intake via Calendly. Returning clients: direct booking available.</p>
+          <a href="https://calendly.com" target="_blank" class="btn-book gold" data-key="book_b2c_btn">Book via Calendly</a>
+        </div>
+        <div class="booking-card b2b">
+          <div class="booking-card-label" data-key="book_b2b_label">Events · Retreats · Residency</div>
+          <div class="booking-card-title" data-key="book_b2b_title">Propose a collaboration</div>
+          <p class="booking-card-body" data-key="book_b2b_body">Festivals, retreat facilitation, or longer residency — reach out directly to explore a strategic match.</p>
+          <a href="mailto:rev.incorporated@proton.me?subject=Collaboration%20—%20REV.INC" class="btn-book outline" data-key="book_b2b_btn">rev.incorporated@proton.me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>
+      <div class="footer-logo">REV.INC</div>
+      <div class="footer-tagline">ZZAPP. REROOT. INTEGRATE.</div>
+      <div class="footer-manifesto" data-key="footer_manifesto">The revolution is already here.</div>
+    </div>
+    <ul class="social-links">
+      <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+      <li><a href="https://tiktok.com" target="_blank">TikTok</a></li>
+      <li><a href="https://substack.com" target="_blank">Substack</a></li>
+      <li><a href="https://linktr.ee" target="_blank">Linktree</a></li>
+    </ul>
+    <div class="footer-copy" data-key="footer_copy">© 2026 REV.INC — Aimé Schrauwen · Schrijnwerkersstraat 8, 2000 Antwerp · rev.incorporated@proton.me</div>
+  </footer>
+
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/32472406393" target="_blank" class="wa-btn" title="WhatsApp REV.INC">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    const copy = {
+      EN: {
+        nav_zzapp: "ZZAPP", nav_science: "Science", nav_services: "Services", nav_events: "Events", nav_about: "About", nav_book: "Book",
+        hero_prelude: "Your body runs on electricity. Always has.",
+        hero_badge: "Bio-Electric Bodywork · Antwerp",
+        hero_title_1: "Reclaim the path of interiorized lightning,",
+        hero_title_2: "rediscover the pathways",
+        hero_title_3: "of inner currency.",
+        hero_tagline: "Your nervous system isn't broken. It adapted. Now it can (r)evolve.",
+        cta_book: "Book a session", cta_events: "Events & festivals", cta_retreat: "Retreat facilitation", cta_residency: "Residency",
+        label_zzapp: "01 — ZZAPP",
+        img_caption_studio: "Bio-electric stimulation · REV.INC · Antwerp",
+        zzapp_title: "Bio-electric bodywork.",
+        zzapp_subtitle: "Direct. Measurable. Never passive.",
+        zzapp_body: "The DDS machine delivers bio-electric impulses directly to the nervous system. A current received as warmth, as tingling, as a slow spreading fullness — below the threshold of pain, well above the threshold of our feelings. The result: a nervous system that stops surviving and starts flourishing. Not therapy. Not relaxation. Saturation.",
+        zzapp_point1: "Microvolt stimulation via the DDS machine",
+        zzapp_point2: "Direct regulation of the autonomic nervous system",
+        zzapp_point3: "Scientifically grounded — emancipatory — no mystification required",
+        zzapp_point4: "Mobile setup — studios, events, and festivals",
+        label_services: "03 — Services",
+        services_title: "For who.",
+        services_body: "REV.INC works from highly-charged events to intimate one-on-one sessions. The current goes where it needs to go.",
+        tag_b2b: "B2B — Events & Festivals", tag_b2c: "B2C — Individual", tag_group: "B2C — Group",
+        service_b2b_title: "Bring the current to your people.",
+        service_b2b_body: "ZZAPP group sessions for festivals, retreats, studios, and events. Mobile, minimal setup. The work integrates body autonomy training, relational boundaries, and nervous system emancipation — not just bio-electricity. Regulated people change the field around them. Your audience feels it too.",
+        service_b2b_link: "Partner with REV.INC",
+        service_b2c_title: "One body. One activation.",
+        service_b2c_body: "1-on-1 ZZAPP sessions in Antwerp (Schrijnwerkersstraat 8). A direct act on your nervous system. Not a consultation. Not a massage. A re-initiation.",
+        service_b2c_price: "Starting from €150",
+        service_b2c_link: "Book your session",
+        service_group_title: "The collective current.",
+        service_group_body: "ZZAPP in circle format. Multiple nervous systems regulating together — in community, in consent, in shared current. What one body releases, the field around it absorbs.",
+        service_group_link: "Join a group session",
+        label_events: "04 — Events & Festivals",
+        events_title: "Take the work into the field.",
+        events_body: "REV.INC is built for movement. The DDS machine is mobile, the setup is minimal, and the impact is immediate. The current has already traveled — from festival grounds in Bermuda to retreat spaces across the Americas, and back to Antwerp. If your event creates conditions for depth — REV.INC fits.",
+        spec_label_1: "Format", spec_val_1: "Group sessions",
+        spec_label_2: "Setup", spec_val_2: "30 min",
+        spec_label_3: "Location", spec_val_3: "Mobile — BE + EU",
+        spec_label_4: "Fee", spec_val_4: "From €500/session",
+        cta_collab: "Propose a collaboration",
+        label_about: "05 — About",
+        about_role: "Founder · Practitioner · Initiator",
+        about_body1: "The body has always run on electricity. Every nerve signal, every cellular repair, every felt sensation — these are bioelectric events. Measurable. Documented. Peer-reviewed. What Tesla understood — and what the dominant medical paradigm largely set aside — is that you can work directly with this current. Not metaphorically. Not spiritually. Electrically. The DDS machine does not add something foreign to the body. It speaks a language the body already knows.",
+        about_quote: '"We recruit people to step into a higher charge — so there is more energy to give back to those we love and to our natural environment."',
+        about_body2: "Edison domesticated electricity for profit and locked it behind patents. A century later, pharmaceutical industry applied the same logic to your body's own chemistry: take what is already present in living systems, extract it, control it, sell it back. ZZAPP is the counter-move. Not alternative medicine — the reclamation of direct, measurable bio-electric science from the extractive logic that buried it. Kemetic science knew the conducting body before Tesla rediscovered it. Deleuze mapped the desire that moves through unblocked systems. Nietzsche named the life-force that cultures of control suppress. REV.INC works at the intersection where these traditions converge: science, philosophy, and the political act of returning electricity to the bodies it already belongs to.",
+        manifesto: "The charge is not the destination. The destination is aliveness itself — ripening, expanding, moving in rhythm with what grows. The capacity to love more. Feel more. Want more. To be, fully.",
+        reroot_eyebrow: "now forming",
+        reroot_body_intro: "Your nervous system didn't break. It was shaped — by a culture that turns human charge into productivity, that domesticates bodies the way Edison domesticated electricity. You adapted. Beautifully. And at great cost.",
+        reroot_body_frame: "REROOT is not recovery. Recovery implies a return to what was. REROOT is the work of building new ground — in your body, your relationships, your understanding of what you are.",
+        reroot_body_lineage: "This is the work at the intersection of somatic science, relational intelligence, and knowledge that has been systematically kept from public access. Your lineage knew this. Your body knows this. We are simply remembering together.",
+        reroot_body_outro: "Together we will find new lines of flight. Your energy wants to move — and so it will.\n\nFor those with a hunger for agency, liberation and impact.\n3, 6, or 12 months of guided liberation.",
+        reroot_cta: "UP//RE:ROOT — Request intake",
+        label_book: "06 — Book",
+        book_title: "Ready to receive.",
+        book_body: "Book your ZZAPP session, or reach out to explore a collaboration.",
+        book_b2c_label: "Individual · Group",
+        book_b2c_title: "Book a session",
+        book_b2c_body: "New clients: intake via Calendly. Returning clients: direct booking available.",
+        book_b2c_btn: "Book via Calendly",
+        book_b2b_label: "Events · Retreats · Residency",
+        book_b2b_title: "Propose a collaboration",
+        book_b2b_body: "Festivals, retreat facilitation, or longer residency — reach out directly to explore a strategic match.",
+        book_b2b_btn: "rev.incorporated@proton.me",
+        footer_manifesto: "The revolution is already here.",
+        footer_copy: "© 2026 REV.INC — Aimé Schrauwen · Schrijnwerkersstraat 8, 2000 Antwerp · rev.incorporated@proton.me"
+      },
+      NL: {
+        nav_zzapp: "ZZAPP", nav_science: "Wetenschap", nav_services: "Diensten", nav_events: "Events", nav_about: "Over", nav_book: "Boek",
+        hero_prelude: "Jouw lichaam werkt op elektriciteit. Altijd al.",
+        hero_badge: "Bio-elektrisch Bodywork · Antwerpen",
+        hero_title_1: "Hervind het pad van de innerlijke geleiding,",
+        hero_title_2: "heroveer de stroom",
+        hero_title_3: "van binnenuit.",
+        hero_tagline: "Jouw zenuwstelsel is niet kapot. Het heeft zich aangepast. Nu mag het gewoonweg ontvangen.",
+        cta_book: "Boek een sessie", cta_events: "Events & festivals", cta_retreat: "Retraitefacilitatie", cta_residency: "Residency",
+        label_zzapp: "01 — ZZAPP",
+        img_caption_studio: "Bio-elektrische stimulatie · REV.INC · Antwerpen",
+        zzapp_title: "Bio-elektrisch bodywork.",
+        zzapp_subtitle: "Direct. Meetbaar. Nooit passief.",
+        zzapp_body: "De DDS-machine levert bio-elektrische impulsen rechtstreeks aan het zenuwstelsel. Een stroom die het lichaam ontvangt als warmte, als tinteling, als een langzaam opwellende volheid — onder de drempel van pijn, ruimschoots boven de drempel van het voelen. Het resultaat: een zenuwstelsel dat stopt met overleven en begint te floreren. Geen therapie. Geen ontspanning. Saturatie.",
+        zzapp_point1: "Microvoltstimulatie via de DDS-machine",
+        zzapp_point2: "Directe regulatie van het autonome zenuwstelsel",
+        zzapp_point3: "Wetenschappelijk onderbouwd — emancipatoir — geen mystificatie vereist",
+        zzapp_point4: "Mobiele opstelling — studio's, events en festivals",
+        label_services: "03 — Diensten",
+        services_title: "Voor wie.",
+        services_body: "REV.INC werkt van drukbezette events tot intieme sessies. De stroom gaat waar hij naartoe moet.",
+        tag_b2b: "B2B — Events & Festivals", tag_b2c: "B2C — Individueel", tag_group: "B2C — Groep",
+        service_b2b_title: "Breng de stroom naar jouw mensen.",
+        service_b2b_body: "ZZAPP-groepssessies voor festivals, retraites, studio's en events. Mobiel, minimale opstelling. Het werk integreert lichaamsautonomiebegeleiding, relationele grenzen en zenuwstelselemancipatie — niet louter bio-electriciteit. Gereguleerde mensen veranderen het veld om zich heen. Je publiek voelt het mee.",
+        service_b2b_link: "Samenwerken met REV.INC",
+        service_b2c_title: "Één lichaam. Één activatie.",
+        service_b2c_body: "1-op-1 ZZAPP-sessies in Antwerpen (Schrijnwerkersstraat 8). Een directe handeling op jouw zenuwstelsel. Geen consultatie. Geen massage. Een her-inwijding.",
+        service_b2c_price: "Vanaf €150",
+        service_b2c_link: "Boek jouw sessie",
+        service_group_title: "De collectieve stroom.",
+        service_group_body: "ZZAPP in cirkelformaat. Meerdere zenuwstelsels die samen reguleren — in gemeenschap, in consent, in gedeelde stroom. Wat één lichaam loslaat, absorbeert het veld eromheen.",
+        service_group_link: "Doe mee aan een groepssessie",
+        label_events: "04 — Events & Festivals",
+        events_title: "Het werk het veld in.",
+        events_body: "REV.INC is gebouwd voor beweging. De DDS-machine is mobiel, de opstelling minimaal en de impact onmiddellijk. De stroom heeft al gereisd — van festivalterreinen in Bermuda tot retraiteruimtes door Amerika, en terug naar Antwerpen. Als jouw event condities schept voor diepte — past REV.INC.",
+        spec_label_1: "Formaat", spec_val_1: "Groepssessies",
+        spec_label_2: "Opstartijd", spec_val_2: "30 min",
+        spec_label_3: "Locatie", spec_val_3: "Mobiel — BE + EU",
+        spec_label_4: "Vergoeding", spec_val_4: "Vanaf €500/sessie",
+        cta_collab: "Stel een samenwerking voor",
+        label_about: "04 — Over",
+        about_role: "Oprichter · Practitioner · Initiator",
+        about_body1: "Het lichaam werkt al altijd op elektriciteit. Elk zenuwsignaal, elke cellulaire herstelling, elk gevoeld moment — dit zijn bio-elektrische gebeurtenissen. Meetbaar. Gedocumenteerd. Wetenschappelijk onderbouwd. Wat Tesla begreep — en wat het dominante medische paradigma grotendeels terzijde schoof — is dat je direct met deze stroom kan werken. Niet metaforisch. Niet spiritueel. Elektrisch. De DDS-machine voegt niets vreemds toe aan het lichaam. Ze spreekt een taal die het lichaam al kent.",
+        about_quote: '"We rekruteren mensen om mee in een hogere charge te stappen — zodat er meer energie is om terug te geven aan onze geliefden en onze natuurlijke omgeving."',
+        about_body2: "Edison domesticeerde elektriciteit voor winst en sloot haar op achter patenten. Een eeuw later paste de farmaceutische industrie dezelfde logica toe op je eigen lichaamschemica: neem wat al aanwezig is in levende systemen, extraheer het, controleer het, verkoop het terug. ZZAPP is de tegenzet. Geen alternatieve geneeskunde — de terugname van directe, meetbare bio-elektrische wetenschap van de extractieve logica die haar begraven heeft. Kemische wetenschap kende het geleidende lichaam voor Tesla het herondekte. Deleuze karteerde het verlangen dat stroomt door ongeblokkeerde systemen. Nietzsche noemde de levensdrift die controlesystemen onderdrukken. REV.INC werkt op het snijpunt waar deze tradities samenkomen: wetenschap, filosofie en de politieke daad van het teruggeven van elektriciteit aan de lichamen waaraan ze al toebehoort.",
+        manifesto: "De lading is niet de bestemming. De bestemming is het leven zelf — rijpend, uitdijend, bewegend op het ritme van wat groeit. De capaciteit om meer lief te hebben. Meer te voelen. Meer te willen. Volledig te zijn.",
+        reroot_eyebrow: "nu in vorming",
+        reroot_body_intro: "Jouw zenuwstelsel is niet gebroken. Het werd gevormd — door een cultuur die menselijke lading omzet in productiviteit, die lichamen domesticeert zoals Edison elektriciteit domesticeerde. Je hebt je aangepast. Prachtig. En tegen een hoge prijs.",
+        reroot_body_frame: "REROOT is geen herstel. Herstel impliceert een terugkeer naar wat was. REROOT is het werk van het aanmaken van nieuwe grond — in je lichaam, je relaties, je begrip van wat je bent.",
+        reroot_body_lineage: "Dit is het werk op het snijpunt van somatische wetenschap, relationele intelligentie en kennis die systematisch aan de openbaarheid is onttrokken. Jouw afkomst wist dit. Jouw lichaam weet dit. We herinneren het samen.",
+        reroot_body_outro: "Samen vinden we nieuwe vluchtlijnen. Jouw energie wil bewegen — en dat zal ze.\n\nVoor wie een honger heeft naar agency, bevrijding en impact.\n3, 6 of 12 maanden begeleid bevrijd.",
+        reroot_cta: "UP//RE:ROOT — Intake aanvragen",
+        label_book: "05 — Boek",
+        book_title: "Klaar om te ontvangen.",
+        book_body: "Boek je ZZAPP-sessie, of neem contact op voor een samenwerking.",
+        book_b2c_label: "Individueel · Groep",
+        book_b2c_title: "Boek een sessie",
+        book_b2c_body: "Nieuwe klanten: intake via Calendly. Terugkerende klanten: direct boeken mogelijk.",
+        book_b2c_btn: "Boek via Calendly",
+        book_b2b_label: "Events · Retraites · Residency",
+        book_b2b_title: "Stel een samenwerking voor",
+        book_b2b_body: "Festivals, retraitefacilitatie of langdurige residency — neem direct contact op voor een verkennend gesprek.",
+        book_b2b_btn: "rev.incorporated@proton.me",
+        footer_manifesto: "De revolutie is al hier.",
+        footer_copy: "© 2026 REV.INC — Aimé Schrauwen · Schrijnwerkersstraat 8, 2000 Antwerpen · rev.incorporated@proton.me"
+      }
+    };
+
+    let currentLang = 'EN';
+    function applyLanguage(lang) {
+      const data = copy[lang];
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (data[key]) el.textContent = data[key];
+      });
+      document.documentElement.lang = lang.toLowerCase();
+    }
+    document.getElementById('langToggle').addEventListener('click', () => {
+      currentLang = currentLang === 'EN' ? 'NL' : 'EN';
+      applyLanguage(currentLang);
+      document.getElementById('langToggle').textContent = currentLang === 'EN' ? 'EN / NL' : 'NL / EN';
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    const dot = document.getElementById('cursorDot');
+    let mx = 0, my = 0, dx = 0, dy = 0;
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+    function animateDot() { dx += (mx - dx) * 0.15; dy += (my - dy) * 0.15; dot.style.left = dx + 'px'; dot.style.top = dy + 'px'; requestAnimationFrame(animateDot); }
+    animateDot();
+
+    window.addEventListener('scroll', () => {
+      document.querySelector('nav').style.background = window.scrollY > 60 ? 'rgba(9,9,9,0.96)' : 'rgba(9,9,9,0.85)';
+    });
+  </script>
+</body>
+</html>
