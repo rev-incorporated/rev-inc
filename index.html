@@ -236,6 +236,7 @@
       .problem-section, .formats-section, .proof-section { padding: 5rem 1.5rem; }
       .science-grid, .services-grid, .proof-grid, .booking-grid { grid-template-columns: 1fr; }
       .about-portrait { max-width: 100%; aspect-ratio: 4/3; }
+      #b2b > div > div:nth-child(3) { grid-template-columns: 1fr !important; }
       footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
       .sticky-cta { left: 1.5rem; }
     }
@@ -263,7 +264,7 @@
   <section class="hero" id="top">
     <div class="hero-bg"></div>
     <div class="hero-content fade-in">
-      <div class="hero-badge" data-key="hero_badge">SomaPsychedelic Bio-Electric Bodywork</div>
+      <div class="hero-badge" data-key="hero_badge">SomaPsychedelic Bio-Electric Bodywork · Applied Rhythmology</div>
       <h1 class="hero-title">
         <span data-key="hero_title_1">Your body already knows</span><br/>
         <span class="gold" data-key="hero_title_2">the frequency.</span><br/>
@@ -287,13 +288,13 @@
     <div class="problem-inner fade-in">
       <div>
         <div class="section-label" data-key="label_problem">The Problem</div>
-        <h2 class="section-title" data-key="problem_title">Edison domesticated electricity. Then they did the same to your body.</h2>
-        <p class="section-body" data-key="problem_body">A century after Edison locked electricity behind patents, pharmaceutical industry applied the same logic to your body's own chemistry: take what is already present in living systems, extract it, control it, sell it back. Your nervous system adapted — beautifully, and at great cost.</p>
-        <blockquote class="problem-quote" data-key="problem_quote">Your nervous system isn't broken. It adapted. Now it can (r)evolve.</blockquote>
+        <h2 class="section-title" data-key="problem_title">Your body is a battery. It has been running on low charge.</h2>
+        <p class="section-body" data-key="problem_body">You generate electricity. Every cell, every heartbeat, every nerve firing — bioelectric current. But the body you inherited was trained to leak: chronic stress, overstimulation, rhythms dictated by productivity instead of biology. The charge drops. The signal weakens. You adapt — and call the adaptation normal.</p>
+        <blockquote class="problem-quote" data-key="problem_quote">The body doesn't need to be fixed. It needs to be recharged — on its own terms, in its own rhythm.</blockquote>
       </div>
       <div>
         <div class="img-wrap">
-          <img src="bodywork-hands.jpg" alt="Bio-electric bodywork — REV.INC" />
+          <img src="hands-detail.jpg" alt="Bio-electric bodywork detail — REV.INC" />
         </div>
       </div>
     </div>
@@ -304,7 +305,7 @@
     <div class="zzapp-grid fade-in">
       <div>
         <div class="img-wrap">
-          <img src="dds-machine-plant.jpg" alt="DDS bio-electric stimulation — REV.INC" />
+          <img src="bodywork-session.jpg" alt="DDS bio-electric stimulation — REV.INC" />
         </div>
         <p class="img-caption" data-key="img_zzapp">DDS bio-electric stimulation · REV.INC</p>
       </div>
@@ -438,7 +439,7 @@
     <div class="formats-inner fade-in">
       <div>
         <div class="img-wrap">
-          <img src="festival-field.jpg" alt="ZZAPP festival facilitation" />
+          <img src="festival-setup.jpg" alt="ZZAPP festival facilitation — mobile setup" />
         </div>
       </div>
       <div>
@@ -479,6 +480,31 @@
     </div>
   </section>
 
+  <!-- B2B ONE-PAGER -->
+  <section style="max-width:100%;padding:5rem 2.5rem;background:linear-gradient(180deg,var(--obsidian) 0%,rgba(27,58,45,0.12) 50%,var(--obsidian) 100%);border-top:1px solid rgba(200,144,58,0.06);border-bottom:1px solid rgba(200,144,58,0.06);" id="b2b">
+    <div style="max-width:1200px;margin:0 auto;" class="fade-in">
+      <div class="section-label" style="color:var(--gold);" data-key="label_b2b">For Programmers & Venues</div>
+      <h2 class="section-title" data-key="b2b_title">Technical specs for event programmers.</h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2.5rem;">
+        <div style="padding:2rem;border:1px solid rgba(200,144,58,0.1);border-radius:2px;background:rgba(0,0,0,0.3);">
+          <div style="font-family:var(--font-display);font-size:0.72rem;font-weight:700;color:var(--gold);margin-bottom:0.8rem;text-transform:uppercase;letter-spacing:0.08em;" data-key="b2b_setup_title">Setup</div>
+          <p style="font-family:var(--font-body);font-size:0.9rem;color:var(--cream-dim);line-height:1.7;" data-key="b2b_setup_body">1 practitioner · 1 DDS machine · 1 massage table · power outlet. 30 min setup, 15 min breakdown. Fully mobile. No special infrastructure needed.</p>
+        </div>
+        <div style="padding:2rem;border:1px solid rgba(200,144,58,0.1);border-radius:2px;background:rgba(0,0,0,0.3);">
+          <div style="font-family:var(--font-display);font-size:0.72rem;font-weight:700;color:var(--gold);margin-bottom:0.8rem;text-transform:uppercase;letter-spacing:0.08em;" data-key="b2b_capacity_title">Capacity</div>
+          <p style="font-family:var(--font-body);font-size:0.9rem;color:var(--cream-dim);line-height:1.7;" data-key="b2b_capacity_body">Individual: 4–6 sessions/day (45 min each). Group circuit: up to 8 participants. Festival contact mode: 20–30/day (1–2 min demo). Scalable with additional machines.</p>
+        </div>
+        <div style="padding:2rem;border:1px solid rgba(200,144,58,0.1);border-radius:2px;background:rgba(0,0,0,0.3);">
+          <div style="font-family:var(--font-display);font-size:0.72rem;font-weight:700;color:var(--gold);margin-bottom:0.8rem;text-transform:uppercase;letter-spacing:0.08em;" data-key="b2b_logistics_title">Logistics</div>
+          <p style="font-family:var(--font-body);font-size:0.9rem;color:var(--cream-dim);line-height:1.7;" data-key="b2b_logistics_body">Based in Antwerp. Travel radius: Belgium + EU. Day rate, multi-day, and residency models available. All pricing direct — no agency. Insurance covered.</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:2.5rem;">
+        <a href="mailto:rev.incorporated@proton.me?subject=B2B%20Inquiry%20—%20REV.INC" class="btn-primary" data-key="b2b_cta">Request a technical sheet</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ABOUT -->
   <section class="about-section" id="about">
     <div class="about-inner fade-in">
@@ -489,12 +515,13 @@
         <div class="about-identity">
           <div class="section-label" data-key="label_about">05 — About</div>
           <div class="about-name">Aimé Schrauwen</div>
-          <div class="about-role" data-key="about_role">Founder · Practitioner · Initiator</div>
+          <div class="about-role" data-key="about_role">Founder · Practitioner · Applied Rhythmologist</div>
           <div class="about-cert">ABMMA Certified · Antwerp · BE + EU</div>
           <p class="about-quote" data-key="about_quote">"We recruit people to step into a higher charge — so there is more energy to give back to those we love and to our natural environment."</p>
         </div>
         <div>
-          <p class="section-body" data-key="about_body2">REV.INC is not a wellness brand. It is a bio-electric emancipation movement operating through the body. Solarpunk in practice — technology in service of the living. Like electroculture returns lushness to depleted soil, ZZAPP returns lushness to the depleted nervous system.</p>
+          <p class="section-body" style="margin-bottom:1.5rem;" data-key="about_category">REV.INC is a bio-electric human development practice — applied rhythmology, body-as-battery science, and indigenous somatic lineages combined into a single modality.</p>
+          <p class="section-body" data-key="about_body2">Not a wellness brand. Not therapy. A solarpunk practice that operates through the body — technology in service of the living. Like electroculture returns lushness to depleted soil, ZZAPP returns lushness to the depleted nervous system.</p>
         </div>
       </div>
     </div>
@@ -564,6 +591,16 @@
       <li><a href="https://tiktok.com" target="_blank">TikTok</a></li>
       <li><a href="https://substack.com" target="_blank">Substack</a></li>
     </ul>
+    <div style="width:100%;display:flex;justify-content:center;gap:3rem;padding:1.5rem 0;border-top:1px solid rgba(255,255,255,0.03);margin-top:0.5rem;">
+      <div style="text-align:center;">
+        <div style="font-family:var(--font-display);font-size:0.62rem;font-weight:700;letter-spacing:0.08em;color:rgba(200,144,58,0.35);">Wagadu Review</div>
+        <div style="font-family:var(--font-body);font-style:italic;font-size:0.72rem;color:rgba(232,213,163,0.2);margin-top:0.2rem;max-width:280px;">The forensics, heuristics and hermeneutics of rolling up the map.</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-family:var(--font-display);font-size:0.62rem;font-weight:700;letter-spacing:0.08em;color:rgba(200,144,58,0.35);">Sankoré</div>
+        <div style="font-family:var(--font-body);font-style:italic;font-size:0.72rem;color:rgba(232,213,163,0.2);margin-top:0.2rem;max-width:280px;">A school for those drawn to the deeper lineage. For those who want to remember the futurepast.</div>
+      </div>
+    </div>
     <div class="footer-copy" data-key="footer_copy">© 2026 REV.INC — Aimé Schrauwen · Antwerp · rev.incorporated@proton.me</div>
   </footer>
 
@@ -582,15 +619,15 @@
     const copy = {
       EN: {
         nav_zzapp:"ZZAPP",nav_science:"Science",nav_services:"Pillars",nav_events:"Events",nav_about:"About",nav_book:"Book a session",
-        hero_badge:"SomaPsychedelic Bio-Electric Bodywork",
+        hero_badge:"SomaPsychedelic Bio-Electric Bodywork · Applied Rhythmology",
         hero_title_1:"Your body already knows",hero_title_2:"the frequency.",hero_title_3:"We grow it.",
         hero_sub:"Bio-electricity lives in your nervous system. Before the patents. Before the pills. Before the domestication of the body as an economic unit. ZZAPP wakes it up.",
         hero_analogy:"Electroculture grows lushness in soil by running microvolt through the earth. ZZAPP does the same — for the body. Solarpunk in practice.",
         cta_book:"Book a session",cta_discover:"Discover the pillars",
         label_problem:"The Problem",
-        problem_title:"Edison domesticated electricity. Then they did the same to your body.",
-        problem_body:"A century after Edison locked electricity behind patents, pharmaceutical industry applied the same logic to your body's own chemistry: take what is already present in living systems, extract it, control it, sell it back. Your nervous system adapted — beautifully, and at great cost.",
-        problem_quote:"Your nervous system isn't broken. It adapted. Now it can (r)evolve.",
+        problem_title:"Your body is a battery. It has been running on low charge.",
+        problem_body:"You generate electricity. Every cell, every heartbeat, every nerve firing — bioelectric current. But the body you inherited was trained to leak: chronic stress, overstimulation, rhythms dictated by productivity instead of biology. The charge drops. The signal weakens. You adapt — and call the adaptation normal.",
+        problem_quote:"The body doesn't need to be fixed. It needs to be recharged — on its own terms, in its own rhythm.",
         label_zzapp:"01 — ZZAPP",img_zzapp:"DDS bio-electric stimulation · REV.INC",
         zzapp_title:"The bio-electric session.",
         zzapp_body:"The DDS machine delivers bio-electric impulses directly to the nervous system. A current received as warmth, as tingling, as a slow spreading fullness — below the threshold of pain, well above the threshold of feeling. Not therapy. Not relaxation. Saturation.",
@@ -614,10 +651,15 @@
         solarpunk_card:"Technology in service of the living. Electroculture for the human nervous system.",
         label_events:"04 — Events & Festivals",events_title:"Take the current into the field.",events_body:"REV.INC is built for movement. The DDS machine is mobile, the setup is minimal, the impact is immediate. If your event creates conditions for depth — REV.INC fits.",
         cta_collab:"Propose a collaboration",
-        label_about:"05 — About",about_role:"Founder · Practitioner · Initiator",
-        about_body1:"Tesla rediscovered what Kemet already knew: the body is a circuit. When that circuit is disrupted — by stress, trauma, overload — the signal weakens. You feel it as fatigue, as tension that never releases, as the sense that something essential has gone quiet. The DDS machine doesn't add something foreign. It speaks a language the body already knows.",
+        label_b2b:"For Programmers & Venues",b2b_title:"Technical specs for event programmers.",
+        b2b_setup_title:"Setup",b2b_setup_body:"1 practitioner · 1 DDS machine · 1 massage table · power outlet. 30 min setup, 15 min breakdown. Fully mobile. No special infrastructure needed.",
+        b2b_capacity_title:"Capacity",b2b_capacity_body:"Individual: 4–6 sessions/day (45 min each). Group circuit: up to 8 participants. Festival contact mode: 20–30/day (1–2 min demo). Scalable with additional machines.",
+        b2b_logistics_title:"Logistics",b2b_logistics_body:"Based in Antwerp. Travel radius: Belgium + EU. Day rate, multi-day, and residency models available. All pricing direct — no agency. Insurance covered.",
+        b2b_cta:"Request a technical sheet",
+        label_about:"05 — About",about_role:"Founder · Practitioner · Applied Rhythmologist",
+        about_category:"REV.INC is a bio-electric human development practice — applied rhythmology, body-as-battery science, and indigenous somatic lineages combined into a single modality.",
         about_quote:'"We recruit people to step into a higher charge — so there is more energy to give back to those we love and to our natural environment."',
-        about_body2:"REV.INC is not a wellness brand. It is a bio-electric emancipation movement operating through the body. Solarpunk in practice — technology in service of the living. Like electroculture returns lushness to depleted soil, ZZAPP returns lushness to the depleted nervous system.",
+        about_body2:"Not a wellness brand. Not therapy. A solarpunk practice that operates through the body — technology in service of the living. Like electroculture returns lushness to depleted soil, ZZAPP returns lushness to the depleted nervous system.",
         manifesto:"The charge is not the destination. The destination is aliveness itself — ripening, expanding, moving in rhythm with what grows. The capacity to love more. Feel more. Want more. To be, fully.",
         reroot_eyebrow:"Now forming",reroot_sub:"Bio-Electric Emancipation Protocol",
         reroot_intro:"Your nervous system didn't break. It was shaped — by a culture that turns human charge into productivity, that domesticates bodies the way Edison domesticated electricity. You adapted. Beautifully. And at great cost.",
@@ -633,15 +675,15 @@
       },
       NL: {
         nav_zzapp:"ZZAPP",nav_science:"Wetenschap",nav_services:"Zuilen",nav_events:"Events",nav_about:"Over",nav_book:"Boek een sessie",
-        hero_badge:"SomaPsychedelic Bio-Elektrisch Bodywork",
+        hero_badge:"SomaPsychedelic Bio-Elektrisch Bodywork · Toegepaste Ritmologie",
         hero_title_1:"Jouw lichaam kent",hero_title_2:"de frequentie al.",hero_title_3:"Wij laten het groeien.",
         hero_sub:"Bio-elektriciteit leeft in je zenuwstelsel. Van voor de patenten. Van voor de pillen. Van voor de domesticering van het lichaam als economische eenheid. ZZAPP wekt het op.",
         hero_analogy:"Electrocultuur laat lusheid groeien in de bodem door microvolt door de aarde te sturen. ZZAPP doet hetzelfde — voor het lichaam. Solarpunk in de praktijk.",
         cta_book:"Boek een sessie",cta_discover:"Ontdek de zuilen",
         label_problem:"Het Probleem",
-        problem_title:"Edison domesticeerde elektriciteit. Daarna deden ze hetzelfde met jouw lichaam.",
-        problem_body:"Een eeuw nadat Edison elektriciteit achter patenten sloot, paste de farmaceutische industrie dezelfde logica toe op je eigen lichaamschemica: neem wat al aanwezig is in levende systemen, extraheer het, controleer het, verkoop het terug. Jouw zenuwstelsel paste zich aan — prachtig, en tegen een hoge prijs.",
-        problem_quote:"Jouw zenuwstelsel is niet kapot. Het heeft zich aangepast. Nu mag het (r)evolueren.",
+        problem_title:"Jouw lichaam is een batterij. Het draait al lang op lage lading.",
+        problem_body:"Je genereert elektriciteit. Elke cel, elke hartslag, elke zenuwpuls — bio-elektrische stroom. Maar het lichaam dat je erfde werd getraind om te lekken: chronische stress, overstimulatie, ritmes gedicteerd door productiviteit in plaats van biologie. De lading zakt. Het signaal verzwakt. Je past je aan — en noemt de aanpassing normaal.",
+        problem_quote:"Het lichaam hoeft niet gerepareerd te worden. Het moet opgeladen worden — op zijn eigen voorwaarden, in zijn eigen ritme.",
         label_zzapp:"01 — ZZAPP",img_zzapp:"DDS bio-elektrische stimulatie · REV.INC",
         zzapp_title:"De bio-elektrische sessie.",
         zzapp_body:"De DDS-machine levert bio-elektrische impulsen rechtstreeks aan het zenuwstelsel. Een stroom die het lichaam ontvangt als warmte, als tinteling, als een langzaam opwellende volheid — onder de drempel van pijn, ruimschoots boven de drempel van het voelen. Geen therapie. Geen ontspanning. Saturatie.",
@@ -665,10 +707,15 @@
         solarpunk_card:"Technologie in dienst van het levende. Electrocultuur voor het menselijk zenuwstelsel.",
         label_events:"04 — Events & Festivals",events_title:"Breng de stroom het veld in.",events_body:"REV.INC is gebouwd voor beweging. De DDS-machine is mobiel, de opstelling minimaal, de impact onmiddellijk. Als jouw event condities schept voor diepte — past REV.INC.",
         cta_collab:"Stel een samenwerking voor",
-        label_about:"05 — Over",about_role:"Oprichter · Practitioner · Initiator",
-        about_body1:"Tesla herontdekte wat Kemet al wist: het lichaam is een circuit. Als dat circuit verstoord wordt — door stress, trauma, overbelasting — verzwakt het signaal. Je voelt het als vermoeidheid, als spanning die nooit echt loslaat, als het gevoel dat iets essentieels stil is gevallen. De DDS-machine voegt niets vreemds toe. Ze spreekt een taal die het lichaam al kent.",
+        label_b2b:"Voor Programmeurs & Venues",b2b_title:"Technische specs voor eventprogrammeurs.",
+        b2b_setup_title:"Setup",b2b_setup_body:"1 practitioner · 1 DDS-machine · 1 massagetafel · stopcontact. 30 min opbouw, 15 min afbouw. Volledig mobiel. Geen speciale infrastructuur nodig.",
+        b2b_capacity_title:"Capaciteit",b2b_capacity_body:"Individueel: 4–6 sessies/dag (45 min elk). Groepscircuit: tot 8 deelnemers. Festival contactmodus: 20–30/dag (1–2 min demo). Schaalbaar met extra machines.",
+        b2b_logistics_title:"Logistiek",b2b_logistics_body:"Gevestigd in Antwerpen. Reisradius: België + EU. Dagtarief, meerdaags en residency-modellen beschikbaar. Alle prijzen direct — geen bureau. Verzekering gedekt.",
+        b2b_cta:"Vraag een technische fiche aan",
+        label_about:"05 — Over",about_role:"Oprichter · Practitioner · Toegepast Ritmoloog",
+        about_category:"REV.INC is een bio-elektrische menselijke ontwikkelingspraktijk — toegepaste ritmologie, body-as-battery wetenschap en inheemse somatische tradities gecombineerd in één modaliteit.",
         about_quote:'"Wij rekruteren mensen om mee in een hogere charge te stappen — zodat er meer energie is om terug te geven aan onze geliefden en onze natuurlijke omgeving."',
-        about_body2:"REV.INC is geen wellness-merk. Het is een bio-elektrische emancipatiebeweging die opereert via het lichaam. Solarpunk in de praktijk — technologie in dienst van het levende. Zoals electrocultuur lusheid terugbrengt naar uitgeputte grond, brengt ZZAPP lusheid terug naar het uitgeputte zenuwstelsel.",
+        about_body2:"Geen wellness-merk. Geen therapie. Een solarpunk-praktijk die opereert via het lichaam — technologie in dienst van het levende. Zoals electrocultuur lusheid terugbrengt naar uitgeputte grond, brengt ZZAPP lusheid terug naar het uitgeputte zenuwstelsel.",
         manifesto:"De lading is niet de bestemming. De bestemming is het leven zelf — rijpend, uitdijend, bewegend op het ritme van wat groeit. De capaciteit om meer lief te hebben. Meer te voelen. Meer te willen. Volledig te zijn.",
         reroot_eyebrow:"Nu in vorming",reroot_sub:"Bio-Elektrisch Emancipatieprotocol",
         reroot_intro:"Jouw zenuwstelsel is niet gebroken. Het werd gevormd — door een cultuur die menselijke lading omzet in productiviteit, die lichamen domesticeert zoals Edison elektriciteit domesticeerde. Je hebt je aangepast. Prachtig. En tegen een hoge prijs.",
