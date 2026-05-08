@@ -44,6 +44,15 @@
     ::-webkit-scrollbar-track { background: var(--black); }
     ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
 
+    /* FAQ */
+    details summary::-webkit-details-marker { display: none; }
+    details[open] summary span:last-child { transform: rotate(45deg); }
+    details[open] { border-color: rgba(200,144,58,0.18) !important; }
+
+    @media (max-width: 700px) {
+      .proof-grid + div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
+    }
+
     /* NAV */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 2.5rem; background: rgba(9,9,9,0.88); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(200,144,58,0.1); transition: background 0.3s; }
     .nav-logo { font-family: var(--font-display); font-size: 1rem; font-weight: 900; color: var(--gold); letter-spacing: 0.04em; text-decoration: none; }
@@ -390,6 +399,17 @@
         <span>Bermuda Festival</span>
         <span>Private retreats BE + EU</span>
       </div>
+      <!-- VIDEO TESTIMONIALS -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3rem;">
+        <div style="text-align:center;">
+          <video src="testimonial-1.mp4" controls preload="metadata" playsinline style="width:100%;max-height:420px;border-radius:4px;border:1px solid rgba(200,144,58,0.1);background:#000;object-fit:contain;"></video>
+          <span class="proof-author" style="display:block;margin-top:0.8rem;" data-key="testimonial_1_author">— Kinesiste / Osteopaat · ZZAPP client</span>
+        </div>
+        <div style="text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid rgba(200,144,58,0.06);border-radius:4px;background:rgba(0,0,0,0.2);padding:2rem;">
+          <div style="font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:0.8rem;" data-key="testimonial_2_placeholder">More stories incoming</div>
+          <p style="font-family:var(--font-body);font-style:italic;font-size:0.9rem;color:var(--cream-dim);max-width:260px;line-height:1.6;" data-key="testimonial_2_teaser">Burnout-recovery testimonial — video being prepared.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -455,16 +475,16 @@
         <h2 class="section-title" style="color:var(--gold);" data-key="events_title">Take the current into the field.</h2>
         <p class="section-body" data-key="events_body">REV.INC is built for movement. The DDS machine is mobile, the setup is minimal, the impact is immediate. If your event creates conditions for depth — REV.INC fits.</p>
         <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.5rem;">
-          <div style="font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;">ZZAPP Festival Formats</div>
-          <div class="format-row">
-            <span class="format-name">ZZAPP CONTACT</span>
-            <span class="format-dur">1–2 min</span>
-            <span class="format-price" style="color:var(--green-lush);">Free / €5</span>
-          </div>
+          <div style="font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;" data-key="festival_formats_label">ZZAPP Festival Formats</div>
           <div class="format-row">
             <span class="format-name">ZZAPP SPARK</span>
             <span class="format-dur">15 min</span>
             <span class="format-price" style="color:var(--gold);">€44</span>
+          </div>
+          <div class="format-row" style="background:rgba(200,144,58,0.06);border:1px solid rgba(200,144,58,0.15);border-radius:4px;padding:0.6rem 0.8rem;">
+            <span class="format-name" style="color:var(--gold-bright);">⚡ ZZAPP CIRCUIT</span>
+            <span class="format-dur" style="color:var(--gold);" data-key="circuit_dur">Group · up to 30 pers</span>
+            <span class="format-price" style="color:var(--gold-bright);font-weight:700;">€44/person</span>
           </div>
           <div class="format-row">
             <span class="format-name">ZZAPP CURRENT</span>
@@ -472,16 +492,13 @@
             <span class="format-price" style="color:var(--gold);">€120</span>
           </div>
           <div class="format-row">
-            <span class="format-name">ZZAPP CIRCUIT</span>
-            <span class="format-dur">Group</span>
-            <span class="format-price" style="color:var(--copper);">€35/person</span>
-          </div>
-          <div class="format-row">
             <span class="format-name">ZZAPP DEEP FIELD</span>
-            <span class="format-dur">90 min</span>
-            <span class="format-price" style="color:var(--gold);">€200</span>
+            <span class="format-dur" data-key="deepfield_dur">90 min · pre-booking</span>
+            <span class="format-price" style="color:var(--gold);">€280</span>
           </div>
-          <div style="font-family:var(--font-mono);font-size:0.52rem;color:rgba(232,213,163,0.25);letter-spacing:0.1em;margin-top:0.5rem;">Setup: 30 min · Mobile BE + EU · Direct payment on-site</div>
+          <div style="font-family:var(--font-body);font-style:italic;font-size:0.85rem;color:var(--cream-dim);margin-top:1rem;line-height:1.6;max-width:360px;" data-key="festival_demo_text">At every festival, free ZZAPP CONTACT demos let you experience the current — no commitment, just a first taste of bio-electricity.</div>
+          <div style="font-family:var(--font-mono);font-size:0.52rem;color:rgba(232,213,163,0.25);letter-spacing:0.1em;margin-top:0.8rem;" data-key="festival_footer">Setup: 30 min · Mobile BE + EU · Direct payment on-site</div>
+          <div style="font-family:var(--font-mono);font-size:0.52rem;color:var(--green-lush);letter-spacing:0.1em;margin-top:0.3rem;" data-key="solarpunk_rate_text">☀ Solarpunk Rate: reduced pricing for students, artists & community builders — ask on-site.</div>
         </div>
         <a href="mailto:rev.incorporated@proton.me?subject=Event%20Collaboration%20—%20REV.INC" class="btn-primary" style="margin-top:2rem;" data-key="cta_collab">Propose a collaboration</a>
       </div>
@@ -500,7 +517,7 @@
         </div>
         <div style="padding:2rem;border:1px solid rgba(200,144,58,0.1);border-radius:2px;background:rgba(0,0,0,0.3);">
           <div style="font-family:var(--font-display);font-size:0.72rem;font-weight:700;color:var(--gold);margin-bottom:0.8rem;text-transform:uppercase;letter-spacing:0.08em;" data-key="b2b_capacity_title">Capacity</div>
-          <p style="font-family:var(--font-body);font-size:0.9rem;color:var(--cream-dim);line-height:1.7;" data-key="b2b_capacity_body">Individual: 4–6 sessions/day (45 min each). Group circuit: up to 8 participants. Festival contact mode: 20–30/day (1–2 min demo). Scalable with additional machines.</p>
+          <p style="font-family:var(--font-body);font-size:0.9rem;color:var(--cream-dim);line-height:1.7;" data-key="b2b_capacity_body">Individual: 4–6 sessions/day (45 min each). Group circuit: up to 30 participants. Festival contact mode: 20–30/day (1–2 min demo). Scalable with additional machines.</p>
         </div>
         <div style="padding:2rem;border:1px solid rgba(200,144,58,0.1);border-radius:2px;background:rgba(0,0,0,0.3);">
           <div style="font-family:var(--font-display);font-size:0.72rem;font-weight:700;color:var(--gold);margin-bottom:0.8rem;text-transform:uppercase;letter-spacing:0.08em;" data-key="b2b_logistics_title">Logistics</div>
@@ -557,12 +574,56 @@
     <a href="mailto:rev.incorporated@proton.me?subject=REROOT%20Intake%20—%20REV.INC" class="btn-reroot" data-key="reroot_cta">Request intake</a>
   </section>
 
+  <!-- FAQ -->
+  <section style="max-width:800px;margin:0 auto;padding:5rem 2.5rem;" id="faq">
+    <div class="fade-in">
+      <div class="section-label" style="color:var(--gold);" data-key="label_faq">Frequently Asked</div>
+      <h2 class="section-title" data-key="faq_title">Before you book.</h2>
+      <div style="display:flex;flex-direction:column;gap:1rem;margin-top:2.5rem;">
+        <details style="border:1px solid rgba(200,144,58,0.08);border-radius:4px;padding:1.2rem 1.5rem;background:rgba(0,0,0,0.2);cursor:pointer;">
+          <summary style="font-family:var(--font-display);font-size:0.72rem;font-weight:700;color:var(--gold);letter-spacing:0.04em;list-style:none;display:flex;justify-content:space-between;align-items:center;" data-key="faq_q1">Does it hurt?<span style="color:var(--gold-dim);font-size:0.9rem;transition:transform 0.3s;">+</span></summary>
+          <p style="font-family:var(--font-body);font-size:0.92rem;color:var(--cream-dim);line-height:1.7;margin-top:1rem;" data-key="faq_a1">No pain — only the resistance you create yourself. The current goes through the muscles and the nervous system. If you don't resist, it's a profound pleasure. The body receives warmth, tingling, and a deep sense of saturation.</p>
+        </details>
+        <details style="border:1px solid rgba(200,144,58,0.08);border-radius:4px;padding:1.2rem 1.5rem;background:rgba(0,0,0,0.2);cursor:pointer;">
+          <summary style="font-family:var(--font-display);font-size:0.72rem;font-weight:700;color:var(--gold);letter-spacing:0.04em;list-style:none;display:flex;justify-content:space-between;align-items:center;" data-key="faq_q2">Is it safe?<span style="color:var(--gold-dim);font-size:0.9rem;transition:transform 0.3s;">+</span></summary>
+          <p style="font-family:var(--font-body);font-size:0.92rem;color:var(--cream-dim);line-height:1.7;margin-top:1rem;" data-key="faq_a2">Yes. DDS microcurrent operates at voltages well below any risk threshold. Contraindications: metal implants in the treatment area, pacemakers, and pregnancy. Outside of these, the technology is completely safe.</p>
+        </details>
+        <details style="border:1px solid rgba(200,144,58,0.08);border-radius:4px;padding:1.2rem 1.5rem;background:rgba(0,0,0,0.2);cursor:pointer;">
+          <summary style="font-family:var(--font-display);font-size:0.72rem;font-weight:700;color:var(--gold);letter-spacing:0.04em;list-style:none;display:flex;justify-content:space-between;align-items:center;" data-key="faq_q3">How many sessions do I need?<span style="color:var(--gold-dim);font-size:0.9rem;transition:transform 0.3s;">+</span></summary>
+          <p style="font-family:var(--font-body);font-size:0.92rem;color:var(--cream-dim);line-height:1.7;margin-top:1rem;" data-key="faq_a3">You feel results from session one — a pattern break and diagnostic reading. Session two targets specific openings. Session three builds new patterns. From three sessions, sustainable change begins. But the body starts responding immediately.</p>
+        </details>
+        <details style="border:1px solid rgba(200,144,58,0.08);border-radius:4px;padding:1.2rem 1.5rem;background:rgba(0,0,0,0.2);cursor:pointer;">
+          <summary style="font-family:var(--font-display);font-size:0.72rem;font-weight:700;color:var(--gold);letter-spacing:0.04em;list-style:none;display:flex;justify-content:space-between;align-items:center;" data-key="faq_q4">How is this different from massage, physio, or reiki?<span style="color:var(--gold-dim);font-size:0.9rem;transition:transform 0.3s;">+</span></summary>
+          <p style="font-family:var(--font-body);font-size:0.92rem;color:var(--cream-dim);line-height:1.7;margin-top:1rem;" data-key="faq_a4">ZZAPP works with microvolt that goes into the body — through the muscles, speaking directly to the nervous system, charging mitochondria. It goes beyond the mechanical. Emotions and stored patterns mapped onto the body are addressed at the bio-electric level. Not purely spiritual or subtle — this is biophysics with biological functionality.</p>
+        </details>
+        <details style="border:1px solid rgba(200,144,58,0.08);border-radius:4px;padding:1.2rem 1.5rem;background:rgba(0,0,0,0.2);cursor:pointer;">
+          <summary style="font-family:var(--font-display);font-size:0.72rem;font-weight:700;color:var(--gold);letter-spacing:0.04em;list-style:none;display:flex;justify-content:space-between;align-items:center;" data-key="faq_q5">Can I combine this with therapy or medication?<span style="color:var(--gold-dim);font-size:0.9rem;transition:transform 0.3s;">+</span></summary>
+          <p style="font-family:var(--font-body);font-size:0.92rem;color:var(--cream-dim);line-height:1.7;margin-top:1rem;" data-key="faq_a5">Yes. ZZAPP complements therapy, coaching, and medication — it doesn't replace them. Many clients combine bio-electric sessions with their existing care. The body's capacity to process is enhanced, which supports whatever work you're already doing.</p>
+        </details>
+        <details style="border:1px solid rgba(200,144,58,0.08);border-radius:4px;padding:1.2rem 1.5rem;background:rgba(0,0,0,0.2);cursor:pointer;">
+          <summary style="font-family:var(--font-display);font-size:0.72rem;font-weight:700;color:var(--gold);letter-spacing:0.04em;list-style:none;display:flex;justify-content:space-between;align-items:center;" data-key="faq_q6">What should I do after a session?<span style="color:var(--gold-dim);font-size:0.9rem;transition:transform 0.3s;">+</span></summary>
+          <p style="font-family:var(--font-body);font-size:0.92rem;color:var(--cream-dim);line-height:1.7;margin-top:1rem;" data-key="faq_a6">Hydrate with electrolytes. Stretch. Avoid submerging in water for the first 2 hours. Ground yourself — walk barefoot, be in nature. Movement practices like yin yoga, qigong, tai chi, or capoeira amplify the integration. Focus on new things or things you want more of — you'll have the energy, and the body's reward system makes new habits easier to build.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
   <!-- BOOK -->
   <section id="book" class="book-section">
     <div class="fade-in">
       <div class="section-label" style="justify-content:center;" data-key="label_book">06 — Book</div>
       <h2 class="section-title" data-key="book_title">Ready to receive.</h2>
       <p class="section-body" style="margin:0 auto;text-align:center;" data-key="book_body">Book your ZZAPP session, or reach out to explore a collaboration.</p>
+      <!-- FREE DISCOVERY CALL -->
+      <div style="text-align:center;margin-bottom:2.5rem;padding:2rem;border:1px solid rgba(58,122,58,0.2);border-radius:4px;background:rgba(27,58,45,0.1);">
+        <div style="font-family:var(--font-display);font-size:0.72rem;font-weight:700;color:var(--green-lush);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;" data-key="discovery_label">Start here</div>
+        <div style="font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--cream);margin-bottom:0.5rem;" data-key="discovery_title">Free Discovery Call</div>
+        <p style="font-family:var(--font-body);font-size:0.9rem;color:var(--cream-dim);max-width:500px;margin:0 auto 1.2rem;" data-key="discovery_body">15 minutes. No commitment. We talk about what's going on in your body, whether ZZAPP is right for you, and what to expect.</p>
+        <a href="https://wa.me/32472406393?text=Hi%20Aim%C3%A9%2C%20I%27d%20like%20to%20book%20a%20free%20discovery%20call." class="btn-book gold" style="display:inline-block;" data-key="discovery_btn">Book free call</a>
+      </div>
+
       <div class="booking-grid">
         <div class="booking-card b2c">
           <div class="booking-label" data-key="book_b2c_label">Individual · Group</div>
@@ -576,6 +637,20 @@
           <div class="booking-card-title" data-key="book_b2b_title">Propose a collaboration</div>
           <p class="booking-card-body" data-key="book_b2b_body">Festivals, retreat facilitation, or longer residency — reach out directly.</p>
           <a href="mailto:rev.incorporated@proton.me?subject=Collaboration%20—%20REV.INC" class="btn-book outline" data-key="book_b2b_btn">rev.incorporated@proton.me</a>
+        </div>
+      </div>
+
+      <!-- STUDIO PACKS -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem;max-width:600px;margin-left:auto;margin-right:auto;">
+        <div style="text-align:center;padding:1.5rem;border:1px solid rgba(200,144,58,0.12);border-radius:4px;background:rgba(0,0,0,0.25);">
+          <div style="font-family:var(--font-display);font-size:0.62rem;font-weight:700;color:var(--gold);letter-spacing:0.08em;text-transform:uppercase;" data-key="pack3_label">3× CURRENT Pack</div>
+          <div style="font-family:var(--font-display);font-size:1.4rem;font-weight:900;color:var(--gold-bright);margin:0.5rem 0;">€330</div>
+          <div style="font-family:var(--font-mono);font-size:0.52rem;color:var(--cream-dim);letter-spacing:0.08em;" data-key="pack3_save">Save €30 · €110/session</div>
+        </div>
+        <div style="text-align:center;padding:1.5rem;border:1px solid rgba(200,144,58,0.18);border-radius:4px;background:rgba(200,144,58,0.04);">
+          <div style="font-family:var(--font-display);font-size:0.62rem;font-weight:700;color:var(--gold-bright);letter-spacing:0.08em;text-transform:uppercase;" data-key="pack5_label">5× CURRENT Pack</div>
+          <div style="font-family:var(--font-display);font-size:1.4rem;font-weight:900;color:var(--gold-bright);margin:0.5rem 0;">€525</div>
+          <div style="font-family:var(--font-mono);font-size:0.52rem;color:var(--cream-dim);letter-spacing:0.08em;" data-key="pack5_save">Save €75 · €105/session</div>
         </div>
       </div>
       <div style="margin-top:2rem;text-align:center;">
@@ -661,7 +736,7 @@
         cta_collab:"Propose a collaboration",
         label_b2b:"For Programmers & Venues",b2b_title:"Technical specs for event programmers.",
         b2b_setup_title:"Setup",b2b_setup_body:"1 practitioner · 1 DDS machine · 1 massage table · power outlet. 30 min setup, 15 min breakdown. Fully mobile. No special infrastructure needed.",
-        b2b_capacity_title:"Capacity",b2b_capacity_body:"Individual: 4–6 sessions/day (45 min each). Group circuit: up to 8 participants. Festival contact mode: 20–30/day (1–2 min demo). Scalable with additional machines.",
+        b2b_capacity_title:"Capacity",b2b_capacity_body:"Individual: 4–6 sessions/day (45 min each). Group circuit: up to 30 participants. Festival contact mode: 20–30/day (1–2 min demo). Scalable with additional machines.",
         b2b_logistics_title:"Logistics",b2b_logistics_body:"Based in Antwerp. Travel radius: Belgium + EU. Day rate, multi-day, and residency models available. All pricing direct — no agency. Insurance covered.",
         b2b_cta:"Request a technical sheet",
         label_about:"05 — About",about_role:"Founder · Practitioner · Applied Rhythmologist",
@@ -679,7 +754,27 @@
         book_location:"Location: Antwerp · exact address on booking confirmation",
         footer_tagline:"SomaPsychedelic Bio-Electric Bodywork",footer_sub:"ZZAPP · REROOT · INTEGRATE",
         footer_copy:"© 2026 REV.INC — Aimé Schrauwen · Antwerp · rev.incorporated@proton.me",
-        sticky_cta:"Book a session"
+        sticky_cta:"Book a session",
+        festival_formats_label:"ZZAPP Festival Formats",
+        circuit_dur:"Group · up to 30 pers",
+        deepfield_dur:"90 min · pre-booking",
+        festival_demo_text:"At every festival, free ZZAPP CONTACT demos let you experience the current — no commitment, just a first taste of bio-electricity.",
+        festival_footer:"Setup: 30 min · Mobile BE + EU · Direct payment on-site",
+        solarpunk_rate_text:"☀ Solarpunk Rate: reduced pricing for students, artists & community builders — ask on-site.",
+        testimonial_1_author:"— Kinesiste / Osteopaat · ZZAPP client",
+        testimonial_2_placeholder:"More stories incoming",
+        testimonial_2_teaser:"Burnout-recovery testimonial — video being prepared.",
+        label_faq:"Frequently Asked",
+        faq_title:"Before you book.",
+        faq_q1:"Does it hurt?",faq_a1:"No pain — only the resistance you create yourself. The current goes through the muscles and the nervous system. If you don't resist, it's a profound pleasure. The body receives warmth, tingling, and a deep sense of saturation.",
+        faq_q2:"Is it safe?",faq_a2:"Yes. DDS microcurrent operates at voltages well below any risk threshold. Contraindications: metal implants in the treatment area, pacemakers, and pregnancy. Outside of these, the technology is completely safe.",
+        faq_q3:"How many sessions do I need?",faq_a3:"You feel results from session one — a pattern break and diagnostic reading. Session two targets specific openings. Session three builds new patterns. From three sessions, sustainable change begins. But the body starts responding immediately.",
+        faq_q4:"How is this different from massage, physio, or reiki?",faq_a4:"ZZAPP works with microvolt that goes into the body — through the muscles, speaking directly to the nervous system, charging mitochondria. It goes beyond the mechanical. Emotions and stored patterns mapped onto the body are addressed at the bio-electric level. Not purely spiritual or subtle — this is biophysics with biological functionality.",
+        faq_q5:"Can I combine this with therapy or medication?",faq_a5:"Yes. ZZAPP complements therapy, coaching, and medication — it doesn't replace them. Many clients combine bio-electric sessions with their existing care. The body's capacity to process is enhanced, which supports whatever work you're already doing.",
+        faq_q6:"What should I do after a session?",faq_a6:"Hydrate with electrolytes. Stretch. Avoid submerging in water for the first 2 hours. Ground yourself — walk barefoot, be in nature. Movement practices like yin yoga, qigong, tai chi, or capoeira amplify the integration. Focus on new things or things you want more of — you'll have the energy, and the body's reward system makes new habits easier to build.",
+        discovery_label:"Start here",discovery_title:"Free Discovery Call",discovery_body:"15 minutes. No commitment. We talk about what's going on in your body, whether ZZAPP is right for you, and what to expect.",discovery_btn:"Book free call",
+        pack3_label:"3× CURRENT Pack",pack3_save:"Save €30 · €110/session",
+        pack5_label:"5× CURRENT Pack",pack5_save:"Save €75 · €105/session"
       },
       NL: {
         nav_zzapp:"ZZAPP",nav_science:"Wetenschap",nav_services:"Zuilen",nav_events:"Events",nav_about:"Over",nav_book:"Boek een sessie",
@@ -717,7 +812,7 @@
         cta_collab:"Stel een samenwerking voor",
         label_b2b:"Voor Programmeurs & Venues",b2b_title:"Technische specs voor eventprogrammeurs.",
         b2b_setup_title:"Setup",b2b_setup_body:"1 practitioner · 1 DDS-machine · 1 massagetafel · stopcontact. 30 min opbouw, 15 min afbouw. Volledig mobiel. Geen speciale infrastructuur nodig.",
-        b2b_capacity_title:"Capaciteit",b2b_capacity_body:"Individueel: 4–6 sessies/dag (45 min elk). Groepscircuit: tot 8 deelnemers. Festival contactmodus: 20–30/dag (1–2 min demo). Schaalbaar met extra machines.",
+        b2b_capacity_title:"Capaciteit",b2b_capacity_body:"Individueel: 4–6 sessies/dag (45 min elk). Groepscircuit: tot 30 deelnemers. Festival contactmodus: 20–30/dag (1–2 min demo). Schaalbaar met extra machines.",
         b2b_logistics_title:"Logistiek",b2b_logistics_body:"Gevestigd in Antwerpen. Reisradius: België + EU. Dagtarief, meerdaags en residency-modellen beschikbaar. Alle prijzen direct — geen bureau. Verzekering gedekt.",
         b2b_cta:"Vraag een technische fiche aan",
         label_about:"05 — Over",about_role:"Oprichter · Practitioner · Toegepast Ritmoloog",
@@ -735,7 +830,27 @@
         book_location:"Locatie: Antwerpen · exact adres bij boekingsbevestiging",
         footer_tagline:"SomaPsychedelic Bio-Elektrisch Bodywork",footer_sub:"ZZAPP · REROOT · INTEGRATE",
         footer_copy:"© 2026 REV.INC — Aimé Schrauwen · Antwerpen · rev.incorporated@proton.me",
-        sticky_cta:"Boek een sessie"
+        sticky_cta:"Boek een sessie",
+        festival_formats_label:"ZZAPP Festivalformaten",
+        circuit_dur:"Groep · tot 30 pers",
+        deepfield_dur:"90 min · vooraf boeken",
+        festival_demo_text:"Op elk festival laten gratis ZZAPP CONTACT demo's je de stroom ervaren — geen verplichting, gewoon een eerste smaak van bio-elektriciteit.",
+        festival_footer:"Opbouw: 30 min · Mobiel BE + EU · Directe betaling ter plaatse",
+        solarpunk_rate_text:"☀ Solarpunk Rate: verlaagd tarief voor studenten, kunstenaars & community builders — vraag ter plaatse.",
+        testimonial_1_author:"— Kinesiste / Osteopaat · ZZAPP cliënt",
+        testimonial_2_placeholder:"Meer verhalen onderweg",
+        testimonial_2_teaser:"Burnout-herstelverhaal — video wordt voorbereid.",
+        label_faq:"Veelgestelde vragen",
+        faq_title:"Voordat je boekt.",
+        faq_q1:"Doet het pijn?",faq_a1:"Geen pijn — alleen de weerstand die je zelf creëert. De stroom gaat door de spieren en het zenuwstelsel. Als je niet weerstaat, is het een diep genot. Het lichaam ontvangt warmte, tinteling en een diepe verzadiging.",
+        faq_q2:"Is het veilig?",faq_a2:"Ja. DDS-microstroom werkt op voltages ver onder elke risicodrempel. Contra-indicaties: metalen implantaten in het behandelgebied, pacemakers en zwangerschap. Buiten deze is de technologie volledig veilig.",
+        faq_q3:"Hoeveel sessies heb ik nodig?",faq_a3:"Je voelt resultaat vanaf sessie één — een patroonbreuk en diagnostische lezing. Sessie twee richt zich op specifieke openingen. Sessie drie bouwt nieuwe patronen. Vanaf drie sessies begint duurzame verandering. Maar het lichaam reageert onmiddellijk.",
+        faq_q4:"Hoe verschilt dit van massage, fysio of reiki?",faq_a4:"ZZAPP werkt met microvolt dat IN het lichaam gaat — door de spieren, rechtstreeks naar het zenuwstelsel, laadt mitochondriën op. Het gaat voorbij het mechanische. Emoties en opgeslagen patronen die op het lichaam zijn vastgelegd worden aangesproken op bio-elektrisch niveau. Niet puur spiritueel of subtiel — dit is biofysica met biologische functionaliteit.",
+        faq_q5:"Kan ik dit combineren met therapie of medicatie?",faq_a5:"Ja. ZZAPP complementeert therapie, coaching en medicatie — het vervangt ze niet. Veel cliënten combineren bio-elektrische sessies met hun bestaande zorg. De verwerkingscapaciteit van het lichaam wordt versterkt, wat al het werk dat je al doet ondersteunt.",
+        faq_q6:"Wat moet ik doen na een sessie?",faq_a6:"Hydrateer met elektrolyten. Stretch. Vermijd onderdompeling in water de eerste 2 uur. Grond jezelf — loop op blote voeten, wees in de natuur. Bewegingspraktijken zoals yin yoga, qigong, tai chi of capoeira versterken de integratie. Focus op nieuwe dingen of dingen waar je meer van wilt — je hebt de energie, en het beloningssysteem van het lichaam maakt nieuwe gewoontes makkelijker.",
+        discovery_label:"Begin hier",discovery_title:"Gratis Kennismakingsgesprek",discovery_body:"15 minuten. Geen verplichting. We praten over wat er speelt in je lichaam, of ZZAPP bij je past, en wat je kunt verwachten.",discovery_btn:"Boek gratis gesprek",
+        pack3_label:"3× CURRENT Pakket",pack3_save:"Bespaar €30 · €110/sessie",
+        pack5_label:"5× CURRENT Pakket",pack5_save:"Bespaar €75 · €105/sessie"
       }
     };
 
