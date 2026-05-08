@@ -51,6 +51,8 @@
 
     @media (max-width: 700px) {
       .proof-grid + div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
+      #calendar div[style*="display:flex;justify-content:space-between"] { flex-direction: column !important; gap: 0.5rem !important; }
+      #calendar div[style*="text-align:right"] { text-align: left !important; }
     }
 
     /* NAV */
@@ -505,6 +507,45 @@
     </div>
   </section>
 
+  <!-- EVENT CALENDAR -->
+  <section style="max-width:900px;margin:0 auto;padding:4rem 2.5rem 3rem;" id="calendar">
+    <div class="fade-in">
+      <div style="font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;" data-key="calendar_label">Where to find REV.INC</div>
+      <div style="display:flex;flex-direction:column;gap:1rem;">
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.5rem;border:1px solid rgba(200,144,58,0.15);border-radius:4px;background:rgba(200,144,58,0.04);">
+          <div>
+            <div style="font-family:var(--font-display);font-size:0.72rem;font-weight:700;color:var(--gold-bright);letter-spacing:0.04em;">TRYP Berlin</div>
+            <div style="font-family:var(--font-body);font-size:0.85rem;color:var(--cream-dim);margin-top:0.2rem;" data-key="tryp_desc">ZZAPP Circuit + individual sessions · psychedelic wellness festival</div>
+          </div>
+          <div style="text-align:right;">
+            <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--gold);letter-spacing:0.08em;">15–17 MAY 2026</div>
+            <div style="font-family:var(--font-mono);font-size:0.52rem;color:var(--cream-dim);margin-top:0.2rem;">Berlin, DE</div>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.5rem;border:1px solid rgba(200,144,58,0.08);border-radius:4px;background:rgba(0,0,0,0.2);">
+          <div>
+            <div style="font-family:var(--font-display);font-size:0.72rem;font-weight:700;color:var(--cream);letter-spacing:0.04em;" data-key="cal_summer_title">Summer Festival Season</div>
+            <div style="font-family:var(--font-body);font-size:0.85rem;color:var(--cream-dim);margin-top:0.2rem;" data-key="cal_summer_desc">Multiple festivals — dates announced soon. Want REV.INC at your event?</div>
+          </div>
+          <div style="text-align:right;">
+            <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--gold-dim);letter-spacing:0.08em;">JUN–SEP 2026</div>
+            <div style="font-family:var(--font-mono);font-size:0.52rem;color:var(--cream-dim);margin-top:0.2rem;">BE + EU</div>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.5rem;border:1px solid rgba(200,144,58,0.08);border-radius:4px;background:rgba(0,0,0,0.2);">
+          <div>
+            <div style="font-family:var(--font-display);font-size:0.72rem;font-weight:700;color:var(--cream);letter-spacing:0.04em;" data-key="cal_studio_title">Studio Sessions — Antwerp</div>
+            <div style="font-family:var(--font-body);font-size:0.85rem;color:var(--cream-dim);margin-top:0.2rem;" data-key="cal_studio_desc">Individual ZZAPP sessions by appointment. Book via WhatsApp or discovery call.</div>
+          </div>
+          <div style="text-align:right;">
+            <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--green-lush);letter-spacing:0.08em;" data-key="cal_ongoing">ONGOING</div>
+            <div style="font-family:var(--font-mono);font-size:0.52rem;color:var(--cream-dim);margin-top:0.2rem;">Antwerp, BE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- B2B ONE-PAGER -->
   <section style="max-width:100%;padding:5rem 2.5rem;background:linear-gradient(180deg,var(--obsidian) 0%,rgba(27,58,45,0.12) 50%,var(--obsidian) 100%);border-top:1px solid rgba(200,144,58,0.06);border-bottom:1px solid rgba(200,144,58,0.06);" id="b2b">
     <div style="max-width:1200px;margin:0 auto;" class="fade-in">
@@ -608,6 +649,17 @@
     </div>
   </section>
 
+  <!-- LEAD MAGNET -->
+  <section style="max-width:100%;padding:4rem 2.5rem;background:linear-gradient(180deg,var(--obsidian) 0%,rgba(27,58,45,0.08) 50%,var(--obsidian) 100%);border-top:1px solid rgba(58,122,58,0.08);border-bottom:1px solid rgba(58,122,58,0.08);">
+    <div style="max-width:600px;margin:0 auto;text-align:center;" class="fade-in">
+      <div style="font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--green-lush);margin-bottom:1rem;" data-key="magnet_label">Free resource</div>
+      <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--cream);margin-bottom:0.8rem;" data-key="magnet_title">The Bio-Electric Primer</h3>
+      <p style="font-family:var(--font-body);font-size:0.92rem;color:var(--cream-dim);line-height:1.7;margin-bottom:1.5rem;" data-key="magnet_body">What is bio-electricity? How does DDS work? What happens in a session? A short guide for the curious — before you book, before you commit. Just understanding.</p>
+      <a href="mailto:rev.incorporated@proton.me?subject=Send%20me%20the%20Bio-Electric%20Primer&body=Hi%20Aim%C3%A9%2C%20I%27d%20like%20to%20receive%20the%20Bio-Electric%20Primer." class="btn-primary" style="display:inline-block;" data-key="magnet_cta">Get the Primer →</a>
+      <p style="font-family:var(--font-mono);font-size:0.48rem;color:rgba(232,213,163,0.2);margin-top:0.8rem;letter-spacing:0.08em;" data-key="magnet_note">Sent to your inbox within 24h. No spam. No list.</p>
+    </div>
+  </section>
+
   <div class="divider"></div>
 
   <!-- BOOK -->
@@ -670,9 +722,10 @@
       <div class="footer-sub" data-key="footer_sub">ZZAPP · REROOT · INTEGRATE</div>
     </div>
     <ul class="social-links">
-      <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
-      <li><a href="https://tiktok.com" target="_blank">TikTok</a></li>
-      <li><a href="https://substack.com" target="_blank">Substack</a></li>
+      <li><a href="https://instagram.com/rev.incorporated" target="_blank">Instagram</a></li>
+      <li><a href="https://tiktok.com/@rev.incorporated" target="_blank">TikTok</a></li>
+      <li><a href="https://revinc.substack.com" target="_blank">Substack</a></li>
+      <li><a href="https://wa.me/32472406393" target="_blank">WhatsApp</a></li>
     </ul>
     <div style="width:100%;display:flex;justify-content:center;gap:3rem;padding:1.5rem 0;border-top:1px solid rgba(255,255,255,0.03);margin-top:0.5rem;">
       <div style="text-align:center;">
@@ -774,7 +827,14 @@
         faq_q6:"What should I do after a session?",faq_a6:"Hydrate with electrolytes. Stretch. Avoid submerging in water for the first 2 hours. Ground yourself — walk barefoot, be in nature. Movement practices like yin yoga, qigong, tai chi, or capoeira amplify the integration. Focus on new things or things you want more of — you'll have the energy, and the body's reward system makes new habits easier to build.",
         discovery_label:"Start here",discovery_title:"Free Discovery Call",discovery_body:"15 minutes. No commitment. We talk about what's going on in your body, whether ZZAPP is right for you, and what to expect.",discovery_btn:"Book free call",
         pack3_label:"3× CURRENT Pack",pack3_save:"Save €30 · €110/session",
-        pack5_label:"5× CURRENT Pack",pack5_save:"Save €75 · €105/session"
+        pack5_label:"5× CURRENT Pack",pack5_save:"Save €75 · €105/session",
+        calendar_label:"Where to find REV.INC",
+        tryp_desc:"ZZAPP Circuit + individual sessions · psychedelic wellness festival",
+        cal_summer_title:"Summer Festival Season",cal_summer_desc:"Multiple festivals — dates announced soon. Want REV.INC at your event?",
+        cal_studio_title:"Studio Sessions — Antwerp",cal_studio_desc:"Individual ZZAPP sessions by appointment. Book via WhatsApp or discovery call.",cal_ongoing:"ONGOING",
+        magnet_label:"Free resource",magnet_title:"The Bio-Electric Primer",
+        magnet_body:"What is bio-electricity? How does DDS work? What happens in a session? A short guide for the curious — before you book, before you commit. Just understanding.",
+        magnet_cta:"Get the Primer →",magnet_note:"Sent to your inbox within 24h. No spam. No list."
       },
       NL: {
         nav_zzapp:"ZZAPP",nav_science:"Wetenschap",nav_services:"Zuilen",nav_events:"Events",nav_about:"Over",nav_book:"Boek een sessie",
@@ -850,7 +910,14 @@
         faq_q6:"Wat moet ik doen na een sessie?",faq_a6:"Hydrateer met elektrolyten. Stretch. Vermijd onderdompeling in water de eerste 2 uur. Grond jezelf — loop op blote voeten, wees in de natuur. Bewegingspraktijken zoals yin yoga, qigong, tai chi of capoeira versterken de integratie. Focus op nieuwe dingen of dingen waar je meer van wilt — je hebt de energie, en het beloningssysteem van het lichaam maakt nieuwe gewoontes makkelijker.",
         discovery_label:"Begin hier",discovery_title:"Gratis Kennismakingsgesprek",discovery_body:"15 minuten. Geen verplichting. We praten over wat er speelt in je lichaam, of ZZAPP bij je past, en wat je kunt verwachten.",discovery_btn:"Boek gratis gesprek",
         pack3_label:"3× CURRENT Pakket",pack3_save:"Bespaar €30 · €110/sessie",
-        pack5_label:"5× CURRENT Pakket",pack5_save:"Bespaar €75 · €105/sessie"
+        pack5_label:"5× CURRENT Pakket",pack5_save:"Bespaar €75 · €105/sessie",
+        calendar_label:"Waar vind je REV.INC",
+        tryp_desc:"ZZAPP Circuit + individuele sessies · psychedelic wellness festival",
+        cal_summer_title:"Zomerfestival Seizoen",cal_summer_desc:"Meerdere festivals — data volgen binnenkort. Wil je REV.INC op jouw event?",
+        cal_studio_title:"Studio Sessies — Antwerpen",cal_studio_desc:"Individuele ZZAPP-sessies op afspraak. Boek via WhatsApp of een kennismakingsgesprek.",cal_ongoing:"DOORLOPEND",
+        magnet_label:"Gratis bron",magnet_title:"De Bio-Elektrische Primer",
+        magnet_body:"Wat is bio-elektriciteit? Hoe werkt DDS? Wat gebeurt er in een sessie? Een korte gids voor nieuwsgierigen — voordat je boekt, voordat je besluit. Gewoon begrip.",
+        magnet_cta:"Download de Primer →",magnet_note:"Binnen 24u in je inbox. Geen spam. Geen lijst."
       }
     };
 
