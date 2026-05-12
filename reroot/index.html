@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REROOT — Bio-Electric Trajectory Work · REV.INC</title>
+  <meta name="description" content="REROOT by REV.INC — committed bio-electric trajectory work. Solve et Coagula methodology. 5 activation channels. Restore the current your body forgot." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://therevolutionincorporated.com/reroot/" />
+  <meta property="og:title" content="REROOT — Bio-Electric Trajectory Work · REV.INC" />
+  <meta property="og:description" content="Your body has been trying to tell you something. REROOT is the path that listens. Committed bio-electric trajectory work by REV.INC." />
+  <meta property="og:image" content="https://therevolutionincorporated.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="1200" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black:      #090909;
+      --obsidian:   #0A0A0A;
+      --surface:    #111111;
+      --gold:       #C8903A;
+      --gold-bright:#E8B82E;
+      --gold-dim:   #8B6E1A;
+      --amber:      #D4942A;
+      --copper:     #B07040;
+      --orange:     #C87828;
+      --green:      #1B3A2D;
+      --green-deep: #0D2418;
+      --green-mid:  #2A5A2A;
+      --green-lush: #3A7A3A;
+      --electric:   #4A9FD4;
+      --electric-dim: rgba(74,159,212,0.5);
+      --purple:     #4A1C6E;
+      --purple-lt:  #7B3FA0;
+      --purple-glow: rgba(123,63,160,0.15);
+      --cream:      #E8D5A3;
+      --cream-dim:  rgba(232,213,163,0.7);
+      --white:      #F2DEB0;
+      --font-display: 'Unbounded', sans-serif;
+      --font-body:    'Cormorant Garamond', serif;
+      --font-mono:    'DM Mono', monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--obsidian); color: var(--cream); font-family: var(--font-body); font-size: 18px; line-height: 1.7; overflow-x: hidden; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 2.5rem; background: rgba(9,9,9,0.92); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(123,63,160,0.15); transition: background 0.3s; }
+    .nav-logo { font-family: var(--font-display); font-size: 1rem; font-weight: 900; color: var(--gold); letter-spacing: 0.04em; text-decoration: none; }
+    .nav-logo span { color: var(--copper); }
+    .nav-right { display: flex; align-items: center; gap: 2rem; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--font-mono); font-size: 0.72rem; font-weight: 300; color: var(--cream); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6; transition: opacity 0.2s, color 0.2s; }
+    .nav-links a:hover { opacity: 1; color: var(--purple-lt); }
+    .nav-links a.active { opacity: 1; color: var(--purple-lt); }
+    .nav-cta { font-family: var(--font-display); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; color: var(--white); background: rgba(74,28,110,0.6); border: 1px solid var(--purple-lt); padding: 0.55rem 1.2rem; border-radius: 2px; transition: background 0.2s; }
+    .nav-cta:hover { background: rgba(123,63,160,0.5); }
+    .lang-toggle { font-family: var(--font-mono); font-size: 0.7rem; font-weight: 300; background: none; border: 1px solid rgba(123,63,160,0.3); color: var(--purple-lt); padding: 0.3rem 0.75rem; border-radius: 2px; cursor: pointer; letter-spacing: 0.1em; transition: background 0.2s; }
+    .lang-toggle:hover { background: rgba(123,63,160,0.1); }
+
+    /* HERO */
+    .hero { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 6rem 2.5rem; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; background:
+      radial-gradient(ellipse at 30% 70%, rgba(74,28,110,0.7) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 40%, rgba(27,58,45,0.5) 0%, transparent 45%),
+      radial-gradient(ellipse at 50% 50%, rgba(200,144,58,0.06) 0%, transparent 60%),
+      linear-gradient(180deg, rgba(9,9,9,0.7) 0%, rgba(74,28,110,0.15) 100%);
+      z-index: 0; }
+    .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, var(--obsidian) 100%); }
+    .hero-content { position: relative; z-index: 2; max-width: 780px; }
+    .hero-badge { display: inline-block; font-family: var(--font-mono); font-size: 0.58rem; font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase; color: var(--purple-lt); border: 1px solid rgba(123,63,160,0.4); padding: 0.5rem 1.2rem; border-radius: 2px; margin-bottom: 2rem; background: rgba(74,28,110,0.3); backdrop-filter: blur(6px); }
+    .hero-title { font-family: var(--font-display); font-size: clamp(2.2rem, 5.5vw, 4.2rem); font-weight: 900; line-height: 1.1; letter-spacing: -0.02em; color: var(--white); margin-bottom: 1.5rem; }
+    .hero-title .purple { color: var(--purple-lt); }
+    .hero-title .gold { color: var(--gold); }
+    .hero-sub { font-family: var(--font-body); font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 300; color: var(--cream-dim); max-width: 580px; margin-bottom: 1.2rem; line-height: 1.75; }
+    .hero-recognition { font-family: var(--font-body); font-style: italic; font-size: 1.15rem; font-weight: 300; color: var(--cream); max-width: 520px; margin-bottom: 2.5rem; line-height: 1.8; border-left: 2px solid rgba(123,63,160,0.5); padding-left: 1.2rem; }
+    .hero-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .btn-primary { font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: var(--white); background: rgba(74,28,110,0.6); border: 1px solid var(--purple-lt); padding: 0.9rem 1.8rem; border-radius: 2px; transition: background 0.2s, transform 0.2s; }
+    .btn-primary:hover { background: rgba(123,63,160,0.5); transform: translateY(-2px); }
+    .btn-secondary { font-family: var(--font-display); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; color: var(--cream); background: transparent; border: 1px solid rgba(232,213,163,0.2); padding: 0.9rem 1.4rem; border-radius: 2px; transition: border-color 0.2s, color 0.2s, transform 0.2s; }
+    .btn-secondary:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+    .scroll-hint { position: absolute; bottom: 2.5rem; right: 2.5rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; z-index: 2; animation: scrollBounce 2.5s ease-in-out infinite; }
+    @keyframes scrollBounce { 0%, 100% { transform: translateY(0); opacity: 0.4; } 50% { transform: translateY(8px); opacity: 1; } }
+    .scroll-hint span { font-family: var(--font-mono); font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(232,213,163,0.35); }
+    .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, rgba(123,63,160,0.4), transparent); }
+
+    /* SECTIONS */
+    section { padding: 7rem 2.5rem; max-width: 1200px; margin: 0 auto; }
+    .section-label { font-family: var(--font-mono); font-size: 0.62rem; font-weight: 300; letter-spacing: 0.2em; text-transform: uppercase; color: var(--purple-lt); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.75rem; }
+    .section-label::before { content: ''; display: inline-block; width: 24px; height: 1px; background: var(--purple-lt); opacity: 0.5; }
+    .section-title { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 700; line-height: 1.12; color: var(--white); margin-bottom: 1.2rem; }
+    .section-body { font-family: var(--font-body); font-size: 1.05rem; font-weight: 300; color: var(--cream-dim); max-width: 620px; line-height: 1.8; }
+    .divider { width: 100%; height: 1px; background: linear-gradient(90deg, transparent, rgba(74,28,110,0.3), rgba(200,144,58,0.15), transparent); margin: 0 auto; max-width: 1200px; }
+
+    /* PHILOSOPHY — the core method */
+    .philosophy-section { background: linear-gradient(180deg, var(--obsidian) 0%, rgba(74,28,110,0.08) 50%, var(--obsidian) 100%); max-width: 100%; padding: 7rem 2.5rem; }
+    .philosophy-inner { max-width: 1200px; margin: 0 auto; }
+    .philosophy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; margin-top: 3rem; }
+    .philosophy-quote { font-family: var(--font-body); font-style: italic; font-size: 1.3rem; font-weight: 300; color: var(--gold); line-height: 1.65; border-left: 2px solid var(--purple-lt); padding-left: 1.5rem; margin-top: 2rem; }
+
+    /* THREE-BEAT ARC */
+    .arc-section { padding: 7rem 2.5rem; max-width: 100%; background: var(--green-deep); border-top: 1px solid rgba(123,63,160,0.1); border-bottom: 1px solid rgba(123,63,160,0.1); }
+    .arc-inner { max-width: 1200px; margin: 0 auto; }
+    .arc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 3rem; }
+    .arc-card { background: rgba(0,0,0,0.4); padding: 3rem 2.5rem; position: relative; overflow: hidden; border: 1px solid rgba(123,63,160,0.08); }
+    .arc-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+    .arc-card:nth-child(1)::before { background: linear-gradient(90deg, var(--green-lush), rgba(58,122,58,0.3)); }
+    .arc-card:nth-child(2)::before { background: linear-gradient(90deg, var(--purple-lt), rgba(123,63,160,0.3)); }
+    .arc-card:nth-child(3)::before { background: linear-gradient(90deg, var(--gold), rgba(200,144,58,0.3)); }
+    .arc-phase { font-family: var(--font-display); font-size: 0.85rem; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.3rem; }
+    .arc-card:nth-child(1) .arc-phase { color: var(--green-lush); }
+    .arc-card:nth-child(2) .arc-phase { color: var(--purple-lt); }
+    .arc-card:nth-child(3) .arc-phase { color: var(--gold); }
+    .arc-alch { font-family: var(--font-mono); font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(232,213,163,0.35); margin-bottom: 1.5rem; }
+    .arc-title { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem; line-height: 1.25; }
+    .arc-body { font-family: var(--font-body); font-size: 0.95rem; font-weight: 300; color: var(--cream-dim); line-height: 1.75; }
+    .arc-markers { list-style: none; margin-top: 1.5rem; }
+    .arc-markers li { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.08em; color: rgba(232,213,163,0.5); margin-bottom: 0.5rem; padding-left: 1rem; position: relative; }
+    .arc-markers li::before { content: '→'; position: absolute; left: 0; color: var(--purple-lt); }
+
+    /* FIVE CHANNELS */
+    .channels-section { padding: 7rem 2.5rem; }
+    .channels-inner { max-width: 1200px; margin: 0 auto; }
+    .channels-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .channel-card { padding: 2rem 1.5rem; border: 1px solid rgba(123,63,160,0.12); border-radius: 2px; background: rgba(74,28,110,0.04); transition: border-color 0.3s, background 0.3s; }
+    .channel-card:hover { border-color: rgba(123,63,160,0.3); background: rgba(74,28,110,0.08); }
+    .channel-icon { font-size: 1.6rem; margin-bottom: 1rem; }
+    .channel-name { font-family: var(--font-display); font-size: 0.78rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; letter-spacing: 0.02em; }
+    .channel-body { font-family: var(--font-body); font-size: 0.88rem; font-weight: 300; color: var(--cream-dim); line-height: 1.7; }
+    .channel-source { font-family: var(--font-mono); font-size: 0.5rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(200,144,58,0.35); margin-top: 0.75rem; }
+
+    /* TRAJECTORIES */
+    .trajectories-section { background: linear-gradient(180deg, var(--obsidian) 0%, rgba(74,28,110,0.06) 50%, var(--obsidian) 100%); max-width: 100%; padding: 7rem 2.5rem; }
+    .trajectories-inner { max-width: 1200px; margin: 0 auto; }
+    .trajectories-intro { font-family: var(--font-body); font-style: italic; font-size: 1.1rem; font-weight: 300; color: var(--cream); max-width: 620px; line-height: 1.8; margin-bottom: 3rem; }
+    .trajectories-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .trajectory-card { background: var(--surface); border: 1px solid rgba(123,63,160,0.08); border-radius: 2px; padding: 3rem 2.5rem; position: relative; overflow: hidden; transition: border-color 0.3s, transform 0.3s; }
+    .trajectory-card:hover { border-color: rgba(123,63,160,0.25); transform: translateY(-4px); }
+    .trajectory-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; opacity: 0; transition: opacity 0.3s; }
+    .trajectory-card:hover::before { opacity: 1; }
+    .trajectory-card:nth-child(1)::before { background: linear-gradient(90deg, transparent, var(--green-lush), transparent); }
+    .trajectory-card:nth-child(2)::before { background: linear-gradient(90deg, transparent, var(--purple-lt), transparent); }
+    .trajectory-card:nth-child(3)::before { background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+    .trajectory-tag { font-family: var(--font-mono); font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 20px; margin-bottom: 1.5rem; display: inline-block; }
+    .trajectory-card:nth-child(1) .trajectory-tag { color: var(--green-lush); border: 1px solid rgba(58,122,58,0.3); }
+    .trajectory-card:nth-child(2) .trajectory-tag { color: var(--purple-lt); border: 1px solid rgba(123,63,160,0.3); }
+    .trajectory-card:nth-child(3) .trajectory-tag { color: var(--gold); border: 1px solid rgba(200,144,58,0.3); }
+    .trajectory-name { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--white); margin-bottom: 0.4rem; line-height: 1.2; }
+    .trajectory-sub { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.1em; color: rgba(232,213,163,0.4); margin-bottom: 1.5rem; }
+    .trajectory-body { font-family: var(--font-body); font-size: 0.95rem; font-weight: 300; color: var(--cream-dim); line-height: 1.75; margin-bottom: 1.5rem; }
+    .trajectory-includes { list-style: none; margin-bottom: 2rem; }
+    .trajectory-includes li { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.06em; color: var(--cream-dim); margin-bottom: 0.5rem; padding-left: 1.2rem; position: relative; line-height: 1.6; }
+    .trajectory-includes li::before { content: '—'; position: absolute; left: 0; color: var(--purple-lt); }
+    .trajectory-price { font-family: var(--font-display); font-size: 1.4rem; font-weight: 900; margin-bottom: 0.3rem; }
+    .trajectory-card:nth-child(1) .trajectory-price { color: var(--green-lush); }
+    .trajectory-card:nth-child(2) .trajectory-price { color: var(--purple-lt); }
+    .trajectory-card:nth-child(3) .trajectory-price { color: var(--gold); }
+    .trajectory-price-note { font-family: var(--font-mono); font-size: 0.52rem; letter-spacing: 0.08em; color: rgba(232,213,163,0.35); }
+    .trajectory-recommended { position: absolute; top: 1rem; right: 1rem; font-family: var(--font-mono); font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--purple-lt); background: rgba(74,28,110,0.3); padding: 0.25rem 0.6rem; border-radius: 12px; border: 1px solid rgba(123,63,160,0.3); }
+
+    /* SESSION FLOW */
+    .session-section { padding: 7rem 2.5rem; max-width: 100%; background: var(--green-deep); border-top: 1px solid rgba(123,63,160,0.1); border-bottom: 1px solid rgba(123,63,160,0.1); }
+    .session-inner { max-width: 1200px; margin: 0 auto; }
+    .session-timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 3rem; position: relative; }
+    .session-timeline::before { content: ''; position: absolute; top: 2.5rem; left: 5%; right: 5%; height: 1px; background: linear-gradient(90deg, var(--green-lush), var(--purple-lt), var(--gold), transparent); opacity: 0.3; }
+    .session-step { text-align: center; padding: 0 1rem; position: relative; }
+    .session-step-num { font-family: var(--font-display); font-size: 1.6rem; font-weight: 900; color: var(--purple-lt); margin-bottom: 0.5rem; position: relative; z-index: 2; display: inline-flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; border-radius: 50%; background: var(--obsidian); border: 1px solid rgba(123,63,160,0.3); }
+    .session-step-title { font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; letter-spacing: 0.04em; }
+    .session-step-dur { font-family: var(--font-mono); font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 0.75rem; }
+    .session-step-body { font-family: var(--font-body); font-size: 0.85rem; font-weight: 300; color: var(--cream-dim); line-height: 1.7; }
+
+    /* MARKERS */
+    .markers-section { padding: 7rem 2.5rem; }
+    .markers-inner { max-width: 1200px; margin: 0 auto; }
+    .markers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+    .marker-card { padding: 2.5rem 2rem; border: 1px solid rgba(123,63,160,0.1); border-radius: 2px; background: rgba(74,28,110,0.04); }
+    .marker-level { font-family: var(--font-mono); font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .marker-card:nth-child(1) .marker-level { color: var(--green-lush); }
+    .marker-card:nth-child(2) .marker-level { color: var(--purple-lt); }
+    .marker-card:nth-child(3) .marker-level { color: var(--gold); }
+    .marker-title { font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem; }
+    .marker-list { list-style: none; }
+    .marker-list li { font-family: var(--font-body); font-size: 0.9rem; font-weight: 300; color: var(--cream-dim); line-height: 1.7; margin-bottom: 0.4rem; padding-left: 1.2rem; position: relative; }
+    .marker-list li::before { content: '↳'; position: absolute; left: 0; color: var(--purple-lt); font-size: 0.8rem; }
+
+    /* FOR WHOM — recognition section */
+    .recognition-section { background: linear-gradient(180deg, var(--obsidian) 0%, rgba(74,28,110,0.08) 50%, var(--obsidian) 100%); max-width: 100%; padding: 7rem 2.5rem; }
+    .recognition-inner { max-width: 1200px; margin: 0 auto; text-align: center; }
+    .recognition-items { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 3rem; max-width: 800px; margin-left: auto; margin-right: auto; text-align: left; }
+    .recognition-item { padding: 1.5rem 2rem; border-left: 2px solid rgba(123,63,160,0.3); background: rgba(74,28,110,0.04); }
+    .recognition-item p { font-family: var(--font-body); font-style: italic; font-size: 1rem; font-weight: 300; color: var(--cream); line-height: 1.7; }
+    .recognition-outro { font-family: var(--font-body); font-size: 1.15rem; font-weight: 300; color: var(--gold); max-width: 600px; margin: 3rem auto 0; line-height: 1.8; }
+
+    /* INTAKE */
+    .intake-section { padding: 7rem 2.5rem; }
+    .intake-inner { max-width: 1200px; margin: 0 auto; }
+    .intake-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; margin-top: 3rem; }
+    .intake-steps { list-style: none; }
+    .intake-step { display: flex; gap: 1.5rem; margin-bottom: 2rem; align-items: flex-start; }
+    .intake-num { font-family: var(--font-display); font-size: 1.2rem; font-weight: 900; color: var(--purple-lt); flex-shrink: 0; width: 2.5rem; height: 2.5rem; border-radius: 50%; border: 1px solid rgba(123,63,160,0.3); display: flex; align-items: center; justify-content: center; }
+    .intake-step-content h4 { font-family: var(--font-display); font-size: 0.82rem; font-weight: 700; color: var(--white); margin-bottom: 0.3rem; }
+    .intake-step-content p { font-family: var(--font-body); font-size: 0.92rem; font-weight: 300; color: var(--cream-dim); line-height: 1.7; }
+    .intake-right { }
+    .intake-note { font-family: var(--font-body); font-style: italic; font-size: 1.2rem; font-weight: 300; color: var(--cream); line-height: 1.8; margin-bottom: 2rem; }
+    .intake-detail { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.08em; color: rgba(232,213,163,0.4); line-height: 1.8; }
+
+    /* CTA / BOOK */
+    .book-section { text-align: center; padding: 7rem 2.5rem; max-width: 100%; background: linear-gradient(180deg, var(--obsidian) 0%, rgba(74,28,110,0.1) 50%, var(--obsidian) 100%); }
+    .book-inner { max-width: 700px; margin: 0 auto; }
+    .book-title { font-family: var(--font-display); font-size: clamp(1.6rem, 3.5vw, 2.5rem); font-weight: 700; color: var(--white); margin-bottom: 1rem; }
+    .book-body { font-family: var(--font-body); font-size: 1.1rem; font-weight: 300; color: var(--cream-dim); line-height: 1.8; margin-bottom: 0.75rem; }
+    .book-note { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.1em; color: rgba(232,213,163,0.35); margin-bottom: 2.5rem; }
+    .btn-book { display: inline-block; font-family: var(--font-display); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: var(--white); background: rgba(74,28,110,0.6); border: 1px solid var(--purple-lt); padding: 1.1rem 2.5rem; border-radius: 2px; transition: background 0.2s, transform 0.2s; }
+    .btn-book:hover { background: rgba(123,63,160,0.5); transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer { padding: 3rem 2.5rem; border-top: 1px solid rgba(123,63,160,0.1); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+    .footer-logo { font-family: var(--font-display); font-size: 0.85rem; font-weight: 900; color: var(--gold); }
+    .footer-tagline { font-family: var(--font-body); font-style: italic; font-size: 0.85rem; color: rgba(232,213,163,0.35); margin-top: 0.3rem; }
+    .footer-sub { font-family: var(--font-mono); font-size: 0.55rem; letter-spacing: 0.1em; color: rgba(200,144,58,0.35); margin-top: 0.3rem; }
+    .social-links { display: flex; gap: 1.5rem; list-style: none; }
+    .social-links a { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(232,213,163,0.4); text-decoration: none; transition: color 0.2s; }
+    .social-links a:hover { color: var(--purple-lt); }
+    .footer-copy { font-family: var(--font-mono); font-size: 0.55rem; color: rgba(232,213,163,0.18); letter-spacing: 0.08em; width: 100%; text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.03); }
+
+    /* WHATSAPP */
+    .wa-btn { position: fixed; bottom: 2rem; right: 2rem; z-index: 200; width: 52px; height: 52px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.3); transition: transform 0.2s, box-shadow 0.2s; }
+    .wa-btn:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(37,211,102,0.4); }
+    .wa-btn svg { width: 28px; height: 28px; fill: white; }
+
+    /* FADE IN */
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .hero { padding: 5rem 1.5rem; }
+      section { padding: 5rem 1.5rem; }
+      .philosophy-grid, .intake-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .arc-grid, .channels-grid, .trajectories-grid, .markers-grid, .session-timeline { grid-template-columns: 1fr; }
+      .recognition-items { grid-template-columns: 1fr; }
+      .session-timeline::before { display: none; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+    }
+    @media (min-width: 901px) and (max-width: 1100px) {
+      .channels-grid { grid-template-columns: repeat(3, 1fr); }
+      .channels-grid .channel-card:nth-child(4),
+      .channels-grid .channel-card:nth-child(5) { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="../" class="nav-logo">REV<span>.</span>INC</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="../#zzapp">ZZAPP</a></li>
+        <li><a href="#method" class="active" data-key="nav_reroot">Reroot</a></li>
+        <li><a href="#trajectories" data-key="nav_trajectories">Trajectories</a></li>
+        <li><a href="#intake" data-key="nav_intake">Intake</a></li>
+      </ul>
+      <a href="#book" class="nav-cta" data-key="nav_book">Begin a conversation</a>
+      <button class="lang-toggle" id="langToggle">EN / NL</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-bg"></div>
+    <div class="hero-content fade-in">
+      <div class="hero-badge" data-key="hero_badge">Trajectory Work · Solve et Coagula · Bio-Electric Restructuring</div>
+      <h1 class="hero-title">
+        <span data-key="hero_title_1">Your body has been</span><br/>
+        <span class="purple" data-key="hero_title_2">trying to tell you</span><br/>
+        <span class="gold" data-key="hero_title_3">something.</span>
+      </h1>
+      <p class="hero-sub" data-key="hero_sub">REROOT is committed bio-electric trajectory work. Not a quick fix. Not a wellness trend. A structured path that restores the current your nervous system forgot it carried.</p>
+      <div class="hero-recognition" data-key="hero_recognition">If you've sensed that something deeper needs to move — something that single sessions can't reach — you're recognizing what this work is for.</div>
+      <div class="hero-ctas">
+        <a href="#method" class="btn-primary" data-key="cta_method">How it works</a>
+        <a href="#trajectories" class="btn-secondary" data-key="cta_trajectories">See trajectories</a>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span data-key="scroll">Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PHILOSOPHY: SOLVE ET COAGULA -->
+  <section class="philosophy-section" id="method">
+    <div class="philosophy-inner fade-in">
+      <div class="section-label" data-key="philo_label">The Method</div>
+      <h2 class="section-title" data-key="philo_title">Solve et Coagula</h2>
+      <div class="philosophy-grid">
+        <div>
+          <p class="section-body" data-key="philo_body_1">Every REROOT trajectory follows an alchemical architecture that the body already understands: first dissolve what's stuck, then restructure at a deeper level.</p>
+          <p class="section-body" style="margin-top:1.2rem" data-key="philo_body_2"><strong style="color:var(--purple-lt);font-weight:400">Solve</strong> — activation destabilizes existing patterns. Muscle armor, held emotion, breath restriction. The charge moves through what was frozen.</p>
+          <p class="section-body" style="margin-top:1.2rem" data-key="philo_body_3"><strong style="color:var(--gold);font-weight:400">Coagula</strong> — integration restructures at a new level. Grounding, silence, conscious breath. What dissolved finds a new form.</p>
+          <p class="section-body" style="margin-top:1.2rem" data-key="philo_body_4">Without Solve there is no change. Without Coagula there is no integration. A session that only activates is dangerous. A session that only grounds is empty.</p>
+        </div>
+        <div>
+          <p class="philosophy-quote" data-key="philo_quote">This is not decorative metaphor. It is the biomechanical rhythm of bio-electric activation. The body knows this sequence — it's been doing it since before we named it.</p>
+          <div style="margin-top:3rem;padding:2rem;border:1px solid rgba(123,63,160,0.15);border-radius:2px;background:rgba(74,28,110,0.06)">
+            <div style="font-family:var(--font-mono);font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--purple-lt);margin-bottom:1rem" data-key="philo_tradition">Ancient correspondence</div>
+            <p style="font-family:var(--font-body);font-size:0.92rem;font-weight:300;color:var(--cream-dim);line-height:1.75" data-key="philo_tradition_body">The Kemetic tradition called this current <strong style="color:var(--gold);font-weight:400">Sekhem</strong> — power. The Yoruba call it <strong style="color:var(--gold);font-weight:400">Àṣẹ</strong>. The Bambara call it <strong style="color:var(--gold);font-weight:400">Nyama</strong>. Three names for the same measurable phenomenon. REROOT restores the precision the Western esoteric tradition lost in translation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- THREE-BEAT ARC: ZZAPP · REROOT · INTEGRATE -->
+  <section class="arc-section" id="arc">
+    <div class="arc-inner fade-in">
+      <div class="section-label" data-key="arc_label">The Arc</div>
+      <h2 class="section-title" data-key="arc_title">Zzapp · Reroot · Integrate</h2>
+      <p class="section-body" data-key="arc_body">Every trajectory moves through three phases. Each phase mirrors the alchemical process — and each prepares the nervous system for the next.</p>
+      <div class="arc-grid">
+        <!-- ZZAPP -->
+        <div class="arc-card">
+          <div class="arc-phase">Zzapp</div>
+          <div class="arc-alch" data-key="arc_zzapp_alch">= Solve · Dissolve</div>
+          <h3 class="arc-title" data-key="arc_zzapp_title">Wake the current</h3>
+          <p class="arc-body" data-key="arc_zzapp_body">Bio-electric activation through breath, grounding, and DDS micro-current. Destabilize stagnant patterns. Move what was frozen. The body shakes off what it no longer needs.</p>
+          <ul class="arc-markers">
+            <li data-key="arc_zzapp_m1">Vibration in legs and core</li>
+            <li data-key="arc_zzapp_m2">Emotional release begins</li>
+            <li data-key="arc_zzapp_m3">Heat wave through fascia</li>
+          </ul>
+        </div>
+        <!-- REROOT -->
+        <div class="arc-card">
+          <div class="arc-phase">Reroot</div>
+          <div class="arc-alch" data-key="arc_reroot_alch">= Coagula · Restructure</div>
+          <h3 class="arc-title" data-key="arc_reroot_title">Find the new ground</h3>
+          <p class="arc-body" data-key="arc_reroot_body">What dissolved now needs a new form. Paired breathwork through yin/yang phases. A field of trust becomes structural. You feel what your body reorganizes around — below the story, below the habits.</p>
+          <ul class="arc-markers">
+            <li data-key="arc_reroot_m1">Deep grounding through soles</li>
+            <li data-key="arc_reroot_m2">New breath pattern settles</li>
+            <li data-key="arc_reroot_m3">Proprioception sharpens</li>
+          </ul>
+        </div>
+        <!-- INTEGRATE -->
+        <div class="arc-card">
+          <div class="arc-phase">Integrate</div>
+          <div class="arc-alch" data-key="arc_int_alch">= Fixatio · Embody</div>
+          <h3 class="arc-title" data-key="arc_int_title">Land it in your life</h3>
+          <p class="arc-body" data-key="arc_int_body">The new form gets skin. Harmonizing climax through breath, sound, and current — then silence — then ground through the soles. What shifted in session becomes the body you take home.</p>
+          <ul class="arc-markers">
+            <li data-key="arc_int_m1">Changed sleep patterns</li>
+            <li data-key="arc_int_m2">Spontaneous behavior shifts</li>
+            <li data-key="arc_int_m3">Vivid, clarifying dreams</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- FIVE CHANNELS -->
+  <section class="channels-section" id="channels">
+    <div class="channels-inner fade-in">
+      <div class="section-label" data-key="ch_label">Five Activation Channels</div>
+      <h2 class="section-title" data-key="ch_title">How the current moves</h2>
+      <p class="section-body" data-key="ch_body">REROOT works through five measurable, trainable channels. Each session activates a specific combination based on what your body needs that day.</p>
+      <div class="channels-grid">
+        <div class="channel-card">
+          <div class="channel-icon">🌬</div>
+          <div class="channel-name" data-key="ch1_name">Breath</div>
+          <p class="channel-body" data-key="ch1_body">The primary channel. Deep diaphragmatic breathing in a grounded position initiates vibration — the sign that bio-energetic flow is restoring.</p>
+          <div class="channel-source" data-key="ch1_src">Reich · Lowen</div>
+        </div>
+        <div class="channel-card">
+          <div class="channel-icon">🌍</div>
+          <div class="channel-name" data-key="ch2_name">Grounding</div>
+          <p class="channel-body" data-key="ch2_body">Literal electrical earthing. Bare feet on conductive surface transfer free electrons into the body. The foundation of all bio-electric work.</p>
+          <div class="channel-source" data-key="ch2_src">Lowen · Kruse</div>
+        </div>
+        <div class="channel-card">
+          <div class="channel-icon">❄️</div>
+          <div class="channel-name" data-key="ch3_name">Cold</div>
+          <p class="channel-body" data-key="ch3_body">Cold thermogenesis activates mitochondria, increases electron flux, and stimulates vagal tone. Bio-electric toning, not willpower theater.</p>
+          <div class="channel-source" data-key="ch3_src">Kruse</div>
+        </div>
+        <div class="channel-card">
+          <div class="channel-icon">🔔</div>
+          <div class="channel-name" data-key="ch4_name">Sound</div>
+          <p class="channel-body" data-key="ch4_body">Tuning forks on fascial points detect and restore electronic dissonance. Open vocal tones dismantle throat blocks. Drums synchronize heartbeat.</p>
+          <div class="channel-source" data-key="ch4_src">McKusick · Sagan</div>
+        </div>
+        <div class="channel-card">
+          <div class="channel-icon">☀️</div>
+          <div class="channel-name" data-key="ch5_name">Light</div>
+          <p class="channel-body" data-key="ch5_body">Circadian light drives the bio-electric clock. Sunrise exposure activates cytochrome c oxidase in mitochondria. Sessions in natural light when possible.</p>
+          <div class="channel-source" data-key="ch5_src">Kruse</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- SESSION FLOW -->
+  <section class="session-section" id="session">
+    <div class="session-inner fade-in">
+      <div class="section-label" data-key="session_label">Session Architecture</div>
+      <h2 class="section-title" data-key="session_title">Inside a 60-minute session</h2>
+      <p class="section-body" data-key="session_body">Every session follows the same alchemical structure. The intensity scales to where you are in your trajectory.</p>
+      <div class="session-timeline">
+        <div class="session-step">
+          <div class="session-step-num">1</div>
+          <div class="session-step-title" data-key="s1_title">Anchor</div>
+          <div class="session-step-dur">0 – 7 min</div>
+          <p class="session-step-body" data-key="s1_body">Arrive. Shoes off. One-sentence intention. Standing body scan from scalp to soles. The space opens.</p>
+        </div>
+        <div class="session-step">
+          <div class="session-step-num">2</div>
+          <div class="session-step-title" data-key="s2_title">Solve</div>
+          <div class="session-step-dur">7 – 30 min</div>
+          <p class="session-step-body" data-key="s2_body">Breath activation → shaking → vocalization → free movement → peak → sudden silence. The body dissolves what it held.</p>
+        </div>
+        <div class="session-step">
+          <div class="session-step-num">3</div>
+          <div class="session-step-title" data-key="s3_title">Coagula</div>
+          <div class="session-step-dur">30 – 52 min</div>
+          <p class="session-step-body" data-key="s3_body">Slow breath. Feet on earth. Cold element. Lying down. Silence. Tuning fork at 128 Hz. The body restructures on a new level.</p>
+        </div>
+        <div class="session-step">
+          <div class="session-step-num">4</div>
+          <div class="session-step-title" data-key="s4_title">Land</div>
+          <div class="session-step-dur">52 – 60 min</div>
+          <p class="session-step-body" data-key="s4_body">Standing circle. One word: what is here now? Water. Fruit. No debriefing unless asked. You own your experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- MARKERS -->
+  <section class="markers-section" id="markers">
+    <div class="markers-inner fade-in">
+      <div class="section-label" data-key="markers_label">How You'll Know It's Working</div>
+      <h2 class="section-title" data-key="markers_title">Observable markers</h2>
+      <p class="section-body" data-key="markers_body">Bio-electric work produces measurable shifts at three levels. You don't have to believe in it. Your body will show you.</p>
+      <div class="markers-grid">
+        <div class="marker-card">
+          <div class="marker-level" data-key="m1_level">Level 1 — Somatic · Within 5 minutes</div>
+          <h3 class="marker-title" data-key="m1_title">The body wakes up</h3>
+          <ul class="marker-list">
+            <li data-key="m1_1">Vibration or trembling in legs, hands, core</li>
+            <li data-key="m1_2">Heat wave (vasodilation through parasympathetic activation)</li>
+            <li data-key="m1_3">Tingling in hands or feet (ion current)</li>
+            <li data-key="m1_4">Spontaneous yawning (vagal activation)</li>
+          </ul>
+        </div>
+        <div class="marker-card">
+          <div class="marker-level" data-key="m2_level">Level 2 — Emotional · 15–30 minutes</div>
+          <h3 class="marker-title" data-key="m2_title">What was stored moves</h3>
+          <ul class="marker-list">
+            <li data-key="m2_1">Spontaneous emotion without clear cause</li>
+            <li data-key="m2_2">Sense of space in chest or throat</li>
+            <li data-key="m2_3">Memories or images (somatic memory releasing)</li>
+          </ul>
+        </div>
+        <div class="marker-card">
+          <div class="marker-level" data-key="m3_level">Level 3 — Energetic · Over multiple sessions</div>
+          <h3 class="marker-title" data-key="m3_title">The system recalibrates</h3>
+          <ul class="marker-list">
+            <li data-key="m3_1">Changed sleep patterns (deeper, fewer hours needed)</li>
+            <li data-key="m3_2">Heightened proprioception (sharper body awareness)</li>
+            <li data-key="m3_3">Spontaneous shifts in diet or movement habits</li>
+            <li data-key="m3_4">Vivid, clarifying dreams</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- RECOGNITION — who this is for (Projector: recognition before invitation) -->
+  <section class="recognition-section" id="recognition">
+    <div class="recognition-inner fade-in">
+      <div class="section-label" style="justify-content:center" data-key="rec_label">Recognition</div>
+      <h2 class="section-title" data-key="rec_title">This work finds its people</h2>
+      <p class="section-body" style="max-width:600px;margin:0 auto" data-key="rec_body">REROOT is not for everyone. It's for people who already sense what needs to shift — and are ready for a structured path rather than another quick fix.</p>
+      <div class="recognition-items">
+        <div class="recognition-item">
+          <p data-key="rec_1">"I've tried everything surface-level. Yoga, therapy, supplements. Something deeper hasn't moved."</p>
+        </div>
+        <div class="recognition-item">
+          <p data-key="rec_2">"My body holds tension that my mind can't explain. I know it's not just stress."</p>
+        </div>
+        <div class="recognition-item">
+          <p data-key="rec_3">"I want to work with someone who understands the science and the tradition — not just one or the other."</p>
+        </div>
+        <div class="recognition-item">
+          <p data-key="rec_4">"I'm ready to commit to a process, not just a session. I want depth, not comfort."</p>
+        </div>
+      </div>
+      <p class="recognition-outro" data-key="rec_outro">If you recognize yourself in any of these, the next step is a conversation — not a commitment.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- TRAJECTORIES -->
+  <section class="trajectories-section" id="trajectories">
+    <div class="trajectories-inner fade-in">
+      <div class="section-label" data-key="traj_label">Trajectories</div>
+      <h2 class="section-title" data-key="traj_title">Three paths, one architecture</h2>
+      <p class="trajectories-intro" data-key="traj_intro">Every trajectory follows the Solve et Coagula structure. The difference is depth and duration. We recommend a trajectory based on what shows up in your Discovery Call — not a menu you choose from.</p>
+      <div class="trajectories-grid">
+        <!-- ATLAS -->
+        <div class="trajectory-card">
+          <div class="trajectory-tag" data-key="t1_tag">Entry</div>
+          <h3 class="trajectory-name" data-key="t1_name">ATLAS</h3>
+          <div class="trajectory-sub" data-key="t1_sub">3 sessions · 3–4 weeks</div>
+          <p class="trajectory-body" data-key="t1_body">Map your bio-electric landscape. Three sessions through one full Solve-Coagula cycle. Enough to feel the shift and know whether this path is yours.</p>
+          <ul class="trajectory-includes">
+            <li data-key="t1_i1">Bio-electric assessment + mapping</li>
+            <li data-key="t1_i2">3 × 60-min sessions (weekly)</li>
+            <li data-key="t1_i3">One full Solve → Coagula → Integration arc</li>
+            <li data-key="t1_i4">Home protocol (grounding, breath, cold)</li>
+            <li data-key="t1_i5">Written session observations</li>
+          </ul>
+          <div class="trajectory-price" data-key="t1_price">€420</div>
+          <div class="trajectory-price-note" data-key="t1_note">~€140/session · includes assessment</div>
+        </div>
+        <!-- CURRENT -->
+        <div class="trajectory-card">
+          <span class="trajectory-recommended" data-key="t2_rec">Most chosen</span>
+          <div class="trajectory-tag" data-key="t2_tag">Deepening</div>
+          <h3 class="trajectory-name" data-key="t2_name">CURRENT</h3>
+          <div class="trajectory-sub" data-key="t2_sub">6 sessions · 6–8 weeks</div>
+          <p class="trajectory-body" data-key="t2_body">Restore the current. Two complete Solve-Coagula cycles with shadow work integration. The body begins to reorganize at a level that sustains beyond the session room.</p>
+          <ul class="trajectory-includes">
+            <li data-key="t2_i1">Everything in ATLAS</li>
+            <li data-key="t2_i2">6 × 60-min sessions (weekly/biweekly)</li>
+            <li data-key="t2_i3">Shadow work introduction (session 4–5)</li>
+            <li data-key="t2_i4">Personalized protocol evolution</li>
+            <li data-key="t2_i5">Mid-trajectory review + recalibration</li>
+            <li data-key="t2_i6">Voice/sound integration work</li>
+          </ul>
+          <div class="trajectory-price" data-key="t2_price">€780</div>
+          <div class="trajectory-price-note" data-key="t2_note">~€130/session · deepening discount</div>
+        </div>
+        <!-- TRANSFORM -->
+        <div class="trajectory-card">
+          <div class="trajectory-tag" data-key="t3_tag">Full path</div>
+          <h3 class="trajectory-name" data-key="t3_name">TRANSFORM</h3>
+          <div class="trajectory-sub" data-key="t3_sub">12 sessions · 3 months</div>
+          <p class="trajectory-body" data-key="t3_body">The full bio-electric restructuring. Four complete cycles with increasing depth. Shadow work, sound integration, cold protocol, and initiation elements. This is the work that changes the body you live in.</p>
+          <ul class="trajectory-includes">
+            <li data-key="t3_i1">Everything in CURRENT</li>
+            <li data-key="t3_i2">12 × 60-min sessions (weekly)</li>
+            <li data-key="t3_i3">Full shadow work arc (Solve → Confront → Integrate)</li>
+            <li data-key="t3_i4">Cold thermogenesis protocol</li>
+            <li data-key="t3_i5">Biofield tuning with tuning forks</li>
+            <li data-key="t3_i6">Initiation elements (Q3 trajectory only)</li>
+            <li data-key="t3_i7">Personal bio-rhythm mapping</li>
+            <li data-key="t3_i8">Closing ceremony + integration plan</li>
+          </ul>
+          <div class="trajectory-price" data-key="t3_price">€1.440</div>
+          <div class="trajectory-price-note" data-key="t3_note">~€120/session · full commitment rate</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- INTAKE PROCESS -->
+  <section class="intake-section" id="intake">
+    <div class="intake-inner fade-in">
+      <div class="section-label" data-key="intake_label">How It Begins</div>
+      <h2 class="section-title" data-key="intake_title">The intake is a conversation,<br/>not a form.</h2>
+      <div class="intake-grid">
+        <div>
+          <ul class="intake-steps">
+            <li class="intake-step">
+              <div class="intake-num">1</div>
+              <div class="intake-step-content">
+                <h4 data-key="in1_title">Discovery Call</h4>
+                <p data-key="in1_body">20-minute video call. What brings you here? What has your body been carrying? What have you tried? No commitment — just mutual recognition.</p>
+              </div>
+            </li>
+            <li class="intake-step">
+              <div class="intake-num">2</div>
+              <div class="intake-step-content">
+                <h4 data-key="in2_title">Trajectory Recommendation</h4>
+                <p data-key="in2_body">Based on our conversation, I'll recommend ATLAS, CURRENT, or TRANSFORM. If REROOT isn't the right fit, I'll tell you that too.</p>
+              </div>
+            </li>
+            <li class="intake-step">
+              <div class="intake-num">3</div>
+              <div class="intake-step-content">
+                <h4 data-key="in3_title">First Session</h4>
+                <p data-key="in3_body">Bio-electric assessment + your first ZZAPP experience. We map your landscape before we start moving terrain.</p>
+              </div>
+            </li>
+            <li class="intake-step">
+              <div class="intake-num">4</div>
+              <div class="intake-step-content">
+                <h4 data-key="in4_title">The Trajectory</h4>
+                <p data-key="in4_body">Weekly or biweekly sessions. Each builds on the last. Home protocols between sessions. Written observations after each meeting. The work compounds.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="intake-right">
+          <p class="intake-note" data-key="intake_note">I don't take everyone. Not because of exclusivity — because this work requires readiness. The Discovery Call is where we both find out.</p>
+          <p class="intake-detail" data-key="intake_detail_1">Sessions @ Mercy Wellness, Brussels<br/>or mobile (Antwerp, Brussels, Ghent)</p>
+          <p class="intake-detail" style="margin-top:1rem" data-key="intake_detail_2">Contra-indications: epilepsy, active psychosis, cardiovascular conditions (cold protocol), pregnancy past first trimester (intensive breathwork). If you're unsure, mention it in the Discovery Call.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- BOOK — single CTA, invitation energy -->
+  <section class="book-section" id="book">
+    <div class="book-inner fade-in">
+      <div class="section-label" style="justify-content:center" data-key="book_label">Begin</div>
+      <h2 class="book-title" data-key="book_title">If this resonates, let's talk.</h2>
+      <p class="book-body" data-key="book_body">The Discovery Call is free, 20 minutes, and without obligation. It's a conversation between two nervous systems — to find out if this work is the right work, right now.</p>
+      <p class="book-note" data-key="book_note">Video call · 20 min · No commitment</p>
+      <a href="https://www.cal.eu/the-revolution-incarnated/discovery-call" target="_blank" rel="noopener" class="btn-book" data-key="book_cta">Book a Discovery Call</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>
+      <div class="footer-logo">REV<span style="color:var(--copper)">.</span>INC</div>
+      <div class="footer-tagline" data-key="footer_tagline">The Revolution Incorporated.</div>
+      <div class="footer-sub" data-key="footer_sub">REROOT · Bio-Electric Trajectory Work · Antwerp / Brussels</div>
+    </div>
+    <ul class="social-links">
+      <li><a href="https://www.instagram.com/rev.incorporated/" target="_blank">Instagram</a></li>
+      <li><a href="https://wa.me/32472406393" target="_blank">WhatsApp</a></li>
+      <li><a href="mailto:rev.incorporated@proton.me">Email</a></li>
+      <li><a href="../">← Main site</a></li>
+    </ul>
+    <div class="footer-copy">© 2026 REV.INC — All rights reserved · Antwerp, Belgium</div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/32472406393" target="_blank" class="wa-btn" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    // ============ LANGUAGE TOGGLE ============
+    const translations = {
+      en: {
+        nav_reroot: 'Reroot',
+        nav_trajectories: 'Trajectories',
+        nav_intake: 'Intake',
+        nav_book: 'Begin a conversation',
+        hero_badge: 'Trajectory Work · Solve et Coagula · Bio-Electric Restructuring',
+        hero_title_1: 'Your body has been',
+        hero_title_2: 'trying to tell you',
+        hero_title_3: 'something.',
+        hero_sub: 'REROOT is committed bio-electric trajectory work. Not a quick fix. Not a wellness trend. A structured path that restores the current your nervous system forgot it carried.',
+        hero_recognition: 'If you\'ve sensed that something deeper needs to move — something that single sessions can\'t reach — you\'re recognizing what this work is for.',
+        cta_method: 'How it works',
+        cta_trajectories: 'See trajectories',
+        scroll: 'Scroll',
+        philo_label: 'The Method',
+        philo_title: 'Solve et Coagula',
+        philo_body_1: 'Every REROOT trajectory follows an alchemical architecture that the body already understands: first dissolve what\'s stuck, then restructure at a deeper level.',
+        philo_body_2: '<strong style="color:var(--purple-lt);font-weight:400">Solve</strong> — activation destabilizes existing patterns. Muscle armor, held emotion, breath restriction. The charge moves through what was frozen.',
+        philo_body_3: '<strong style="color:var(--gold);font-weight:400">Coagula</strong> — integration restructures at a new level. Grounding, silence, conscious breath. What dissolved finds a new form.',
+        philo_body_4: 'Without Solve there is no change. Without Coagula there is no integration. A session that only activates is dangerous. A session that only grounds is empty.',
+        philo_quote: 'This is not decorative metaphor. It is the biomechanical rhythm of bio-electric activation. The body knows this sequence — it\'s been doing it since before we named it.',
+        philo_tradition: 'Ancient correspondence',
+        philo_tradition_body: 'The Kemetic tradition called this current <strong style="color:var(--gold);font-weight:400">Sekhem</strong> — power. The Yoruba call it <strong style="color:var(--gold);font-weight:400">Àṣẹ</strong>. The Bambara call it <strong style="color:var(--gold);font-weight:400">Nyama</strong>. Three names for the same measurable phenomenon. REROOT restores the precision the Western esoteric tradition lost in translation.',
+        arc_label: 'The Arc',
+        arc_title: 'Zzapp · Reroot · Integrate',
+        arc_body: 'Every trajectory moves through three phases. Each phase mirrors the alchemical process — and each prepares the nervous system for the next.',
+        arc_zzapp_alch: '= Solve · Dissolve',
+        arc_zzapp_title: 'Wake the current',
+        arc_zzapp_body: 'Bio-electric activation through breath, grounding, and DDS micro-current. Destabilize stagnant patterns. Move what was frozen. The body shakes off what it no longer needs.',
+        arc_zzapp_m1: 'Vibration in legs and core',
+        arc_zzapp_m2: 'Emotional release begins',
+        arc_zzapp_m3: 'Heat wave through fascia',
+        arc_reroot_alch: '= Coagula · Restructure',
+        arc_reroot_title: 'Find the new ground',
+        arc_reroot_body: 'What dissolved now needs a new form. Paired breathwork through yin/yang phases. A field of trust becomes structural. You feel what your body reorganizes around — below the story, below the habits.',
+        arc_reroot_m1: 'Deep grounding through soles',
+        arc_reroot_m2: 'New breath pattern settles',
+        arc_reroot_m3: 'Proprioception sharpens',
+        arc_int_alch: '= Fixatio · Embody',
+        arc_int_title: 'Land it in your life',
+        arc_int_body: 'The new form gets skin. Harmonizing climax through breath, sound, and current — then silence — then ground through the soles. What shifted in session becomes the body you take home.',
+        arc_int_m1: 'Changed sleep patterns',
+        arc_int_m2: 'Spontaneous behavior shifts',
+        arc_int_m3: 'Vivid, clarifying dreams',
+        ch_label: 'Five Activation Channels',
+        ch_title: 'How the current moves',
+        ch_body: 'REROOT works through five measurable, trainable channels. Each session activates a specific combination based on what your body needs that day.',
+        ch1_name: 'Breath', ch1_body: 'The primary channel. Deep diaphragmatic breathing in a grounded position initiates vibration — the sign that bio-energetic flow is restoring.', ch1_src: 'Reich · Lowen',
+        ch2_name: 'Grounding', ch2_body: 'Literal electrical earthing. Bare feet on conductive surface transfer free electrons into the body. The foundation of all bio-electric work.', ch2_src: 'Lowen · Kruse',
+        ch3_name: 'Cold', ch3_body: 'Cold thermogenesis activates mitochondria, increases electron flux, and stimulates vagal tone. Bio-electric toning, not willpower theater.', ch3_src: 'Kruse',
+        ch4_name: 'Sound', ch4_body: 'Tuning forks on fascial points detect and restore electronic dissonance. Open vocal tones dismantle throat blocks. Drums synchronize heartbeat.', ch4_src: 'McKusick · Sagan',
+        ch5_name: 'Light', ch5_body: 'Circadian light drives the bio-electric clock. Sunrise exposure activates cytochrome c oxidase in mitochondria. Sessions in natural light when possible.', ch5_src: 'Kruse',
+        session_label: 'Session Architecture',
+        session_title: 'Inside a 60-minute session',
+        session_body: 'Every session follows the same alchemical structure. The intensity scales to where you are in your trajectory.',
+        s1_title: 'Anchor', s1_body: 'Arrive. Shoes off. One-sentence intention. Standing body scan from scalp to soles. The space opens.',
+        s2_title: 'Solve', s2_body: 'Breath activation → shaking → vocalization → free movement → peak → sudden silence. The body dissolves what it held.',
+        s3_title: 'Coagula', s3_body: 'Slow breath. Feet on earth. Cold element. Lying down. Silence. Tuning fork at 128 Hz. The body restructures on a new level.',
+        s4_title: 'Land', s4_body: 'Standing circle. One word: what is here now? Water. Fruit. No debriefing unless asked. You own your experience.',
+        markers_label: 'How You\'ll Know It\'s Working',
+        markers_title: 'Observable markers',
+        markers_body: 'Bio-electric work produces measurable shifts at three levels. You don\'t have to believe in it. Your body will show you.',
+        m1_level: 'Level 1 — Somatic · Within 5 minutes', m1_title: 'The body wakes up',
+        m1_1: 'Vibration or trembling in legs, hands, core', m1_2: 'Heat wave (vasodilation through parasympathetic activation)', m1_3: 'Tingling in hands or feet (ion current)', m1_4: 'Spontaneous yawning (vagal activation)',
+        m2_level: 'Level 2 — Emotional · 15–30 minutes', m2_title: 'What was stored moves',
+        m2_1: 'Spontaneous emotion without clear cause', m2_2: 'Sense of space in chest or throat', m2_3: 'Memories or images (somatic memory releasing)',
+        m3_level: 'Level 3 — Energetic · Over multiple sessions', m3_title: 'The system recalibrates',
+        m3_1: 'Changed sleep patterns (deeper, fewer hours needed)', m3_2: 'Heightened proprioception (sharper body awareness)', m3_3: 'Spontaneous shifts in diet or movement habits', m3_4: 'Vivid, clarifying dreams',
+        rec_label: 'Recognition',
+        rec_title: 'This work finds its people',
+        rec_body: 'REROOT is not for everyone. It\'s for people who already sense what needs to shift — and are ready for a structured path rather than another quick fix.',
+        rec_1: '"I\'ve tried everything surface-level. Yoga, therapy, supplements. Something deeper hasn\'t moved."',
+        rec_2: '"My body holds tension that my mind can\'t explain. I know it\'s not just stress."',
+        rec_3: '"I want to work with someone who understands the science and the tradition — not just one or the other."',
+        rec_4: '"I\'m ready to commit to a process, not just a session. I want depth, not comfort."',
+        rec_outro: 'If you recognize yourself in any of these, the next step is a conversation — not a commitment.',
+        traj_label: 'Trajectories',
+        traj_title: 'Three paths, one architecture',
+        traj_intro: 'Every trajectory follows the Solve et Coagula structure. The difference is depth and duration. We recommend a trajectory based on what shows up in your Discovery Call — not a menu you choose from.',
+        t1_tag: 'Entry', t1_name: 'ATLAS', t1_sub: '3 sessions · 3–4 weeks',
+        t1_body: 'Map your bio-electric landscape. Three sessions through one full Solve-Coagula cycle. Enough to feel the shift and know whether this path is yours.',
+        t1_i1: 'Bio-electric assessment + mapping', t1_i2: '3 × 60-min sessions (weekly)', t1_i3: 'One full Solve → Coagula → Integration arc', t1_i4: 'Home protocol (grounding, breath, cold)', t1_i5: 'Written session observations',
+        t1_price: '€420', t1_note: '~€140/session · includes assessment',
+        t2_rec: 'Most chosen', t2_tag: 'Deepening', t2_name: 'CURRENT', t2_sub: '6 sessions · 6–8 weeks',
+        t2_body: 'Restore the current. Two complete Solve-Coagula cycles with shadow work integration. The body begins to reorganize at a level that sustains beyond the session room.',
+        t2_i1: 'Everything in ATLAS', t2_i2: '6 × 60-min sessions (weekly/biweekly)', t2_i3: 'Shadow work introduction (session 4–5)', t2_i4: 'Personalized protocol evolution', t2_i5: 'Mid-trajectory review + recalibration', t2_i6: 'Voice/sound integration work',
+        t2_price: '€780', t2_note: '~€130/session · deepening discount',
+        t3_tag: 'Full path', t3_name: 'TRANSFORM', t3_sub: '12 sessions · 3 months',
+        t3_body: 'The full bio-electric restructuring. Four complete cycles with increasing depth. Shadow work, sound integration, cold protocol, and initiation elements. This is the work that changes the body you live in.',
+        t3_i1: 'Everything in CURRENT', t3_i2: '12 × 60-min sessions (weekly)', t3_i3: 'Full shadow work arc (Solve → Confront → Integrate)', t3_i4: 'Cold thermogenesis protocol', t3_i5: 'Biofield tuning with tuning forks', t3_i6: 'Initiation elements (Q3 trajectory only)', t3_i7: 'Personal bio-rhythm mapping', t3_i8: 'Closing ceremony + integration plan',
+        t3_price: '€1.440', t3_note: '~€120/session · full commitment rate',
+        intake_label: 'How It Begins',
+        intake_title: 'The intake is a conversation,<br/>not a form.',
+        in1_title: 'Discovery Call', in1_body: '20-minute video call. What brings you here? What has your body been carrying? What have you tried? No commitment — just mutual recognition.',
+        in2_title: 'Trajectory Recommendation', in2_body: 'Based on our conversation, I\'ll recommend ATLAS, CURRENT, or TRANSFORM. If REROOT isn\'t the right fit, I\'ll tell you that too.',
+        in3_title: 'First Session', in3_body: 'Bio-electric assessment + your first ZZAPP experience. We map your landscape before we start moving terrain.',
+        in4_title: 'The Trajectory', in4_body: 'Weekly or biweekly sessions. Each builds on the last. Home protocols between sessions. Written observations after each meeting. The work compounds.',
+        intake_note: 'I don\'t take everyone. Not because of exclusivity — because this work requires readiness. The Discovery Call is where we both find out.',
+        intake_detail_1: 'Sessions @ Mercy Wellness, Brussels<br/>or mobile (Antwerp, Brussels, Ghent)',
+        intake_detail_2: 'Contra-indications: epilepsy, active psychosis, cardiovascular conditions (cold protocol), pregnancy past first trimester (intensive breathwork). If you\'re unsure, mention it in the Discovery Call.',
+        book_label: 'Begin',
+        book_title: 'If this resonates, let\'s talk.',
+        book_body: 'The Discovery Call is free, 20 minutes, and without obligation. It\'s a conversation between two nervous systems — to find out if this work is the right work, right now.',
+        book_note: 'Video call · 20 min · No commitment',
+        book_cta: 'Book a Discovery Call',
+        footer_tagline: 'The Revolution Incorporated.',
+        footer_sub: 'REROOT · Bio-Electric Trajectory Work · Antwerp / Brussels'
+      },
+      nl: {
+        nav_reroot: 'Reroot',
+        nav_trajectories: 'Trajecten',
+        nav_intake: 'Intake',
+        nav_book: 'Begin een gesprek',
+        hero_badge: 'Trajectwerk · Solve et Coagula · Bio-Elektrische Herstructurering',
+        hero_title_1: 'Je lichaam probeert je',
+        hero_title_2: 'al langer iets',
+        hero_title_3: 'te vertellen.',
+        hero_sub: 'REROOT is geëngageerd bio-elektrisch trajectwerk. Geen quick fix. Geen wellnesstrend. Een gestructureerd pad dat de stroom herstelt die je zenuwstelsel vergat te dragen.',
+        hero_recognition: 'Als je voelt dat er iets diepers moet bewegen — iets dat losse sessies niet bereiken — dan herken je waar dit werk voor dient.',
+        cta_method: 'Hoe het werkt',
+        cta_trajectories: 'Bekijk trajecten',
+        scroll: 'Scroll',
+        philo_label: 'De Methode',
+        philo_title: 'Solve et Coagula',
+        philo_body_1: 'Elk REROOT-traject volgt een alchemistische architectuur die het lichaam al begrijpt: eerst oplossen wat vastzit, dan herstructureren op een dieper niveau.',
+        philo_body_2: '<strong style="color:var(--purple-lt);font-weight:400">Solve</strong> — activering destabiliseert bestaande patronen. Spierpantser, vastgehouden emotie, adembeperking. De lading beweegt door wat bevroren was.',
+        philo_body_3: '<strong style="color:var(--gold);font-weight:400">Coagula</strong> — integratie herstructureert op een nieuw niveau. Grounding, stilte, bewuste adem. Wat opgelost is vindt een nieuwe vorm.',
+        philo_body_4: 'Zonder Solve is er geen verandering. Zonder Coagula geen integratie. Een sessie die alleen activeert is gevaarlijk. Een sessie die alleen grond is leeg.',
+        philo_quote: 'Dit is geen decoratieve metafoor. Het is het biomechanische ritme van bio-elektrische activering. Het lichaam kent deze sequentie — het doet dit al van vóór we het benoemden.',
+        philo_tradition: 'Oude correspondentie',
+        philo_tradition_body: 'De Kemetische traditie noemde deze stroom <strong style="color:var(--gold);font-weight:400">Sekhem</strong> — macht. De Yoruba noemen het <strong style="color:var(--gold);font-weight:400">Àṣẹ</strong>. De Bambara noemen het <strong style="color:var(--gold);font-weight:400">Nyama</strong>. Drie namen voor hetzelfde meetbare fenomeen. REROOT herstelt de precisie die de westerse esoterische traditie verloor in vertaling.',
+        arc_label: 'De Boog',
+        arc_title: 'Zzapp · Reroot · Integrate',
+        arc_body: 'Elk traject beweegt door drie fasen. Elke fase spiegelt het alchemistisch proces — en bereidt het zenuwstelsel voor op de volgende.',
+        arc_zzapp_alch: '= Solve · Oplossen',
+        arc_zzapp_title: 'Wek de stroom',
+        arc_zzapp_body: 'Bio-elektrische activering via adem, grounding en DDS microstroom. Destabiliseer stagnante patronen. Beweeg wat bevroren was. Het lichaam schudt af wat het niet meer nodig heeft.',
+        arc_zzapp_m1: 'Vibratie in benen en kern',
+        arc_zzapp_m2: 'Emotionele release begint',
+        arc_zzapp_m3: 'Warmtegolf door fasciae',
+        arc_reroot_alch: '= Coagula · Herstructureer',
+        arc_reroot_title: 'Vind de nieuwe grond',
+        arc_reroot_body: 'Wat opgelost is heeft nu een nieuwe vorm nodig. Gepaarde ademhaling door yin/yang fasen. Een veld van vertrouwen wordt structureel. Je voelt waar je lichaam zich rond reorganiseert — onder het verhaal, onder de gewoontes.',
+        arc_reroot_m1: 'Diepe grounding via de zolen',
+        arc_reroot_m2: 'Nieuw adempatroon landt',
+        arc_reroot_m3: 'Proprioceptie verscherpt',
+        arc_int_alch: '= Fixatio · Belichaam',
+        arc_int_title: 'Land het in je leven',
+        arc_int_body: 'De nieuwe vorm krijgt huid. Harmoniserende climax via adem, geluid en stroom — dan stilte — dan grond door de zolen. Wat verschoof in de sessie wordt het lichaam dat je mee naar huis neemt.',
+        arc_int_m1: 'Veranderde slaappatronen',
+        arc_int_m2: 'Spontane gedragsveranderingen',
+        arc_int_m3: 'Levendige, verhelderende dromen',
+        ch_label: 'Vijf Activeringskanalen',
+        ch_title: 'Hoe de stroom beweegt',
+        ch_body: 'REROOT werkt via vijf meetbare, trainbare kanalen. Elke sessie activeert een specifieke combinatie op basis van wat je lichaam die dag nodig heeft.',
+        ch1_name: 'Adem', ch1_body: 'Het primaire kanaal. Diepe middenrifademhaling in een gegronde positie initieert vibratie — het teken dat bio-energetische stroom herstelt.', ch1_src: 'Reich · Lowen',
+        ch2_name: 'Grounding', ch2_body: 'Letterlijke elektrische aarding. Blote voeten op geleidend oppervlak dragen vrije elektronen over naar het lichaam. Het fundament van alle bio-elektrische werk.', ch2_src: 'Lowen · Kruse',
+        ch3_name: 'Koude', ch3_body: 'Koude thermogenese activeert mitochondriën, verhoogt elektronenflux en stimuleert vagale tonus. Bio-elektrische toning, geen wilskrachttheater.', ch3_src: 'Kruse',
+        ch4_name: 'Geluid', ch4_body: 'Stemvorken op fasciale punten detecteren en herstellen elektronische dissonantie. Open vocaaltonen ontmantelen keelblokkades. Trommels synchroniseren hartritme.', ch4_src: 'McKusick · Sagan',
+        ch5_name: 'Licht', ch5_body: 'Circadiaan licht stuurt de bio-elektrische klok. Zonsopkomstblootstelling activeert cytochroom-c-oxidase in mitochondriën. Sessies in natuurlijk licht waar mogelijk.', ch5_src: 'Kruse',
+        session_label: 'Sessie-architectuur',
+        session_title: 'Binnenin een sessie van 60 minuten',
+        session_body: 'Elke sessie volgt dezelfde alchemistische structuur. De intensiteit schaalt mee met waar je bent in je traject.',
+        s1_title: 'Ankering', s1_body: 'Aankomst. Schoenen uit. Eén zin intentie. Staande lichaamsscan van hoofdhuid tot voetzolen. De ruimte opent.',
+        s2_title: 'Solve', s2_body: 'Ademactivering → schudden → vocalisatie → vrije beweging → piek → plotselinge stilte. Het lichaam lost op wat het vasthield.',
+        s3_title: 'Coagula', s3_body: 'Langzame adem. Voeten op aarde. Koude-element. Liggen. Stilte. Stemvork op 128 Hz. Het lichaam herstructureert op een nieuw niveau.',
+        s4_title: 'Landing', s4_body: 'Staande cirkel. Eén woord: wat is er nu? Water. Fruit. Geen debrief tenzij gevraagd. Je bezit je eigen ervaring.',
+        markers_label: 'Hoe Je Weet Dat Het Werkt',
+        markers_title: 'Waarneembare markers',
+        markers_body: 'Bio-elektrisch werk produceert meetbare verschuivingen op drie niveaus. Je hoeft er niet in te geloven. Je lichaam laat het je zien.',
+        m1_level: 'Niveau 1 — Somatisch · Binnen 5 minuten', m1_title: 'Het lichaam ontwaakt',
+        m1_1: 'Vibratie of trillingen in benen, handen, kern', m1_2: 'Warmtegolf (vasodilatatie via parasympatische activering)', m1_3: 'Tintelingen in handen of voeten (ionenstroom)', m1_4: 'Spontaan geeuwen (vagale activering)',
+        m2_level: 'Niveau 2 — Emotioneel · 15–30 minuten', m2_title: 'Wat opgeslagen was beweegt',
+        m2_1: 'Spontane emotie zonder duidelijke aanleiding', m2_2: 'Gevoel van ruimte in borst of keel', m2_3: 'Herinneringen of beelden (somatisch geheugen dat vrijkomt)',
+        m3_level: 'Niveau 3 — Energetisch · Over meerdere sessies', m3_title: 'Het systeem herkalibreert',
+        m3_1: 'Veranderde slaappatronen (dieper, minder uren nodig)', m3_2: 'Verhoogde proprioceptie (scherper lichaamsbesef)', m3_3: 'Spontane verschuivingen in eet- of bewegingspatronen', m3_4: 'Levendige, verhelderende dromen',
+        rec_label: 'Herkenning',
+        rec_title: 'Dit werk vindt zijn mensen',
+        rec_body: 'REROOT is niet voor iedereen. Het is voor mensen die al voelen wat moet verschuiven — en klaar zijn voor een gestructureerd pad in plaats van nog een quick fix.',
+        rec_1: '"Ik heb alles oppervlakkigs geprobeerd. Yoga, therapie, supplementen. Iets diepers heeft niet bewogen."',
+        rec_2: '"Mijn lichaam draagt spanning die mijn hoofd niet kan verklaren. Ik weet dat het niet gewoon stress is."',
+        rec_3: '"Ik wil werken met iemand die zowel de wetenschap als de traditie begrijpt — niet slechts één van beide."',
+        rec_4: '"Ik ben klaar om me te engageren voor een proces, niet enkel een sessie. Ik wil diepte, geen comfort."',
+        rec_outro: 'Als je jezelf herkent in een van deze, is de volgende stap een gesprek — geen verplichting.',
+        traj_label: 'Trajecten',
+        traj_title: 'Drie paden, één architectuur',
+        traj_intro: 'Elk traject volgt de Solve et Coagula structuur. Het verschil is diepte en duur. We bevelen een traject aan op basis van wat verschijnt in je Discovery Call — niet een menu waaruit je kiest.',
+        t1_tag: 'Instap', t1_name: 'ATLAS', t1_sub: '3 sessies · 3–4 weken',
+        t1_body: 'Breng je bio-elektrisch landschap in kaart. Drie sessies door één volledig Solve-Coagula cyclus. Genoeg om de verschuiving te voelen en te weten of dit pad het jouwe is.',
+        t1_i1: 'Bio-elektrische assessment + mapping', t1_i2: '3 × 60-min sessies (wekelijks)', t1_i3: 'Eén volledige Solve → Coagula → Integratie boog', t1_i4: 'Thuisprotocol (grounding, adem, koude)', t1_i5: 'Geschreven sessie-observaties',
+        t1_price: '€420', t1_note: '~€140/sessie · inclusief assessment',
+        t2_rec: 'Meest gekozen', t2_tag: 'Verdieping', t2_name: 'CURRENT', t2_sub: '6 sessies · 6–8 weken',
+        t2_body: 'Herstel de stroom. Twee volledige Solve-Coagula cycli met shadow work integratie. Het lichaam begint zich te reorganiseren op een niveau dat standhoudt buiten de sessieruimte.',
+        t2_i1: 'Alles uit ATLAS', t2_i2: '6 × 60-min sessies (wekelijks/tweewekelijks)', t2_i3: 'Shadow work introductie (sessie 4–5)', t2_i4: 'Gepersonaliseerde protocol-evolutie', t2_i5: 'Tussentijdse review + herkalibratie', t2_i6: 'Stem/geluid-integratiewerk',
+        t2_price: '€780', t2_note: '~€130/sessie · verdiepingskorting',
+        t3_tag: 'Volledig pad', t3_name: 'TRANSFORM', t3_sub: '12 sessies · 3 maanden',
+        t3_body: 'De volledige bio-elektrische herstructurering. Vier complete cycli met toenemende diepte. Shadow work, geluidsintegratie, koudeprotocol en initiatie-elementen. Dit is het werk dat verandert in welk lichaam je leeft.',
+        t3_i1: 'Alles uit CURRENT', t3_i2: '12 × 60-min sessies (wekelijks)', t3_i3: 'Volledige shadow work boog (Solve → Confronteer → Integreer)', t3_i4: 'Koude thermogenese protocol', t3_i5: 'Biofield tuning met stemvorken', t3_i6: 'Initiatie-elementen (enkel Q3 traject)', t3_i7: 'Persoonlijke bioritme-mapping', t3_i8: 'Afsluitceremonie + integratieplan',
+        t3_price: '€1.440', t3_note: '~€120/sessie · volledig engagement-tarief',
+        intake_label: 'Hoe Het Begint',
+        intake_title: 'De intake is een gesprek,<br/>geen formulier.',
+        in1_title: 'Discovery Call', in1_body: '20-minuten videogesprek. Wat brengt je hier? Wat heeft je lichaam gedragen? Wat heb je geprobeerd? Geen verplichting — enkel wederzijdse herkenning.',
+        in2_title: 'Trajectaanbeveling', in2_body: 'Op basis van ons gesprek beveel ik ATLAS, CURRENT of TRANSFORM aan. Als REROOT niet de juiste fit is, zeg ik dat ook.',
+        in3_title: 'Eerste Sessie', in3_body: 'Bio-elektrische assessment + je eerste ZZAPP-ervaring. We brengen je landschap in kaart voor we terrein beginnen verplaatsen.',
+        in4_title: 'Het Traject', in4_body: 'Wekelijkse of tweewekelijkse sessies. Elke bouwt voort op de vorige. Thuisprotocollen tussen sessies. Geschreven observaties na elke ontmoeting. Het werk cumuleert.',
+        intake_note: 'Ik neem niet iedereen aan. Niet uit exclusiviteit — omdat dit werk gereedheid vraagt. De Discovery Call is waar we dat beiden uitvinden.',
+        intake_detail_1: 'Sessies @ Mercy Wellness, Brussel<br/>of mobiel (Antwerpen, Brussel, Gent)',
+        intake_detail_2: 'Contra-indicaties: epilepsie, actieve psychose, cardiovasculaire aandoeningen (koudeprotocol), zwangerschap voorbij eerste trimester (intensief ademwerk). Twijfel je? Vermeld het in de Discovery Call.',
+        book_label: 'Begin',
+        book_title: 'Als dit resoneert, laten we praten.',
+        book_body: 'De Discovery Call is gratis, 20 minuten, en zonder verplichting. Het is een gesprek tussen twee zenuwstelsels — om uit te vinden of dit werk het juiste werk is, op dit moment.',
+        book_note: 'Videogesprek · 20 min · Geen verplichting',
+        book_cta: 'Boek een Discovery Call',
+        footer_tagline: 'The Revolution Incorporated.',
+        footer_sub: 'REROOT · Bio-Elektrisch Trajectwerk · Antwerpen / Brussel'
+      }
+    };
+
+    let currentLang = 'en';
+    const toggle = document.getElementById('langToggle');
+
+    toggle.addEventListener('click', () => {
+      currentLang = currentLang === 'en' ? 'nl' : 'en';
+      toggle.textContent = currentLang === 'en' ? 'EN / NL' : 'NL / EN';
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (translations[currentLang][key]) {
+          if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+            el.placeholder = translations[currentLang][key];
+          } else {
+            el.innerHTML = translations[currentLang][key];
+          }
+        }
+      });
+    });
+
+    // ============ INTERSECTION OBSERVER (FADE IN) ============
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // ============ SMOOTH NAV SCROLL ============
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+  </script>
+</body>
+</html>
