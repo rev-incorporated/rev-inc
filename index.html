@@ -138,36 +138,10 @@
     .science-label { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); margin-bottom: 0.5rem; }
     .science-body { font-family: var(--font-body); font-size: 0.9rem; color: var(--cream-dim); line-height: 1.7; }
 
-    /* RE-ROOTING FRAME */
-    .rerooting-frame { text-align: center; padding: 3rem 2rem; margin-bottom: 4rem; }
-    .rerooting-line { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 0 auto; }
-    .rerooting-text { font-family: var(--font-body); font-style: italic; font-size: 1.15rem; font-weight: 300; color: var(--cream); line-height: 1.85; max-width: 680px; margin: 1.5rem auto; }
-
-    /* SCIENCE GRID VARIANTS */
-    .science-grid-4 { grid-template-columns: repeat(2, 1fr) !important; }
-    .practice-card { border-color: rgba(176,112,64,0.15); background: rgba(176,112,64,0.04); }
-    .practice-card .science-label { color: var(--copper); }
-
-    /* SESSION FLOW */
-    .session-flow { margin-top: 5rem; padding: 4rem 0; text-align: center; }
-    .flow-title { font-family: var(--font-display); font-size: clamp(1.6rem, 3.5vw, 2.5rem); font-weight: 700; color: var(--white); margin-bottom: 0.3rem; }
-    .flow-subtitle { font-family: var(--font-body); font-style: italic; font-size: 1rem; color: var(--cream-dim); margin-bottom: 3rem; }
-    .flow-phase { width: 100%; padding: 2.5rem 0; border-radius: 4px; }
-    .flow-solve { background: linear-gradient(180deg, rgba(176,112,64,0.06) 0%, rgba(200,144,58,0.1) 100%); border: 1px solid rgba(176,112,64,0.15); }
-    .flow-coagula { background: linear-gradient(180deg, rgba(58,122,58,0.06) 0%, rgba(27,58,45,0.1) 100%); border: 1px solid rgba(27,58,45,0.15); }
-    .flow-phase-label { font-family: var(--font-display); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 2rem; }
-    .flow-solve .flow-phase-label { color: var(--copper); }
-    .flow-coagula .flow-phase-label { color: var(--green-lush); }
-    .flow-steps { display: flex; justify-content: center; gap: 4rem; }
-    .flow-step { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; }
-    .flow-dot { width: 14px; height: 14px; border-radius: 50%; }
-    .solve-dot { background: var(--copper); box-shadow: 0 0 12px rgba(176,112,64,0.4); }
-    .coagula-dot { background: var(--green-lush); box-shadow: 0 0 12px rgba(58,122,58,0.4); }
-    .flow-step-name { font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; color: var(--white); letter-spacing: 0.04em; }
-    .flow-step-action { font-family: var(--font-body); font-style: italic; font-size: 0.82rem; color: var(--cream-dim); }
-    .flow-pivot { padding: 1.5rem 0; display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
-    .flow-diamond { font-size: 1.2rem; color: var(--gold); text-shadow: 0 0 20px rgba(200,144,58,0.5); }
-    .flow-pivot-text { font-family: var(--font-mono); font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dim); }
+    /* SCIENCE TEASER */
+    .science-teaser-cta { display: inline-block; margin-top: 3rem; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); text-decoration: none; transition: opacity 0.2s, letter-spacing 0.3s; padding: 0.8rem 2rem; border: 1px solid rgba(200,144,58,0.25); }
+    .science-teaser-cta:hover { opacity: 0.85; letter-spacing: 0.18em; }
+    .science-teaser-cta::after { content: ' →'; }
 
     /* SOCIAL PROOF */
     .proof-section { background: var(--green-deep); max-width: 100%; padding: 6rem 2.5rem; border-top: 1px solid rgba(200,144,58,0.08); border-bottom: 1px solid rgba(200,144,58,0.08); }
@@ -286,8 +260,7 @@
       section { padding: 5rem 1.5rem; }
       .zzapp-grid, .problem-inner, .formats-inner, .about-core { grid-template-columns: 1fr; gap: 3rem; }
       .problem-section, .formats-section, .proof-section { padding: 5rem 1.5rem; }
-      .science-grid, .science-grid-4, .services-grid, .proof-grid, .booking-grid { grid-template-columns: 1fr; }
-      .flow-steps { flex-direction: column; gap: 2rem; }
+      .science-grid, .services-grid, .proof-grid, .booking-grid { grid-template-columns: 1fr; }
       .about-portrait { max-width: 100%; aspect-ratio: 4/3; }
       #b2b > div > div:nth-child(3) { grid-template-columns: 1fr !important; }
       footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
@@ -303,7 +276,7 @@
     <div class="nav-right">
       <ul class="nav-links">
         <li><a href="#zzapp" data-key="nav_zzapp">ZZAPP</a></li>
-        <li><a href="#science" data-key="nav_science">Science</a></li>
+        <li><a href="/science/" data-key="nav_science">Science</a></li>
         <li><a href="#services" data-key="nav_services">Services</a></li>
         <li><a href="#events" data-key="nav_events">Events</a></li>
         <li><a href="#about" data-key="nav_about">About</a></li>
@@ -394,131 +367,30 @@
 
   <div class="divider"></div>
 
-  <!-- SCIENCE -->
+  <!-- SCIENCE TEASER -->
   <section id="science">
     <div class="fade-in">
-      <!-- RE-ROOTING FRAME -->
-      <div class="rerooting-frame">
-        <div class="rerooting-line"></div>
-        <p class="rerooting-text" data-key="rerooting_text">Western wellness split mind from body, science from tradition, measurement from practice. The traditions we draw from — African, Asian, indigenous — never made that cut. Bio-electricity is the bridge: measurable by Western instruments, practiced by African and Asian traditions for millennia. We don't add tradition to science. We restore what science forgot it was measuring.</p>
-        <div class="rerooting-line"></div>
-      </div>
-
-      <!-- LAAG 1: THE SCIENCE -->
       <div class="section-label" data-key="label_science">02 — The Science</div>
       <h2 class="section-title" data-key="science_title">Measurable. Documented. Peer-reviewed.</h2>
-      <p class="section-body" data-key="science_body">ZZAPP is not intuition. The method rests on measurable bio-electric principles — from earth voltage to cellular biology.</p>
-      <div class="science-grid science-grid-4">
-        <div class="science-card">
-          <div class="science-stat" style="color:var(--green-lush);">−78μV</div>
-          <div class="science-label" data-key="sci_earth_label">Earth Connection</div>
-          <p class="science-body" data-key="sci_earth_body">The earth's surface carries a negative charge of −78 microvolt. Your body evolved in constant contact with this field. Modern life severed that connection — rubber soles, concrete floors, elevated buildings. ZZAPP restores the circuit.</p>
-        </div>
-        <div class="science-card">
-          <div class="science-stat" style="color:var(--gold);">+500%</div>
-          <div class="science-label" data-key="sci_atp_label">ATP Production</div>
-          <p class="science-body" data-key="sci_atp_body">Microcurrent stimulation increases ATP synthesis by up to 500% (Cheng et al., 1982). ATP is the direct fuel of cellular repair, tissue regeneration, and metabolic function. Low voltage means low energy — not psychologically, biologically.</p>
-        </div>
-        <div class="science-card">
-          <div class="science-stat" style="color:var(--copper);">ANS</div>
-          <div class="science-label" data-key="sci_ans_label">Autonomic Regulation</div>
-          <p class="science-body" data-key="sci_ans_body">Your autonomic nervous system toggles between activation and recovery. DDS frequencies along meridian pathways engage the parasympathetic branch — shifting the body from chronic stress into measurable recovery. Vagal tone improves. HRV rises.</p>
-        </div>
-        <div class="science-card">
-          <div class="science-stat" style="color:var(--electric);">FASCIA</div>
-          <div class="science-label" data-key="sci_fascia_label">Fascia Network</div>
-          <p class="science-body" data-key="sci_fascia_body">Fascia is piezoelectric — it generates voltage when compressed. Collagen fibers function as biological semiconductors. Stored tension is not a metaphor. It is a measurable electrical change in your connective tissue. ZZAPP works with this system directly.</p>
-        </div>
-      </div>
+      <p class="section-body" style="max-width:680px;" data-key="science_teaser_body">Bio-electricity is the bridge: measurable by Western instruments, practiced by African and Asian traditions for millennia. We don't add tradition to science. We restore what science forgot it was measuring.</p>
 
-      <!-- LAAG 2: THE PRACTICE -->
-      <div class="section-label" style="margin-top:5rem;color:var(--copper);" data-key="label_practice">The Practice</div>
-      <h2 class="section-title" data-key="practice_title">Science measures. Practice moves.</h2>
-      <p class="section-body" data-key="practice_body">These are the traditions that understood bio-electricity before anyone plugged in a voltmeter.</p>
       <div class="science-grid" style="margin-top:2.5rem;">
-        <div class="science-card practice-card">
-          <div class="science-label" data-key="prac_dearmor_label">De-Armoring · Reich</div>
-          <p class="science-body" data-key="prac_dearmor_body">Character armor is bio-electric. Wilhelm Reich measured skin conductance before and after de-armoring: resistance drops, voltage rises, sensation returns. The body organizes defense in seven rings — jaw to pelvis — each locking emotional charge into fascia. Every contracted muscle is a circuit breaker. ZZAPP's segment-scan maps these rings and works them open.</p>
+        <div class="science-card" style="text-align:center;padding:2.5rem 1.5rem;">
+          <div class="science-stat" style="color:var(--green-lush);">−78μV</div>
+          <div class="science-label" data-key="sci_teaser_earth">Earth Voltage</div>
         </div>
-        <div class="science-card practice-card">
-          <div class="science-label" data-key="prac_grounding_label">Grounding & Vibration · Lowen</div>
-          <p class="science-body" data-key="prac_grounding_body">Stand with your feet on the earth, knees soft, and breathe. The involuntary vibration that follows is the sign that bio-electric current is breaking through armor. Lowen observed these tremors at 4–8 Hz — the same range as the Schumann resonance at 7.83 Hz. The body isn't shaking randomly. It's finding resonance with the field it evolved in. Without grounding after activation, discharge becomes retraumatization. That's why ZZAPP always follows Solve with Coagula.</p>
+        <div class="science-card" style="text-align:center;padding:2.5rem 1.5rem;">
+          <div class="science-stat" style="color:var(--gold);">+500%</div>
+          <div class="science-label" data-key="sci_teaser_atp">ATP Production</div>
         </div>
-        <div class="science-card practice-card">
-          <div class="science-label" data-key="prac_shaking_label">Shaking Medicine · Cross-Cultural</div>
-          <p class="science-body" data-key="prac_shaking_body">Neurogenic tremors originate in the psoas — the deepest muscle connecting spine to legs, where the body stores fight-or-flight that was never completed. The Kalahari San dance until n/um rises through the spine. Vodou practitioners enter controlled tremor through rhythmic induction. Quakers shook. Dervishes whirl. The shake completes the bio-electric circuit that trauma interrupted. The body already knows how to heal. It needs permission to finish.</p>
-        </div>
-      </div>
-      <div class="science-grid science-grid-4" style="margin-top:1.5rem;">
-        <div class="science-card practice-card">
-          <div class="science-label" data-key="prac_drums_label">Three Drums · Applied Rhythmology</div>
-          <p class="science-body" data-key="prac_drums_body">ZZAPP works with three ancestral percussion voices: the West-African djembe, the Yoruba talking drum, and the shamanistic drum of Russian and Central Asian tradition. Each carries a different frequency architecture — the djembe's bass drives the gut, the talking drum modulates like speech, the frame drum resonates bone. We prefer drowning in the field of a live drum. A djembe produces 50–3,000 Hz — overlapping therapeutic ultrasound ranges. When recording is the only option, we use it. But the field of a live drum is the method.</p>
-        </div>
-        <div class="science-card practice-card" style="border-color:rgba(200,144,58,0.2);background:rgba(200,144,58,0.04);">
-          <div class="science-label" style="color:var(--gold);" data-key="prac_biospark_label">BioSpark · Prepare the Vessel</div>
-          <p class="science-body" data-key="prac_biospark_body">Before bio-electric work begins, the body needs to conduct. ZZAPP's BioSpark is a pre-session preparation: lime juice alkalises the stomach. Apple cider vinegar stabilizes pH. Himalayan salt and electrolytes — potassium, magnesium, sodium, calcium — restore mineral conductivity. Collagen peptides support myelin production — the insulation that lets electrical signals travel clean. Creatine fuels the ATP cycle. This isn't a smoothie. It's electrical preparation. Alkalise the terrain before de-armoring and charge, and the body receives current instead of resisting it.</p>
+        <div class="science-card" style="text-align:center;padding:2.5rem 1.5rem;">
+          <div class="science-stat" style="color:var(--copper);">7.83 Hz</div>
+          <div class="science-label" data-key="sci_teaser_schumann">Schumann Resonance</div>
         </div>
       </div>
 
-      <!-- CLIMAX: SESSION FLOW — SOLVE ET COAGULA -->
-      <div class="session-flow fade-in">
-        <div style="margin-bottom:3rem;">
-          <div class="section-label" style="justify-content:center;color:var(--gold);" data-key="flow_label">The Session</div>
-          <h3 class="flow-title" data-key="flow_title">Solve et Coagula</h3>
-          <p class="flow-subtitle" data-key="flow_subtitle">Dissolve & Reconstruct</p>
-        </div>
-
-        <div style="display:flex;flex-direction:column;align-items:center;gap:0;">
-          <!-- SOLVE -->
-          <div class="flow-phase flow-solve">
-            <div class="flow-phase-label" data-key="flow_solve">SOLVE</div>
-            <div class="flow-steps">
-              <div class="flow-step">
-                <div class="flow-dot solve-dot"></div>
-                <div class="flow-step-name" data-key="flow_s1">BioSpark</div>
-                <div class="flow-step-action" data-key="flow_s1a">prepare the vessel</div>
-              </div>
-              <div class="flow-step">
-                <div class="flow-dot solve-dot"></div>
-                <div class="flow-step-name" data-key="flow_s2">De-Armoring</div>
-                <div class="flow-step-action" data-key="flow_s2a">open the armor</div>
-              </div>
-              <div class="flow-step">
-                <div class="flow-dot solve-dot"></div>
-                <div class="flow-step-name" data-key="flow_s3">Charge</div>
-                <div class="flow-step-action" data-key="flow_s3a">activate the current</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- PIVOT -->
-          <div class="flow-pivot">
-            <div class="flow-diamond">◈</div>
-            <div class="flow-pivot-text" data-key="flow_pivot">Stilte</div>
-          </div>
-
-          <!-- COAGULA -->
-          <div class="flow-phase flow-coagula">
-            <div class="flow-phase-label" data-key="flow_coagula">COAGULA</div>
-            <div class="flow-steps">
-              <div class="flow-step">
-                <div class="flow-dot coagula-dot"></div>
-                <div class="flow-step-name" data-key="flow_c1">Fascia</div>
-                <div class="flow-step-action" data-key="flow_c1a">reorganize the tissue</div>
-              </div>
-              <div class="flow-step">
-                <div class="flow-dot coagula-dot"></div>
-                <div class="flow-step-name" data-key="flow_c2">Grounding</div>
-                <div class="flow-step-action" data-key="flow_c2a">land the body</div>
-              </div>
-              <div class="flow-step">
-                <div class="flow-dot coagula-dot"></div>
-                <div class="flow-step-name" data-key="flow_c3">Dance</div>
-                <div class="flow-step-action" data-key="flow_c3a">integrate the field</div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div style="text-align:center;margin-top:3rem;">
+        <a href="/science/" class="science-teaser-cta" data-key="science_cta">Explore the science</a>
       </div>
     </div>
   </section>
@@ -914,22 +786,10 @@
         zzapp_p1:"Microvolt stimulation via the DDS machine",zzapp_p2:"Direct regulation of the autonomic nervous system",zzapp_p3:"Scientifically grounded — emancipatory — no mystification required",zzapp_p4:"Mobile setup — studios, events, festivals",
         pulse_label:"+ PULSE — The Integration Layer",pulse_body:"Every ZZAPP session includes PULSE: a structured integration conversation that bridges what the body just processed with how you live. Not optional — part of the protocol.",
         zzapp_cta:"Experience the current",
-        rerooting_text:"Western wellness split mind from body, science from tradition, measurement from practice. The traditions we draw from — African, Asian, indigenous — never made that cut. Bio-electricity is the bridge: measurable by Western instruments, practiced by African and Asian traditions for millennia. We don't add tradition to science. We restore what science forgot it was measuring.",
-        label_science:"02 — The Science",science_title:"Measurable. Documented. Peer-reviewed.",science_body:"ZZAPP is not intuition. The method rests on measurable bio-electric principles — from earth voltage to cellular biology.",
-        sci_earth_label:"Earth Connection",sci_earth_body:"The earth's surface carries a negative charge of −78 microvolt. Your body evolved in constant contact with this field. Modern life severed that connection — rubber soles, concrete floors, elevated buildings. ZZAPP restores the circuit.",
-        sci_atp_label:"ATP Production",sci_atp_body:"Microcurrent stimulation increases ATP synthesis by up to 500% (Cheng et al., 1982). ATP is the direct fuel of cellular repair, tissue regeneration, and metabolic function. Low voltage means low energy — not psychologically, biologically.",
-        sci_ans_label:"Autonomic Regulation",sci_ans_body:"Your autonomic nervous system toggles between activation and recovery. DDS frequencies along meridian pathways engage the parasympathetic branch — shifting the body from chronic stress into measurable recovery. Vagal tone improves. HRV rises.",
-        sci_fascia_label:"Fascia Network",sci_fascia_body:"Fascia is piezoelectric — it generates voltage when compressed. Collagen fibers function as biological semiconductors. Stored tension is not a metaphor. It is a measurable electrical change in your connective tissue. ZZAPP works with this system directly.",
-        label_practice:"The Practice",practice_title:"Science measures. Practice moves.",practice_body:"These are the traditions that understood bio-electricity before anyone plugged in a voltmeter.",
-        prac_dearmor_label:"De-Armoring · Reich",prac_dearmor_body:"Character armor is bio-electric. Wilhelm Reich measured skin conductance before and after de-armoring: resistance drops, voltage rises, sensation returns. The body organizes defense in seven rings — jaw to pelvis — each locking emotional charge into fascia. Every contracted muscle is a circuit breaker. ZZAPP's segment-scan maps these rings and works them open.",
-        prac_grounding_label:"Grounding & Vibration · Lowen",prac_grounding_body:"Stand with your feet on the earth, knees soft, and breathe. The involuntary vibration that follows is the sign that bio-electric current is breaking through armor. Lowen observed these tremors at 4–8 Hz — the same range as the Schumann resonance at 7.83 Hz. The body isn't shaking randomly. It's finding resonance with the field it evolved in. Without grounding after activation, discharge becomes retraumatization. That's why ZZAPP always follows Solve with Coagula.",
-        prac_shaking_label:"Shaking Medicine · Cross-Cultural",prac_shaking_body:"Neurogenic tremors originate in the psoas — the deepest muscle connecting spine to legs, where the body stores fight-or-flight that was never completed. The Kalahari San dance until n/um rises through the spine. Vodou practitioners enter controlled tremor through rhythmic induction. Quakers shook. Dervishes whirl. The shake completes the bio-electric circuit that trauma interrupted. The body already knows how to heal. It needs permission to finish.",
-        prac_drums_label:"Three Drums · Applied Rhythmology",prac_drums_body:"ZZAPP works with three ancestral percussion voices: the West-African djembe, the Yoruba talking drum, and the shamanistic drum of Russian and Central Asian tradition. Each carries a different frequency architecture — the djembe's bass drives the gut, the talking drum modulates like speech, the frame drum resonates bone. We prefer drowning in the field of a live drum. A djembe produces 50–3,000 Hz — overlapping therapeutic ultrasound ranges. When recording is the only option, we use it. But the field of a live drum is the method.",
-        prac_biospark_label:"BioSpark · Prepare the Vessel",prac_biospark_body:"Before bio-electric work begins, the body needs to conduct. ZZAPP's BioSpark is a pre-session preparation: lime juice alkalises the stomach. Apple cider vinegar stabilizes pH. Himalayan salt and electrolytes — potassium, magnesium, sodium, calcium — restore mineral conductivity. Collagen peptides support myelin production — the insulation that lets electrical signals travel clean. Creatine fuels the ATP cycle. This isn't a smoothie. It's electrical preparation. Alkalise the terrain before de-armoring and charge, and the body receives current instead of resisting it.",
-        flow_label:"The Session",flow_title:"Solve et Coagula",flow_subtitle:"Dissolve & Reconstruct",
-        flow_solve:"SOLVE",flow_s1:"BioSpark",flow_s1a:"prepare the vessel",flow_s2:"De-Armoring",flow_s2a:"open the armor",flow_s3:"Charge",flow_s3a:"activate the current",
-        flow_pivot:"Stilte",
-        flow_coagula:"COAGULA",flow_c1:"Fascia",flow_c1a:"reorganize the tissue",flow_c2:"Grounding",flow_c2a:"land the body",flow_c3:"Dance",flow_c3a:"integrate the field",
+        label_science:"02 — The Science",science_title:"Measurable. Documented. Peer-reviewed.",
+        science_teaser_body:"Bio-electricity is the bridge: measurable by Western instruments, practiced by African and Asian traditions for millennia. We don't add tradition to science. We restore what science forgot it was measuring.",
+        sci_teaser_earth:"Earth Voltage",sci_teaser_atp:"ATP Production",sci_teaser_schumann:"Schumann Resonance",
+        science_cta:"Explore the science",
         proof_title:"The current speaks for itself.",
         proof_1:'"I slept 10 hours that night. I don\'t know what you did but something came loose."',
         proof_2:'"It felt like my body remembered how to breathe. Not my lungs — my whole system."',
@@ -1009,22 +869,10 @@
         zzapp_p1:"Microvoltstimulatie via de DDS-machine",zzapp_p2:"Directe regulatie van het autonome zenuwstelsel",zzapp_p3:"Wetenschappelijk onderbouwd — emancipatoir — geen mystificatie vereist",zzapp_p4:"Mobiele opstelling — studio's, events en festivals",
         pulse_label:"+ PULSE — De Integratielaag",pulse_body:"Elke ZZAPP-sessie bevat PULSE: een gestructureerd integratiegesprek dat overbrugt wat het lichaam net verwerkte met hoe je leeft. Niet optioneel — deel van het protocol.",
         zzapp_cta:"Ervaar de stroom",
-        rerooting_text:"Westerse wellness scheidde geest van lichaam, wetenschap van traditie, meting van praktijk. De tradities waaruit wij putten — Afrikaans, Aziatisch, inheems — maakten die scheiding nooit. Bio-elektriciteit is de brug: meetbaar met westerse instrumenten, beoefend door Afrikaanse en Aziatische tradities sinds millennia. We voegen geen traditie toe aan wetenschap. We herstellen wat wetenschap vergat te meten.",
-        label_science:"02 — De Wetenschap",science_title:"Meetbaar. Gedocumenteerd. Peer-reviewed.",science_body:"ZZAPP is geen intuïtie. De methode rust op meetbare bio-elektrische principes — van aardspanning tot celbiologie.",
-        sci_earth_label:"Aardverbinding",sci_earth_body:"Het aardoppervlak draagt een negatieve lading van −78 microvolt. Jouw lichaam evolueerde in constant contact met dit veld. Het moderne leven verbrak die verbinding — rubberzolen, betonvloeren, verhoogde gebouwen. ZZAPP herstelt het circuit.",
-        sci_atp_label:"ATP-productie",sci_atp_body:"Microstroom-stimulatie verhoogt ATP-synthese met tot 500% (Cheng et al., 1982). ATP is de directe brandstof voor celherstel, weefselregeneratie en metabole functie. Lage spanning betekent lage energie — niet psychologisch, biologisch.",
-        sci_ans_label:"Autonome regulatie",sci_ans_body:"Je autonome zenuwstelsel schakelt tussen activatie en herstel. DDS-frequenties langs meridianen activeren de parasympathische tak — ze schakelen het lichaam van chronische stress naar meetbaar herstel. Vagale tonus verbetert. HRV stijgt.",
-        sci_fascia_label:"Fascia-netwerk",sci_fascia_body:"Fascia is piëzo-elektrisch — het genereert spanning bij compressie. Collageenvezels functioneren als biologische halfgeleiders. Opgeslagen spanning is geen metafoor. Het is een meetbare elektrische verandering in je bindweefsel. ZZAPP werkt direct met dit systeem.",
-        label_practice:"De Praktijk",practice_title:"Wetenschap meet. Praktijk beweegt.",practice_body:"Dit zijn de tradities die bio-elektriciteit begrepen voordat iemand een voltmeter aansloot.",
-        prac_dearmor_label:"Ontpantsering · Reich",prac_dearmor_body:"Karakterpantser is bio-elektrisch. Wilhelm Reich mat huidgeleiding voor en na ontpantsering: weerstand daalt, spanning stijgt, gevoel keert terug. Het lichaam organiseert verdediging in zeven ringen — van kaak tot bekken — elk een emotionele lading vergrendelend in de fascia. Elke gecontraheerde spier is een stroomonderbreker. ZZAPP's segment-scan brengt deze ringen in kaart en werkt ze open.",
-        prac_grounding_label:"Grounding & Vibratie · Lowen",prac_grounding_body:"Sta met je voeten op de aarde, knieën zacht, en adem. De onwillekeurige vibratie die volgt is het teken dat bio-elektrische stroom door het pantser breekt. Lowen observeerde deze trillingen op 4–8 Hz — hetzelfde bereik als de Schumann-resonantie op 7,83 Hz. Het lichaam trilt niet willekeurig. Het vindt resonantie met het veld waarin het evolueerde. Zonder grounding na activering wordt ontlading hertraumatisering. Daarom volgt ZZAPP altijd Solve met Coagula.",
-        prac_shaking_label:"Shaking Medicine · Cross-Cultureel",prac_shaking_body:"Neurogene tremoren ontstaan in de psoas — de diepste spier die wervelkolom met benen verbindt, waar het lichaam vecht-of-vlucht opslaat die nooit voltooid werd. De Kalahari San dansen tot n/um stijgt door de wervelkolom. Vodou-beoefenaars betreden gecontroleerde tremor via ritmische inductie. Quakers schudden. Derwisjen draaien. De shake voltooit het bio-elektrische circuit dat trauma onderbrak. Het lichaam weet al hoe het moet genezen. Het heeft toestemming nodig om af te maken.",
-        prac_drums_label:"Drie Trommels · Toegepaste Ritmologie",prac_drums_body:"ZZAPP werkt met drie ancestrale percussie-stemmen: de West-Afrikaanse djembé, de Yoruba talking drum en de sjamanistische trommel uit de Russische en Centraal-Aziatische traditie. Elk draagt een andere frequentie-architectuur — de bas van de djembé drijft de buik, de talking drum moduleert als spraak, de framedrum resoneert bot. Wij verkiezen onderdompeling in het veld van een live trommel. Een djembé produceert 50–3.000 Hz — overlappend met therapeutisch ultrageluid. Wanneer opnames de enige optie zijn, gebruiken we ze. Maar het veld van een live trommel is de methode.",
-        prac_biospark_label:"BioSpark · Bereid het Vat",prac_biospark_body:"Voordat bio-elektrisch werk begint, moet het lichaam geleiden. ZZAPP's BioSpark is een pre-sessie preparaat: limoensap alkaliseert de maag. Appelciderazijn stabiliseert pH. Himalayazout en elektrolyten — kalium, magnesium, natrium, calcium — herstellen minerale geleidbaarheid. Collageenpeptiden ondersteunen myeline-productie — de isolatie die elektrische signalen schoon laat reizen. Creatine voedt de ATP-cyclus. Dit is geen smoothie. Het is elektrische voorbereiding. Alkaliseer het terrein vóór ontpantsering en lading, en het lichaam ontvangt stroom in plaats van deze te weerstaan.",
-        flow_label:"De Sessie",flow_title:"Solve et Coagula",flow_subtitle:"Oplossen & Herstructureren",
-        flow_solve:"SOLVE",flow_s1:"BioSpark",flow_s1a:"bereid het vat",flow_s2:"Ontpantsering",flow_s2a:"open het pantser",flow_s3:"Lading",flow_s3a:"activeer de stroom",
-        flow_pivot:"Stilte",
-        flow_coagula:"COAGULA",flow_c1:"Fascia",flow_c1a:"herorganiseer het weefsel",flow_c2:"Grounding",flow_c2a:"land het lichaam",flow_c3:"Dans",flow_c3a:"integreer het veld",
+        label_science:"02 — De Wetenschap",science_title:"Meetbaar. Gedocumenteerd. Peer-reviewed.",
+        science_teaser_body:"Bio-elektriciteit is de brug: meetbaar met westerse instrumenten, beoefend door Afrikaanse en Aziatische tradities sinds millennia. We voegen geen traditie toe aan wetenschap. We herstellen wat wetenschap vergat te meten.",
+        sci_teaser_earth:"Aardspanning",sci_teaser_atp:"ATP-productie",sci_teaser_schumann:"Schumann-resonantie",
+        science_cta:"Verken de wetenschap",
         proof_title:"De stroom spreekt voor zich.",
         proof_1:'"Ik sliep die nacht 10 uur. Ik weet niet wat je deed maar er is iets losgekomen."',
         proof_2:'"Het voelde alsof mijn lichaam zich herinnerde hoe te ademen. Niet mijn longen — mijn hele systeem."',

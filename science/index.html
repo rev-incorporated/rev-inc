@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Science — REV.INC</title>
+  <meta name="description" content="The bio-electric method behind ZZAPP — from earth voltage to shaking medicine, from Reich to African polyrhythm. Science measures. Practice moves." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://therevolutionincorporated.com/science/" />
+  <meta property="og:title" content="The Science — REV.INC" />
+  <meta property="og:description" content="Bio-electricity is the bridge: measurable by Western instruments, practiced by African and Asian traditions for millennia." />
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black:      #090909;
+      --obsidian:   #0A0A0A;
+      --surface:    #111111;
+      --surface-lt: #161616;
+      --gold:       #C8903A;
+      --gold-bright:#E8B82E;
+      --gold-dim:   #8B6E1A;
+      --amber:      #D4942A;
+      --copper:     #B07040;
+      --orange:     #C87828;
+      --green:      #1B3A2D;
+      --green-deep: #0D2418;
+      --green-mid:  #2A5A2A;
+      --green-lush: #3A7A3A;
+      --electric:   #4A9FD4;
+      --electric-dim: rgba(74,159,212,0.5);
+      --purple:     #4A1C6E;
+      --purple-lt:  #7B3FA0;
+      --cream:      #E8D5A3;
+      --cream-dim:  rgba(232,213,163,0.7);
+      --white:      #F2DEB0;
+      --font-display: 'Unbounded', sans-serif;
+      --font-body:    'Cormorant Garamond', serif;
+      --font-mono:    'DM Mono', monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--obsidian); color: var(--cream); font-family: var(--font-body); font-size: 18px; line-height: 1.7; overflow-x: hidden; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 2.5rem; background: rgba(9,9,9,0.92); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(200,144,58,0.1); }
+    .nav-logo { font-family: var(--font-display); font-size: 1rem; font-weight: 900; color: var(--gold); letter-spacing: 0.04em; text-decoration: none; }
+    .nav-logo span { color: var(--copper); }
+    .nav-right { display: flex; align-items: center; gap: 2rem; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--font-mono); font-size: 0.72rem; font-weight: 300; color: var(--cream); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6; transition: opacity 0.2s, color 0.2s; }
+    .nav-links a:hover { opacity: 1; color: var(--gold); }
+    .nav-links a.active { opacity: 1; color: var(--gold); }
+    .lang-toggle { font-family: var(--font-mono); font-size: 0.7rem; font-weight: 300; background: none; border: 1px solid rgba(200,144,58,0.3); color: var(--gold); padding: 0.3rem 0.75rem; border-radius: 2px; cursor: pointer; letter-spacing: 0.1em; transition: background 0.2s; }
+    .lang-toggle:hover { background: rgba(200,144,58,0.1); }
+
+    /* HERO */
+    .sci-hero { position: relative; min-height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 8rem 2.5rem 4rem; overflow: hidden; }
+    .sci-hero-bg { position: absolute; inset: 0; background:
+      radial-gradient(ellipse at 30% 70%, rgba(27,58,45,0.6) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 30%, rgba(74,159,212,0.15) 0%, transparent 45%),
+      radial-gradient(ellipse at 50% 90%, rgba(200,144,58,0.06) 0%, transparent 50%),
+      linear-gradient(180deg, var(--obsidian) 0%, rgba(13,36,24,0.3) 60%, var(--obsidian) 100%);
+      z-index: 0; }
+    .sci-hero-content { position: relative; z-index: 2; max-width: 720px; }
+    .sci-hero-label { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--green-lush); margin-bottom: 1.5rem; }
+    .sci-hero-title { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; line-height: 1.1; color: var(--white); margin-bottom: 1.5rem; }
+    .sci-hero-title .gold { color: var(--gold); }
+
+    /* REROOTING FRAME */
+    .rerooting { padding: 0 2.5rem 2rem; max-width: 780px; margin: 0 auto; text-align: center; }
+    .rerooting-line { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 0 auto; }
+    .rerooting-text { font-family: var(--font-body); font-style: italic; font-size: 1.2rem; font-weight: 300; color: var(--cream); line-height: 1.85; margin: 1.5rem 0; }
+
+    /* WAVE DIVIDER */
+    .wave-divider { width: 100%; max-width: 600px; margin: 3rem auto; height: 40px; position: relative; overflow: hidden; opacity: 0.25; }
+    .wave-divider svg { width: 100%; height: 100%; }
+
+    /* SECTIONS */
+    .sci-section { padding: 5rem 2.5rem; max-width: 1100px; margin: 0 auto; }
+    .section-label { font-family: var(--font-mono); font-size: 0.62rem; font-weight: 300; letter-spacing: 0.2em; text-transform: uppercase; color: var(--green-lush); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.75rem; }
+    .section-label::before { content: ''; display: inline-block; width: 24px; height: 1px; background: currentColor; opacity: 0.5; }
+    .section-title { font-family: var(--font-display); font-size: clamp(1.6rem, 3.5vw, 2.5rem); font-weight: 700; line-height: 1.15; color: var(--white); margin-bottom: 1rem; }
+    .section-intro { font-family: var(--font-body); font-size: 1.05rem; font-weight: 300; color: var(--cream-dim); max-width: 600px; line-height: 1.8; margin-bottom: 3rem; }
+    .divider { width: 100%; height: 1px; background: linear-gradient(90deg, transparent, rgba(200,144,58,0.12), transparent); max-width: 1100px; margin: 0 auto; }
+
+    /* CARD GRIDS */
+    .card-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .card-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+
+    /* SCIENCE CARDS */
+    .sci-card { padding: 2.2rem 2rem; border: 1px solid rgba(27,58,45,0.25); border-radius: 4px; background: rgba(27,58,45,0.06); transition: border-color 0.3s; }
+    .sci-card:hover { border-color: rgba(200,144,58,0.15); }
+    .sci-stat { font-family: var(--font-display); font-size: 1.8rem; font-weight: 900; margin-bottom: 0.5rem; }
+    .sci-label { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); margin-bottom: 0.6rem; }
+    .sci-body { font-family: var(--font-body); font-size: 0.92rem; color: var(--cream-dim); line-height: 1.75; }
+
+    /* PRACTICE CARDS */
+    .prac-card { padding: 2.2rem 2rem; border: 1px solid rgba(176,112,64,0.15); border-radius: 4px; background: rgba(176,112,64,0.04); transition: border-color 0.3s; }
+    .prac-card:hover { border-color: rgba(176,112,64,0.3); }
+    .prac-label { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--copper); margin-bottom: 0.6rem; }
+    .prac-body { font-family: var(--font-body); font-size: 0.92rem; color: var(--cream-dim); line-height: 1.75; }
+
+    /* VISION CARDS */
+    .vis-card { padding: 2.2rem 2rem; border: 1px solid rgba(74,159,212,0.15); border-radius: 4px; background: rgba(74,159,212,0.03); transition: border-color 0.3s; }
+    .vis-card:hover { border-color: rgba(74,159,212,0.3); }
+    .vis-label { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--electric); margin-bottom: 0.6rem; }
+    .vis-body { font-family: var(--font-body); font-size: 0.92rem; color: var(--cream-dim); line-height: 1.75; }
+
+    /* BIOSPARK ACCENT */
+    .biospark-card { border-color: rgba(200,144,58,0.2); background: rgba(200,144,58,0.04); }
+    .biospark-card:hover { border-color: rgba(200,144,58,0.35); }
+    .biospark-card .prac-label { color: var(--gold); }
+
+    /* SESSION FLOW */
+    .session-flow { text-align: center; padding: 5rem 0; }
+    .flow-title { font-family: var(--font-display); font-size: clamp(1.6rem, 3.5vw, 2.5rem); font-weight: 700; color: var(--white); margin-bottom: 0.3rem; }
+    .flow-subtitle { font-family: var(--font-body); font-style: italic; font-size: 1.05rem; color: var(--cream-dim); margin-bottom: 3rem; }
+    .flow-phase { width: 100%; padding: 2.5rem 1rem; border-radius: 4px; }
+    .flow-solve { background: linear-gradient(180deg, rgba(176,112,64,0.06) 0%, rgba(200,144,58,0.1) 100%); border: 1px solid rgba(176,112,64,0.15); }
+    .flow-coagula { background: linear-gradient(180deg, rgba(58,122,58,0.06) 0%, rgba(27,58,45,0.1) 100%); border: 1px solid rgba(27,58,45,0.15); }
+    .flow-phase-label { font-family: var(--font-display); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 2rem; }
+    .flow-solve .flow-phase-label { color: var(--copper); }
+    .flow-coagula .flow-phase-label { color: var(--green-lush); }
+    .flow-steps { display: flex; justify-content: center; gap: 4rem; }
+    .flow-step { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; }
+    .flow-dot { width: 14px; height: 14px; border-radius: 50%; }
+    .solve-dot { background: var(--copper); box-shadow: 0 0 12px rgba(176,112,64,0.4); }
+    .coagula-dot { background: var(--green-lush); box-shadow: 0 0 12px rgba(58,122,58,0.4); }
+    .flow-step-name { font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; color: var(--white); letter-spacing: 0.04em; }
+    .flow-step-action { font-family: var(--font-body); font-style: italic; font-size: 0.82rem; color: var(--cream-dim); }
+    .flow-pivot { padding: 1.5rem 0; display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+    .flow-diamond { font-size: 1.5rem; color: var(--gold); text-shadow: 0 0 24px rgba(200,144,58,0.5); }
+    .flow-pivot-text { font-family: var(--font-mono); font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dim); }
+
+    /* OCTAVE VISUAL */
+    .octave-visual { max-width: 700px; margin: 0 auto; padding: 3rem 0; }
+    .octave-scale { display: flex; align-items: flex-end; justify-content: center; gap: 0; height: 120px; }
+    .octave-note { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; flex: 1; max-width: 75px; }
+    .octave-bar { width: 100%; border-radius: 2px 2px 0 0; transition: opacity 0.3s; }
+    .octave-name { font-family: var(--font-mono); font-size: 0.52rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cream-dim); }
+    .octave-shock { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; flex: 0 0 30px; height: 100%; }
+    .octave-shock-line { width: 1px; height: 60%; background: linear-gradient(180deg, var(--gold), transparent); }
+    .octave-shock-label { font-family: var(--font-mono); font-size: 0.45rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); writing-mode: vertical-rl; transform: rotate(180deg); margin-top: 0.3rem; }
+
+    /* CTA */
+    .sci-cta { text-align: center; padding: 5rem 2.5rem; }
+    .sci-cta-text { font-family: var(--font-body); font-style: italic; font-size: 1.15rem; color: var(--cream); max-width: 500px; margin: 0 auto 2rem; line-height: 1.8; }
+    .btn-primary { font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: var(--black); background: var(--gold); padding: 0.9rem 1.8rem; border-radius: 2px; transition: background 0.2s, transform 0.2s; display: inline-block; }
+    .btn-primary:hover { background: var(--gold-bright); transform: translateY(-2px); }
+    .btn-ghost { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: var(--cream-dim); border: 1px solid rgba(232,213,163,0.15); padding: 0.7rem 1.4rem; border-radius: 2px; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* FOOTER */
+    footer { padding: 3rem 2.5rem; border-top: 1px solid rgba(200,144,58,0.08); max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 0.85rem; font-weight: 900; color: var(--gold); text-decoration: none; }
+    .footer-copy { font-family: var(--font-mono); font-size: 0.55rem; color: rgba(232,213,163,0.18); letter-spacing: 0.08em; }
+
+    /* FADE IN */
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .sci-hero { padding: 6rem 1.5rem 3rem; min-height: 40vh; }
+      .sci-section { padding: 4rem 1.5rem; }
+      .card-grid-2, .card-grid-3 { grid-template-columns: 1fr; }
+      .flow-steps { flex-direction: column; gap: 2rem; }
+      .octave-scale { height: 80px; gap: 0; }
+      .octave-shock-label { font-size: 0.4rem; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="../" class="nav-logo">REV<span>.</span>INC</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="../#zzapp">ZZAPP</a></li>
+        <li><a href="./" class="active" data-key="nav_science">Science</a></li>
+        <li><a href="../#services" data-key="nav_services">Pillars</a></li>
+        <li><a href="../#book" data-key="nav_book_link">Book</a></li>
+      </ul>
+      <button class="lang-toggle" id="langToggle">EN / NL</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="sci-hero">
+    <div class="sci-hero-bg"></div>
+    <div class="sci-hero-content fade-in">
+      <div class="sci-hero-label" data-key="hero_label">The Science & Practice of ZZAPP</div>
+      <h1 class="sci-hero-title" data-key="hero_title">What the body <span class="gold">already knows.</span></h1>
+    </div>
+  </section>
+
+  <!-- RE-ROOTING FRAME -->
+  <div class="rerooting fade-in">
+    <div class="rerooting-line"></div>
+    <p class="rerooting-text" data-key="rerooting_text">Western wellness split mind from body, science from tradition, measurement from practice. The traditions we draw from — African, Asian, indigenous — never made that cut. Bio-electricity is the bridge: measurable by Western instruments, practiced by African and Asian traditions for millennia. We don't add tradition to science. We restore what science forgot it was measuring.</p>
+    <div class="rerooting-line"></div>
+  </div>
+
+  <!-- WAVE DIVIDER -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 600 40" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 20 Q75 5 150 20 T300 20 T450 20 T600 20" stroke="#C8903A" stroke-width="1" fill="none"/>
+      <path d="M0 22 Q75 37 150 22 T300 22 T450 22 T600 22" stroke="#3A7A3A" stroke-width="0.5" fill="none" opacity="0.5"/>
+    </svg>
+  </div>
+
+  <!-- LAYER 1: THE SCIENCE -->
+  <section class="sci-section">
+    <div class="fade-in">
+      <div class="section-label" style="color:var(--green-lush);" data-key="label_science">The Science</div>
+      <h2 class="section-title" data-key="science_title">Measurable. Documented. Peer-reviewed.</h2>
+      <p class="section-intro" data-key="science_intro">ZZAPP is not intuition. The method rests on measurable bio-electric principles — from earth voltage to cellular biology.</p>
+      <div class="card-grid-2">
+        <div class="sci-card">
+          <div class="sci-stat" style="color:var(--green-lush);">−78μV</div>
+          <div class="sci-label" data-key="sci_earth_label">Earth Connection</div>
+          <p class="sci-body" data-key="sci_earth_body">The earth's surface carries a negative charge of −78 microvolt. Your body evolved in constant contact with this field. Modern life severed that connection — rubber soles, concrete floors, elevated buildings. ZZAPP restores the circuit.</p>
+        </div>
+        <div class="sci-card">
+          <div class="sci-stat" style="color:var(--gold);">+500%</div>
+          <div class="sci-label" data-key="sci_atp_label">ATP Production</div>
+          <p class="sci-body" data-key="sci_atp_body">Microcurrent stimulation increases ATP synthesis by up to 500% (Cheng et al., 1982). ATP is the direct fuel of cellular repair, tissue regeneration, and metabolic function. Low voltage means low energy — not psychologically, biologically.</p>
+        </div>
+        <div class="sci-card">
+          <div class="sci-stat" style="color:var(--copper);">ANS</div>
+          <div class="sci-label" data-key="sci_ans_label">Autonomic Regulation</div>
+          <p class="sci-body" data-key="sci_ans_body">Your autonomic nervous system toggles between activation and recovery. DDS frequencies along meridian pathways engage the parasympathetic branch — shifting the body from chronic stress into measurable recovery. Vagal tone improves. HRV rises.</p>
+        </div>
+        <div class="sci-card">
+          <div class="sci-stat" style="color:var(--electric);">FASCIA</div>
+          <div class="sci-label" data-key="sci_fascia_label">Fascia Network</div>
+          <p class="sci-body" data-key="sci_fascia_body">Fascia is piezoelectric — it generates voltage when compressed. Collagen fibers function as biological semiconductors. Stored tension is not a metaphor. It is a measurable electrical change in your connective tissue. ZZAPP works with this system directly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- LAYER 2: THE PRACTICE -->
+  <section class="sci-section">
+    <div class="fade-in">
+      <div class="section-label" style="color:var(--copper);" data-key="label_practice">The Practice</div>
+      <h2 class="section-title" data-key="practice_title">Science measures. Practice moves.</h2>
+      <p class="section-intro" data-key="practice_intro">These are the traditions that understood bio-electricity before anyone plugged in a voltmeter.</p>
+      <div class="card-grid-3">
+        <div class="prac-card">
+          <div class="prac-label" data-key="prac_dearmor_label">De-Armoring · Reich</div>
+          <p class="prac-body" data-key="prac_dearmor_body">Character armor is bio-electric. Wilhelm Reich measured skin conductance before and after de-armoring: resistance drops, voltage rises, sensation returns. The body organizes defense in seven rings — jaw to pelvis — each locking emotional charge into fascia. Every contracted muscle is a circuit breaker. ZZAPP's segment-scan maps these rings and works them open.</p>
+        </div>
+        <div class="prac-card">
+          <div class="prac-label" data-key="prac_grounding_label">Grounding & Vibration · Lowen</div>
+          <p class="prac-body" data-key="prac_grounding_body">Stand with your feet on the earth, knees soft, and breathe. The involuntary vibration that follows is the sign that bio-electric current is breaking through armor. Lowen observed these tremors at 4–8 Hz — the same range as the Schumann resonance at 7.83 Hz. The body isn't shaking randomly. It's finding resonance with the field it evolved in. Without grounding after activation, discharge becomes retraumatization.</p>
+        </div>
+        <div class="prac-card">
+          <div class="prac-label" data-key="prac_shaking_label">Shaking Medicine · Cross-Cultural</div>
+          <p class="prac-body" data-key="prac_shaking_body">Neurogenic tremors originate in the psoas — the deepest muscle connecting spine to legs, where the body stores fight-or-flight that was never completed. The Kalahari San dance until n/um rises through the spine. Vodou practitioners enter controlled tremor through rhythmic induction. The shake completes the bio-electric circuit that trauma interrupted. The body already knows how to heal.</p>
+        </div>
+      </div>
+      <div class="card-grid-2" style="margin-top:1.5rem;">
+        <div class="prac-card">
+          <div class="prac-label" data-key="prac_drums_label">Three Drums · Applied Rhythmology</div>
+          <p class="prac-body" data-key="prac_drums_body">ZZAPP works with three ancestral percussion voices: the West-African djembe, the Yoruba talking drum, and the shamanistic drum of Russian and Central Asian tradition. Each carries a different frequency architecture — the djembe's bass drives the gut, the talking drum modulates like speech, the frame drum resonates bone. We prefer drowning in the field of a live drum. When recording is the only option, we use it. But the field of a live drum is the method.</p>
+        </div>
+        <div class="prac-card biospark-card">
+          <div class="prac-label" data-key="prac_biospark_label">BioSpark · Prepare the Vessel</div>
+          <p class="prac-body" data-key="prac_biospark_body">Before bio-electric work begins, the body needs to conduct. ZZAPP's BioSpark is a pre-session preparation: lime juice alkalises the stomach. Apple cider vinegar stabilizes pH. Himalayan salt and electrolytes — potassium, magnesium, sodium, calcium — restore mineral conductivity. Collagen peptides support myelin production. Creatine fuels the ATP cycle. This isn't a smoothie. It's electrical preparation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- LAYER 3: THE VISION -->
+  <section class="sci-section">
+    <div class="fade-in">
+      <div class="section-label" style="color:var(--electric);" data-key="label_vision">The Vision</div>
+      <h2 class="section-title" data-key="vision_title">Energy, frequency, vibration.</h2>
+      <p class="section-intro" data-key="vision_intro">The deeper framework — where measurable physics meets traditions that never lost the thread.</p>
+      <div class="card-grid-3">
+        <div class="vis-card">
+          <div class="vis-label" data-key="vis_tesla_label">Resonance · Tesla</div>
+          <p class="vis-body" data-key="vis_tesla_body">Every physical system has a resonant frequency. Hit that frequency and the signal amplifies exponentially. Tesla proved this for the earth — ZZAPP applies it to the body. The Schumann resonance (7.83 Hz) matches the vibration Lowen observed when muscular armor breaks. Not coincidence. The body is a resonance system. The question is not whether it vibrates — but whether it vibrates at its own frequency or someone else's.</p>
+        </div>
+        <div class="vis-card">
+          <div class="vis-label" data-key="vis_gurdjieff_label">Three Centers · Gurdjieff</div>
+          <p class="vis-body" data-key="vis_gurdjieff_body">Gurdjieff identified what bio-electricity confirms: the body operates through three centers — intellectual, emotional, and moving. Most people live from one. ZZAPP addresses all three simultaneously: the DDS machine speaks to the moving center, breathwork opens the emotional, PULSE integration engages the intellectual. Character armor is the machine. De-armoring is waking up.</p>
+        </div>
+        <div class="vis-card">
+          <div class="vis-label" data-key="vis_field_label">The Field · Zero-Point</div>
+          <p class="vis-body" data-key="vis_field_body">The vacuum is not empty. Quantum physics confirms a background energy field even at absolute zero. Fritz-Albert Popp measured what this means for biology: living cells emit biophotons — coherent light at ultra-low intensities. Healthy cells emit differently than sick cells. This is measurable and peer-reviewed. Your body is not just an electrical system — it is a light-emitting system. The traditions that described the aura were not guessing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- OCTAVE + SESSION FLOW -->
+  <section class="sci-section">
+    <div class="fade-in">
+      <!-- OCTAVE VISUAL -->
+      <div class="octave-visual">
+        <div class="section-label" style="justify-content:center;color:var(--gold-dim);" data-key="octave_label">The Octave</div>
+        <p style="font-family:var(--font-body);font-style:italic;font-size:0.95rem;color:var(--cream-dim);text-align:center;max-width:520px;margin:0 auto 2rem;line-height:1.7;" data-key="octave_intro">Gurdjieff taught that every process follows the law of the octave — energy ascends through seven notes but stalls at two intervals unless a conscious shock is applied. A ZZAPP session is one octave.</p>
+        <div class="octave-scale">
+          <div class="octave-note">
+            <div class="octave-bar" style="height:25%;background:var(--copper);"></div>
+            <span class="octave-name">do</span>
+          </div>
+          <div class="octave-note">
+            <div class="octave-bar" style="height:35%;background:var(--copper);"></div>
+            <span class="octave-name">re</span>
+          </div>
+          <div class="octave-note">
+            <div class="octave-bar" style="height:45%;background:var(--copper);"></div>
+            <span class="octave-name">mi</span>
+          </div>
+          <div class="octave-shock">
+            <div class="octave-shock-line"></div>
+            <span class="octave-shock-label" data-key="octave_shock1">shock 1</span>
+          </div>
+          <div class="octave-note">
+            <div class="octave-bar" style="height:55%;background:var(--gold);"></div>
+            <span class="octave-name">fa</span>
+          </div>
+          <div class="octave-note">
+            <div class="octave-bar" style="height:65%;background:var(--gold);"></div>
+            <span class="octave-name">sol</span>
+          </div>
+          <div class="octave-note">
+            <div class="octave-bar" style="height:78%;background:var(--green-lush);"></div>
+            <span class="octave-name">la</span>
+          </div>
+          <div class="octave-note">
+            <div class="octave-bar" style="height:88%;background:var(--green-lush);"></div>
+            <span class="octave-name">si</span>
+          </div>
+          <div class="octave-shock">
+            <div class="octave-shock-line"></div>
+            <span class="octave-shock-label" data-key="octave_shock2">shock 2</span>
+          </div>
+          <div class="octave-note">
+            <div class="octave-bar" style="height:100%;background:var(--electric);"></div>
+            <span class="octave-name" style="color:var(--electric);">DO</span>
+          </div>
+        </div>
+        <p style="font-family:var(--font-mono);font-size:0.52rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-dim);text-align:center;margin-top:1.5rem;" data-key="octave_map">do–mi: BioSpark → De-Armoring → Charge · shock 1: Stilte · fa–si: Fascia → Grounding → Dance · shock 2: Integration · DO: new octave</p>
+      </div>
+
+      <!-- SESSION FLOW -->
+      <div class="session-flow">
+        <div class="section-label" style="justify-content:center;color:var(--gold);" data-key="flow_label">The Session</div>
+        <h3 class="flow-title" data-key="flow_title">Solve et Coagula</h3>
+        <p class="flow-subtitle" data-key="flow_subtitle">Dissolve & Reconstruct</p>
+
+        <div style="display:flex;flex-direction:column;align-items:center;gap:0;">
+          <div class="flow-phase flow-solve">
+            <div class="flow-phase-label" data-key="flow_solve">SOLVE</div>
+            <div class="flow-steps">
+              <div class="flow-step">
+                <div class="flow-dot solve-dot"></div>
+                <div class="flow-step-name" data-key="flow_s1">BioSpark</div>
+                <div class="flow-step-action" data-key="flow_s1a">prepare the vessel</div>
+              </div>
+              <div class="flow-step">
+                <div class="flow-dot solve-dot"></div>
+                <div class="flow-step-name" data-key="flow_s2">De-Armoring</div>
+                <div class="flow-step-action" data-key="flow_s2a">open the armor</div>
+              </div>
+              <div class="flow-step">
+                <div class="flow-dot solve-dot"></div>
+                <div class="flow-step-name" data-key="flow_s3">Charge</div>
+                <div class="flow-step-action" data-key="flow_s3a">activate the current</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flow-pivot">
+            <div class="flow-diamond">◈</div>
+            <div class="flow-pivot-text" data-key="flow_pivot">Stilte — the first shock</div>
+          </div>
+
+          <div class="flow-phase flow-coagula">
+            <div class="flow-phase-label" data-key="flow_coagula">COAGULA</div>
+            <div class="flow-steps">
+              <div class="flow-step">
+                <div class="flow-dot coagula-dot"></div>
+                <div class="flow-step-name" data-key="flow_c1">Fascia</div>
+                <div class="flow-step-action" data-key="flow_c1a">reorganize the tissue</div>
+              </div>
+              <div class="flow-step">
+                <div class="flow-dot coagula-dot"></div>
+                <div class="flow-step-name" data-key="flow_c2">Grounding</div>
+                <div class="flow-step-action" data-key="flow_c2a">land the body</div>
+              </div>
+              <div class="flow-step">
+                <div class="flow-dot coagula-dot"></div>
+                <div class="flow-step-name" data-key="flow_c3">Dance</div>
+                <div class="flow-step-action" data-key="flow_c3a">integrate the field</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="sci-cta fade-in">
+    <p class="sci-cta-text" data-key="cta_text">The science is the map. The session is the territory. When you're ready, the invitation is open.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="../#book" class="btn-primary" data-key="cta_book">Book a session</a>
+      <a href="../" class="btn-ghost" data-key="cta_home">← Back to REV.INC</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="../" class="footer-logo">REV.INC</a>
+    <div class="footer-copy" data-key="footer_copy">© 2026 REV.INC — Aimé Schrauwen · Antwerp</div>
+  </footer>
+
+  <script>
+    const copy = {
+      EN: {
+        nav_science:"Science",nav_services:"Pillars",nav_book_link:"Book",
+        hero_label:"The Science & Practice of ZZAPP",hero_title:"What the body already knows.",
+        rerooting_text:"Western wellness split mind from body, science from tradition, measurement from practice. The traditions we draw from — African, Asian, indigenous — never made that cut. Bio-electricity is the bridge: measurable by Western instruments, practiced by African and Asian traditions for millennia. We don't add tradition to science. We restore what science forgot it was measuring.",
+        label_science:"The Science",science_title:"Measurable. Documented. Peer-reviewed.",science_intro:"ZZAPP is not intuition. The method rests on measurable bio-electric principles — from earth voltage to cellular biology.",
+        sci_earth_label:"Earth Connection",sci_earth_body:"The earth's surface carries a negative charge of −78 microvolt. Your body evolved in constant contact with this field. Modern life severed that connection — rubber soles, concrete floors, elevated buildings. ZZAPP restores the circuit.",
+        sci_atp_label:"ATP Production",sci_atp_body:"Microcurrent stimulation increases ATP synthesis by up to 500% (Cheng et al., 1982). ATP is the direct fuel of cellular repair, tissue regeneration, and metabolic function. Low voltage means low energy — not psychologically, biologically.",
+        sci_ans_label:"Autonomic Regulation",sci_ans_body:"Your autonomic nervous system toggles between activation and recovery. DDS frequencies along meridian pathways engage the parasympathetic branch — shifting the body from chronic stress into measurable recovery. Vagal tone improves. HRV rises.",
+        sci_fascia_label:"Fascia Network",sci_fascia_body:"Fascia is piezoelectric — it generates voltage when compressed. Collagen fibers function as biological semiconductors. Stored tension is not a metaphor. It is a measurable electrical change in your connective tissue. ZZAPP works with this system directly.",
+        label_practice:"The Practice",practice_title:"Science measures. Practice moves.",practice_intro:"These are the traditions that understood bio-electricity before anyone plugged in a voltmeter.",
+        prac_dearmor_label:"De-Armoring · Reich",prac_dearmor_body:"Character armor is bio-electric. Wilhelm Reich measured skin conductance before and after de-armoring: resistance drops, voltage rises, sensation returns. The body organizes defense in seven rings — jaw to pelvis — each locking emotional charge into fascia. Every contracted muscle is a circuit breaker. ZZAPP's segment-scan maps these rings and works them open.",
+        prac_grounding_label:"Grounding & Vibration · Lowen",prac_grounding_body:"Stand with your feet on the earth, knees soft, and breathe. The involuntary vibration that follows is the sign that bio-electric current is breaking through armor. Lowen observed these tremors at 4–8 Hz — the same range as the Schumann resonance at 7.83 Hz. The body isn't shaking randomly. It's finding resonance with the field it evolved in. Without grounding after activation, discharge becomes retraumatization.",
+        prac_shaking_label:"Shaking Medicine · Cross-Cultural",prac_shaking_body:"Neurogenic tremors originate in the psoas — the deepest muscle connecting spine to legs, where the body stores fight-or-flight that was never completed. The Kalahari San dance until n/um rises through the spine. Vodou practitioners enter controlled tremor through rhythmic induction. The shake completes the bio-electric circuit that trauma interrupted. The body already knows how to heal.",
+        prac_drums_label:"Three Drums · Applied Rhythmology",prac_drums_body:"ZZAPP works with three ancestral percussion voices: the West-African djembe, the Yoruba talking drum, and the shamanistic drum of Russian and Central Asian tradition. Each carries a different frequency architecture — the djembe's bass drives the gut, the talking drum modulates like speech, the frame drum resonates bone. We prefer drowning in the field of a live drum. When recording is the only option, we use it. But the field of a live drum is the method.",
+        prac_biospark_label:"BioSpark · Prepare the Vessel",prac_biospark_body:"Before bio-electric work begins, the body needs to conduct. ZZAPP's BioSpark is a pre-session preparation: lime juice alkalises the stomach. Apple cider vinegar stabilizes pH. Himalayan salt and electrolytes — potassium, magnesium, sodium, calcium — restore mineral conductivity. Collagen peptides support myelin production. Creatine fuels the ATP cycle. This isn't a smoothie. It's electrical preparation.",
+        label_vision:"The Vision",vision_title:"Energy, frequency, vibration.",vision_intro:"The deeper framework — where measurable physics meets traditions that never lost the thread.",
+        vis_tesla_label:"Resonance · Tesla",vis_tesla_body:"Every physical system has a resonant frequency. Hit that frequency and the signal amplifies exponentially. Tesla proved this for the earth — ZZAPP applies it to the body. The Schumann resonance (7.83 Hz) matches the vibration Lowen observed when muscular armor breaks. Not coincidence. The body is a resonance system. The question is not whether it vibrates — but whether it vibrates at its own frequency or someone else's.",
+        vis_gurdjieff_label:"Three Centers · Gurdjieff",vis_gurdjieff_body:"Gurdjieff identified what bio-electricity confirms: the body operates through three centers — intellectual, emotional, and moving. Most people live from one. ZZAPP addresses all three simultaneously: the DDS machine speaks to the moving center, breathwork opens the emotional, PULSE integration engages the intellectual. Character armor is the machine. De-armoring is waking up.",
+        vis_field_label:"The Field · Zero-Point",vis_field_body:"The vacuum is not empty. Quantum physics confirms a background energy field even at absolute zero. Fritz-Albert Popp measured what this means for biology: living cells emit biophotons — coherent light at ultra-low intensities. Healthy cells emit differently than sick cells. This is measurable and peer-reviewed. Your body is not just an electrical system — it is a light-emitting system. The traditions that described the aura were not guessing.",
+        octave_label:"The Octave",octave_intro:"Gurdjieff taught that every process follows the law of the octave — energy ascends through seven notes but stalls at two intervals unless a conscious shock is applied. A ZZAPP session is one octave.",
+        octave_shock1:"shock 1",octave_shock2:"shock 2",
+        octave_map:"do–mi: BioSpark → De-Armoring → Charge · shock 1: Stilte · fa–si: Fascia → Grounding → Dance · shock 2: Integration · DO: new octave",
+        flow_label:"The Session",flow_title:"Solve et Coagula",flow_subtitle:"Dissolve & Reconstruct",
+        flow_solve:"SOLVE",flow_s1:"BioSpark",flow_s1a:"prepare the vessel",flow_s2:"De-Armoring",flow_s2a:"open the armor",flow_s3:"Charge",flow_s3a:"activate the current",
+        flow_pivot:"Stilte — the first shock",
+        flow_coagula:"COAGULA",flow_c1:"Fascia",flow_c1a:"reorganize the tissue",flow_c2:"Grounding",flow_c2a:"land the body",flow_c3:"Dance",flow_c3a:"integrate the field",
+        cta_text:"The science is the map. The session is the territory. When you're ready, the invitation is open.",
+        cta_book:"Book a session",cta_home:"← Back to REV.INC",
+        footer_copy:"© 2026 REV.INC — Aimé Schrauwen · Antwerp"
+      },
+      NL: {
+        nav_science:"Wetenschap",nav_services:"Zuilen",nav_book_link:"Boek",
+        hero_label:"De Wetenschap & Praktijk van ZZAPP",hero_title:"Wat het lichaam al weet.",
+        rerooting_text:"Westerse wellness scheidde geest van lichaam, wetenschap van traditie, meting van praktijk. De tradities waaruit wij putten — Afrikaans, Aziatisch, inheems — maakten die scheiding nooit. Bio-elektriciteit is de brug: meetbaar met westerse instrumenten, beoefend door Afrikaanse en Aziatische tradities sinds millennia. We voegen geen traditie toe aan wetenschap. We herstellen wat wetenschap vergat te meten.",
+        label_science:"De Wetenschap",science_title:"Meetbaar. Gedocumenteerd. Peer-reviewed.",science_intro:"ZZAPP is geen intuïtie. De methode rust op meetbare bio-elektrische principes — van aardspanning tot celbiologie.",
+        sci_earth_label:"Aardverbinding",sci_earth_body:"Het aardoppervlak draagt een negatieve lading van −78 microvolt. Jouw lichaam evolueerde in constant contact met dit veld. Het moderne leven verbrak die verbinding — rubberzolen, betonvloeren, verhoogde gebouwen. ZZAPP herstelt het circuit.",
+        sci_atp_label:"ATP-productie",sci_atp_body:"Microstroom-stimulatie verhoogt ATP-synthese met tot 500% (Cheng et al., 1982). ATP is de directe brandstof voor celherstel, weefselregeneratie en metabole functie. Lage spanning betekent lage energie — niet psychologisch, biologisch.",
+        sci_ans_label:"Autonome regulatie",sci_ans_body:"Je autonome zenuwstelsel schakelt tussen activatie en herstel. DDS-frequenties langs meridianen activeren de parasympathische tak — ze schakelen het lichaam van chronische stress naar meetbaar herstel. Vagale tonus verbetert. HRV stijgt.",
+        sci_fascia_label:"Fascia-netwerk",sci_fascia_body:"Fascia is piëzo-elektrisch — het genereert spanning bij compressie. Collageenvezels functioneren als biologische halfgeleiders. Opgeslagen spanning is geen metafoor. Het is een meetbare elektrische verandering in je bindweefsel. ZZAPP werkt direct met dit systeem.",
+        label_practice:"De Praktijk",practice_title:"Wetenschap meet. Praktijk beweegt.",practice_intro:"Dit zijn de tradities die bio-elektriciteit begrepen voordat iemand een voltmeter aansloot.",
+        prac_dearmor_label:"Ontpantsering · Reich",prac_dearmor_body:"Karakterpantser is bio-elektrisch. Wilhelm Reich mat huidgeleiding voor en na ontpantsering: weerstand daalt, spanning stijgt, gevoel keert terug. Het lichaam organiseert verdediging in zeven ringen — van kaak tot bekken — elk een emotionele lading vergrendelend in de fascia. Elke gecontraheerde spier is een stroomonderbreker. ZZAPP's segment-scan brengt deze ringen in kaart en werkt ze open.",
+        prac_grounding_label:"Grounding & Vibratie · Lowen",prac_grounding_body:"Sta met je voeten op de aarde, knieën zacht, en adem. De onwillekeurige vibratie die volgt is het teken dat bio-elektrische stroom door het pantser breekt. Lowen observeerde deze trillingen op 4–8 Hz — hetzelfde bereik als de Schumann-resonantie op 7,83 Hz. Het lichaam trilt niet willekeurig. Het vindt resonantie met het veld waarin het evolueerde. Zonder grounding na activering wordt ontlading hertraumatisering.",
+        prac_shaking_label:"Shaking Medicine · Cross-Cultureel",prac_shaking_body:"Neurogene tremoren ontstaan in de psoas — de diepste spier die wervelkolom met benen verbindt, waar het lichaam vecht-of-vlucht opslaat die nooit voltooid werd. De Kalahari San dansen tot n/um stijgt door de wervelkolom. Vodou-beoefenaars betreden gecontroleerde tremor via ritmische inductie. De shake voltooit het bio-elektrische circuit dat trauma onderbrak. Het lichaam weet al hoe het moet genezen.",
+        prac_drums_label:"Drie Trommels · Toegepaste Ritmologie",prac_drums_body:"ZZAPP werkt met drie ancestrale percussie-stemmen: de West-Afrikaanse djembé, de Yoruba talking drum en de sjamanistische trommel uit de Russische en Centraal-Aziatische traditie. Elk draagt een andere frequentie-architectuur — de bas van de djembé drijft de buik, de talking drum moduleert als spraak, de framedrum resoneert bot. Wij verkiezen onderdompeling in het veld van een live trommel. Wanneer opnames de enige optie zijn, gebruiken we ze. Maar het veld van een live trommel is de methode.",
+        prac_biospark_label:"BioSpark · Bereid het Vat",prac_biospark_body:"Voordat bio-elektrisch werk begint, moet het lichaam geleiden. ZZAPP's BioSpark is een pre-sessie preparaat: limoensap alkaliseert de maag. Appelciderazijn stabiliseert pH. Himalayazout en elektrolyten — kalium, magnesium, natrium, calcium — herstellen minerale geleidbaarheid. Collageenpeptiden ondersteunen myeline-productie. Creatine voedt de ATP-cyclus. Dit is geen smoothie. Het is elektrische voorbereiding.",
+        label_vision:"De Visie",vision_title:"Energie, frequentie, vibratie.",vision_intro:"Het diepere kader — waar meetbare fysica tradities ontmoet die de draad nooit verloren.",
+        vis_tesla_label:"Resonantie · Tesla",vis_tesla_body:"Elk fysiek systeem heeft een resonantiefrequentie. Raak die frequentie en het signaal versterkt exponentieel. Tesla bewees dit voor de aarde — ZZAPP past het toe op het lichaam. De Schumann-resonantie (7,83 Hz) matcht de vibratie die Lowen observeerde wanneer spierpantser breekt. Geen toeval. Het lichaam IS een resonantiesysteem. De vraag is niet of het vibreert — maar of het vibreert op zijn eigen frequentie of die van iemand anders.",
+        vis_gurdjieff_label:"Drie Centra · Gurdjieff",vis_gurdjieff_body:"Gurdjieff identificeerde wat bio-elektriciteit bevestigt: het lichaam opereert via drie centra — intellectueel, emotioneel en bewegend. De meeste mensen leven vanuit één. ZZAPP adresseert alle drie tegelijk: de DDS-machine spreekt het bewegend centrum aan, ademwerk opent het emotionele, PULSE-integratie engageert het intellectuele. Karakterpantser is de machine. Ontpantsering is wakker worden.",
+        vis_field_label:"Het Veld · Zero-Point",vis_field_body:"Het vacuüm is niet leeg. Kwantumfysica bevestigt een achtergrond-energieveld zelfs bij het absolute nulpunt. Fritz-Albert Popp mat wat dit betekent voor biologie: levende cellen stralen biofotonen uit — coherent licht op ultra-lage intensiteiten. Gezonde cellen stralen anders uit dan zieke cellen. Dit is meetbaar en peer-reviewed. Je lichaam is niet alleen een elektrisch systeem — het is een licht-uitstralend systeem. De tradities die de aura beschreven raadden niet.",
+        octave_label:"Het Octaaf",octave_intro:"Gurdjieff onderwees dat elk proces de wet van het octaaf volgt — energie stijgt door zeven noten maar stokt op twee intervallen tenzij een bewuste schok wordt toegepast. Een ZZAPP-sessie is één octaaf.",
+        octave_shock1:"schok 1",octave_shock2:"schok 2",
+        octave_map:"do–mi: BioSpark → Ontpantsering → Lading · schok 1: Stilte · fa–si: Fascia → Grounding → Dans · schok 2: Integratie · DO: nieuw octaaf",
+        flow_label:"De Sessie",flow_title:"Solve et Coagula",flow_subtitle:"Oplossen & Herstructureren",
+        flow_solve:"SOLVE",flow_s1:"BioSpark",flow_s1a:"bereid het vat",flow_s2:"Ontpantsering",flow_s2a:"open het pantser",flow_s3:"Lading",flow_s3a:"activeer de stroom",
+        flow_pivot:"Stilte — de eerste schok",
+        flow_coagula:"COAGULA",flow_c1:"Fascia",flow_c1a:"herorganiseer het weefsel",flow_c2:"Grounding",flow_c2a:"land het lichaam",flow_c3:"Dans",flow_c3a:"integreer het veld",
+        cta_text:"De wetenschap is de kaart. De sessie is het terrein. Wanneer je klaar bent, staat de uitnodiging open.",
+        cta_book:"Boek een sessie",cta_home:"← Terug naar REV.INC",
+        footer_copy:"© 2026 REV.INC — Aimé Schrauwen · Antwerpen"
+      }
+    };
+
+    let currentLang = 'EN';
+    function applyLanguage(lang) {
+      const data = copy[lang];
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (data[key]) el.textContent = data[key];
+      });
+      document.documentElement.lang = lang.toLowerCase();
+    }
+    document.getElementById('langToggle').addEventListener('click', () => {
+      currentLang = currentLang === 'EN' ? 'NL' : 'EN';
+      applyLanguage(currentLang);
+      document.getElementById('langToggle').textContent = currentLang === 'EN' ? 'EN / NL' : 'NL / EN';
+    });
+
+    // Fade-in observer
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
