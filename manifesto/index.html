@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Manifesto — REV.INC</title>
+  <meta name="description" content="Bio-electricity is a commons. Sensitivity and capacity are the tools of the revolution. The political and philosophical declaration behind REV.INC and ZZAPP." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://therevolutionincorporated.com/manifesto/" />
+  <meta property="og:title" content="The Manifesto — REV.INC" />
+  <meta property="og:description" content="Energy connects. It is the resistance that shocks. The oscillation of care and agency leads toward lushness." />
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black:      #090909;
+      --obsidian:   #0A0A0A;
+      --surface:    #111111;
+      --gold:       #C8903A;
+      --gold-bright:#E8B82E;
+      --gold-dim:   #8B6E1A;
+      --copper:     #B07040;
+      --green-lush: #3A7A3A;
+      --electric:   #4A9FD4;
+      --cream:      #E8D5A3;
+      --cream-dim:  rgba(232,213,163,0.7);
+      --white:      #F2DEB0;
+      --font-display: 'Unbounded', sans-serif;
+      --font-body:    'Cormorant Garamond', serif;
+      --font-mono:    'DM Mono', monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--obsidian); color: var(--cream); font-family: var(--font-body); font-size: 18px; line-height: 1.7; overflow-x: hidden; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 2.5rem; background: rgba(9,9,9,0.92); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(200,144,58,0.1); }
+    .nav-logo { font-family: var(--font-display); font-size: 1rem; font-weight: 900; color: var(--gold); letter-spacing: 0.04em; text-decoration: none; }
+    .nav-logo span { color: var(--copper); }
+    .nav-right { display: flex; align-items: center; gap: 2rem; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--font-mono); font-size: 0.72rem; font-weight: 300; color: var(--cream); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6; transition: opacity 0.2s, color 0.2s; }
+    .nav-links a:hover { opacity: 1; color: var(--gold); }
+    .nav-links a.active { opacity: 1; color: var(--gold); }
+    .lang-toggle { font-family: var(--font-mono); font-size: 0.7rem; font-weight: 300; background: none; border: 1px solid rgba(200,144,58,0.3); color: var(--gold); padding: 0.3rem 0.75rem; border-radius: 2px; cursor: pointer; letter-spacing: 0.1em; transition: background 0.2s; }
+    .lang-toggle:hover { background: rgba(200,144,58,0.1); }
+
+    /* HERO */
+    .m-hero { position: relative; min-height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 9rem 2.5rem 4rem; overflow: hidden; }
+    .m-hero-bg { position: absolute; inset: 0; background:
+      radial-gradient(ellipse at 25% 75%, rgba(27,58,45,0.5) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 25%, rgba(74,28,110,0.25) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 50%, rgba(200,144,58,0.06) 0%, transparent 60%),
+      linear-gradient(180deg, var(--obsidian) 0%, rgba(13,36,24,0.25) 55%, var(--obsidian) 100%);
+      z-index: 0; }
+    .m-hero-content { position: relative; z-index: 2; max-width: 760px; }
+    .m-hero-label { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.8rem; }
+    .m-hero-title { font-family: var(--font-display); font-size: clamp(2.1rem, 5.5vw, 3.8rem); font-weight: 900; line-height: 1.08; color: var(--white); margin-bottom: 2rem; }
+    .m-hero-title .gold { color: var(--gold); }
+    .m-epigraph { font-family: var(--font-body); font-style: italic; font-size: clamp(1.1rem, 2.2vw, 1.4rem); font-weight: 300; color: var(--cream); line-height: 1.85; max-width: 620px; margin: 0 auto; }
+
+    /* WAVE DIVIDER */
+    .wave-divider { width: 100%; max-width: 560px; margin: 1rem auto 0; height: 44px; opacity: 0.3; }
+    .wave-divider svg { width: 100%; height: 100%; }
+
+    /* TENETS */
+    .tenets { max-width: 880px; margin: 0 auto; padding: 3rem 2.5rem 2rem; }
+    .tenet { display: grid; grid-template-columns: 64px 1fr; gap: 2rem; padding: 3.5rem 0; border-bottom: 1px solid rgba(200,144,58,0.08); }
+    .tenet:last-child { border-bottom: none; }
+    .tenet-num { font-family: var(--font-display); font-size: 1.3rem; font-weight: 900; color: var(--gold-dim); line-height: 1; padding-top: 0.5rem; }
+    .tenet-eyebrow { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--green-lush); margin-bottom: 1rem; }
+    .tenet-claim { font-family: var(--font-display); font-size: clamp(1.3rem, 3vw, 1.9rem); font-weight: 700; line-height: 1.2; color: var(--white); margin-bottom: 1.2rem; }
+    .tenet-body { font-family: var(--font-body); font-size: 1.08rem; font-weight: 300; color: var(--cream-dim); line-height: 1.85; }
+    .tenet-body strong { color: var(--gold); font-weight: 400; }
+
+    /* CLOSING */
+    .m-close { text-align: center; padding: 5rem 2.5rem 3rem; max-width: 680px; margin: 0 auto; }
+    .m-close-line { font-family: var(--font-body); font-style: italic; font-size: clamp(1.3rem, 3vw, 1.8rem); color: var(--cream); line-height: 1.7; margin-bottom: 2.5rem; }
+    .m-close-line strong { color: var(--gold); font-weight: 400; font-style: normal; }
+    .m-cta-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: var(--black); background: var(--gold); padding: 0.9rem 1.8rem; border-radius: 2px; transition: background 0.2s, transform 0.2s; display: inline-block; }
+    .btn-primary:hover { background: var(--gold-bright); transform: translateY(-2px); }
+    .btn-ghost { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: var(--cream-dim); border: 1px solid rgba(232,213,163,0.15); padding: 0.85rem 1.4rem; border-radius: 2px; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* FOOTER */
+    footer { padding: 3rem 2.5rem; border-top: 1px solid rgba(200,144,58,0.08); max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 0.85rem; font-weight: 900; color: var(--gold); text-decoration: none; }
+    .footer-copy { font-family: var(--font-mono); font-size: 0.55rem; color: rgba(232,213,163,0.18); letter-spacing: 0.08em; }
+
+    /* FADE IN */
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .m-hero { padding: 7rem 1.5rem 3rem; min-height: 60vh; }
+      .tenets { padding: 2rem 1.5rem; }
+      .tenet { grid-template-columns: 1fr; gap: 0.5rem; padding: 2.8rem 0; }
+      .tenet-num { font-size: 1rem; padding-top: 0; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="../" class="nav-logo">REV<span>.</span>INC</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="../#zzapp">ZZAPP</a></li>
+        <li><a href="../science/" data-key="nav_science">Science</a></li>
+        <li><a href="./" class="active" data-key="nav_manifesto">Manifesto</a></li>
+        <li><a href="../#book" data-key="nav_book_link">Book</a></li>
+      </ul>
+      <button class="lang-toggle" id="langToggle">EN / NL</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="m-hero">
+    <div class="m-hero-bg"></div>
+    <div class="m-hero-content fade-in">
+      <div class="m-hero-label" data-key="hero_label">The Manifesto</div>
+      <h1 class="m-hero-title"><span data-key="hero_title_1">Bio-electricity is a</span> <span class="gold" data-key="hero_title_2">commons.</span></h1>
+      <p class="m-epigraph" data-key="epigraph">Sensitivity and capacity are the tools of the revolution. Energy connects, energy builds fields, energy oscillates. It is the resistance that shocks. The oscillation of care and agency leads toward lushness.</p>
+      <div class="wave-divider">
+        <svg viewBox="0 0 560 44" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,22 C46,2 93,42 140,22 C186,2 233,42 280,22 C326,2 373,42 420,22 C466,2 513,42 560,22" fill="none" stroke="#C8903A" stroke-width="1.2"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- TENETS -->
+  <div class="tenets">
+
+    <div class="tenet fade-in">
+      <div class="tenet-num">I</div>
+      <div>
+        <div class="tenet-eyebrow" data-key="t1_eyebrow">Sensitivity is power</div>
+        <h2 class="tenet-claim" data-key="t1_claim">The revolution is not loud.</h2>
+        <p class="tenet-body" data-key="t1_body">Sensitivity and capacity are its tools. A body that feels more can do more, give more, want more. We do not harden people against the world — we grow their capacity to receive it. <strong>The most sensitive instrument is the most powerful one.</strong></p>
+      </div>
+    </div>
+
+    <div class="tenet fade-in">
+      <div class="tenet-num">II</div>
+      <div>
+        <div class="tenet-eyebrow" data-key="t2_eyebrow">The current is a commons</div>
+        <h2 class="tenet-claim" data-key="t2_claim">It belongs to no one — which means it belongs to everyone.</h2>
+        <p class="tenet-body" data-key="t2_body">Before the patents, before the pills, before the body was enclosed as an economic unit, the charge was already yours. Like clean water, like rest, like uncaptured attention — bio-electricity is a birthright, not a product. <strong>We do not sell you energy. We remind you it was never not yours.</strong></p>
+      </div>
+    </div>
+
+    <div class="tenet fade-in">
+      <div class="tenet-num">III</div>
+      <div>
+        <div class="tenet-eyebrow" data-key="t3_eyebrow">Energy connects — resistance shocks</div>
+        <h2 class="tenet-claim" data-key="t3_claim">Shock is patriarchal and colonial. Connection is not.</h2>
+        <p class="tenet-body" data-key="t3_body">The colonial nervous system was built on shock — discipline through jolt, control through fear, the body governed by its own exhaustion. But energy itself does not shock. It connects, it builds fields, it oscillates. <strong>It is the resistance that shocks.</strong> Remove the resistance and the current becomes pleasure, becomes information, becomes care.</p>
+      </div>
+    </div>
+
+    <div class="tenet fade-in">
+      <div class="tenet-num">IV</div>
+      <div>
+        <div class="tenet-eyebrow" data-key="t4_eyebrow">The body is not broken</div>
+        <h2 class="tenet-claim" data-key="t4_claim">It adapted. Beautifully. At great cost.</h2>
+        <p class="tenet-body" data-key="t4_body">Nothing here needs fixing. Your nervous system did exactly what it was shaped to do — it survived a culture that turns human charge into productivity. <strong>The body is not repaired. It is reminded.</strong> De-domestication, not correction.</p>
+      </div>
+    </div>
+
+    <div class="tenet fade-in">
+      <div class="tenet-num">V</div>
+      <div>
+        <div class="tenet-eyebrow" data-key="t5_eyebrow">No mysticism — only maps</div>
+        <h2 class="tenet-claim" data-key="t5_claim">We project nothing onto you. We hand you the map.</h2>
+        <p class="tenet-body" data-key="t5_body">In every session we explain what is happening — the galvanic difference between copper and steel, why the throat connects to the sacrum, where two charges meet and collapse in the middle. Not to impress. To emancipate. You do not leave with a story about our gift — <strong>you leave with more agency than you arrived with.</strong> That is the only test that matters.</p>
+      </div>
+    </div>
+
+    <div class="tenet fade-in">
+      <div class="tenet-num">VI</div>
+      <div>
+        <div class="tenet-eyebrow" data-key="t6_eyebrow">Wildness is freedom</div>
+        <h2 class="tenet-claim" data-key="t6_claim">Beyond shame, beyond guilt, beyond the mind-body split.</h2>
+        <p class="tenet-body" data-key="t6_body">To rewild is to return — to the body and its functions, to the nature without and the nature within. Not regression. Liberation. We help people uncage their vital force and remember they belong to the living world, not above it. <strong>Wildness is not chaos. It is the original order.</strong></p>
+      </div>
+    </div>
+
+    <div class="tenet fade-in">
+      <div class="tenet-num">VII</div>
+      <div>
+        <div class="tenet-eyebrow" data-key="t7_eyebrow">The revolution is incorporated</div>
+        <h2 class="tenet-claim" data-key="t7_claim">REV — Revolution · Reversal · Revelation. INCORPORATED — in the body, embodied.</h2>
+        <p class="tenet-body" data-key="t7_body">This is not a movement that asks for your belief. It asks for your nervous system. The oscillation of care and agency leads toward lushness — in the body, in the commons, in the soil. <strong>The current was always yours.</strong> We only help you feel it again.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CLOSING -->
+  <section class="m-close fade-in">
+    <p class="m-close-line" data-key="close_line">You've felt it your whole life. The gap between the charge you carry and the charge you express. <strong>Enter the circuit.</strong></p>
+    <div class="m-cta-row">
+      <a href="../#book" class="btn-primary" data-key="cta_book">Book a session</a>
+      <a href="../" class="btn-ghost" data-key="cta_home">← Back to REV.INC</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="../" class="footer-logo">REV.INC</a>
+    <div class="footer-copy" data-key="footer_copy">© 2026 REV.INC — Aimé Schrauwen · Antwerp</div>
+  </footer>
+
+  <script>
+    const copy = {
+      EN: {
+        nav_science:"Science",nav_manifesto:"Manifesto",nav_book_link:"Book",
+        hero_label:"The Manifesto",
+        hero_title_1:"Bio-electricity is a",hero_title_2:"commons.",
+        epigraph:"Sensitivity and capacity are the tools of the revolution. Energy connects, energy builds fields, energy oscillates. It is the resistance that shocks. The oscillation of care and agency leads toward lushness.",
+        t1_eyebrow:"Sensitivity is power",t1_claim:"The revolution is not loud.",t1_body:"Sensitivity and capacity are its tools. A body that feels more can do more, give more, want more. We do not harden people against the world — we grow their capacity to receive it. The most sensitive instrument is the most powerful one.",
+        t2_eyebrow:"The current is a commons",t2_claim:"It belongs to no one — which means it belongs to everyone.",t2_body:"Before the patents, before the pills, before the body was enclosed as an economic unit, the charge was already yours. Like clean water, like rest, like uncaptured attention — bio-electricity is a birthright, not a product. We do not sell you energy. We remind you it was never not yours.",
+        t3_eyebrow:"Energy connects — resistance shocks",t3_claim:"Shock is patriarchal and colonial. Connection is not.",t3_body:"The colonial nervous system was built on shock — discipline through jolt, control through fear, the body governed by its own exhaustion. But energy itself does not shock. It connects, it builds fields, it oscillates. It is the resistance that shocks. Remove the resistance and the current becomes pleasure, becomes information, becomes care.",
+        t4_eyebrow:"The body is not broken",t4_claim:"It adapted. Beautifully. At great cost.",t4_body:"Nothing here needs fixing. Your nervous system did exactly what it was shaped to do — it survived a culture that turns human charge into productivity. The body is not repaired. It is reminded. De-domestication, not correction.",
+        t5_eyebrow:"No mysticism — only maps",t5_claim:"We project nothing onto you. We hand you the map.",t5_body:"In every session we explain what is happening — the galvanic difference between copper and steel, why the throat connects to the sacrum, where two charges meet and collapse in the middle. Not to impress. To emancipate. You do not leave with a story about our gift — you leave with more agency than you arrived with. That is the only test that matters.",
+        t6_eyebrow:"Wildness is freedom",t6_claim:"Beyond shame, beyond guilt, beyond the mind-body split.",t6_body:"To rewild is to return — to the body and its functions, to the nature without and the nature within. Not regression. Liberation. We help people uncage their vital force and remember they belong to the living world, not above it. Wildness is not chaos. It is the original order.",
+        t7_eyebrow:"The revolution is incorporated",t7_claim:"REV — Revolution · Reversal · Revelation. INCORPORATED — in the body, embodied.",t7_body:"This is not a movement that asks for your belief. It asks for your nervous system. The oscillation of care and agency leads toward lushness — in the body, in the commons, in the soil. The current was always yours. We only help you feel it again.",
+        close_line:"You've felt it your whole life. The gap between the charge you carry and the charge you express. Enter the circuit.",
+        cta_book:"Book a session",cta_home:"← Back to REV.INC",
+        footer_copy:"© 2026 REV.INC — Aimé Schrauwen · Antwerp"
+      },
+      NL: {
+        nav_science:"Wetenschap",nav_manifesto:"Manifest",nav_book_link:"Boek",
+        hero_label:"Het Manifest",
+        hero_title_1:"Bio-elektriciteit is een",hero_title_2:"commons.",
+        epigraph:"Sensitiviteit en capaciteit zijn de werktuigen van de revolutie. Energie verbindt, energie bouwt velden, energie oscilleert. Het is de weerstand die schokt. De oscillatie van zorg en agency leidt naar lushness.",
+        t1_eyebrow:"Sensitiviteit is kracht",t1_claim:"De revolutie is niet luid.",t1_body:"Sensitiviteit en capaciteit zijn haar werktuigen. Een lichaam dat meer voelt kan meer doen, meer geven, meer willen. We harden mensen niet tegen de wereld — we laten hun vermogen om haar te ontvangen groeien. Het meest gevoelige instrument is het krachtigste.",
+        t2_eyebrow:"De stroom is een commons",t2_claim:"Ze behoort niemand toe — wat betekent dat ze iedereen toebehoort.",t2_body:"Vóór de patenten, vóór de pillen, vóór het lichaam werd omheind als economische eenheid, was de lading al van jou. Zoals schoon water, zoals rust, zoals onbevangen aandacht — bio-elektriciteit is een geboorterecht, geen product. We verkopen je geen energie. We herinneren je eraan dat ze nooit niet de jouwe was.",
+        t3_eyebrow:"Energie verbindt — weerstand schokt",t3_claim:"Schok is patriarchaal en koloniaal. Verbinding niet.",t3_body:"Het koloniale zenuwstelsel werd gebouwd op schok — discipline via de jolt, controle via angst, het lichaam bestuurd door zijn eigen uitputting. Maar energie zelf schokt niet. Ze verbindt, ze bouwt velden, ze oscilleert. Het is de weerstand die schokt. Verwijder de weerstand en de stroom wordt plezier, wordt informatie, wordt zorg.",
+        t4_eyebrow:"Het lichaam is niet stuk",t4_claim:"Het paste zich aan. Prachtig. Tegen een hoge prijs.",t4_body:"Niets hier hoeft gerepareerd te worden. Jouw zenuwstelsel deed precies waarvoor het gevormd werd — het overleefde een cultuur die menselijke lading omzet in productiviteit. Het lichaam wordt niet hersteld. Het wordt herinnerd. De-domesticatie, geen correctie.",
+        t5_eyebrow:"Geen mystiek — alleen kaarten",t5_claim:"We projecteren niets op jou. We geven je de kaart.",t5_body:"In elke sessie leggen we uit wat er gebeurt — het galvanische verschil tussen koper en staal, waarom de keel met het sacrum verbindt, waar twee ladingen elkaar ontmoeten en in het midden ineenstorten. Niet om indruk te maken. Om te emanciperen. Je vertrekt niet met een verhaal over onze gave — je vertrekt met meer agency dan waarmee je kwam. Dat is de enige test die telt.",
+        t6_eyebrow:"Wildheid is vrijheid",t6_claim:"Voorbij schaamte, voorbij schuld, voorbij de geest-lichaam-splitsing.",t6_body:"Herwilderen is terugkeren — naar het lichaam en zijn functies, naar de natuur buiten en de natuur binnen. Geen regressie. Bevrijding. We helpen mensen hun vitale kracht ontkooien en herinneren dat ze tot de levende wereld behoren, niet erboven. Wildheid is geen chaos. Ze is de oorspronkelijke orde.",
+        t7_eyebrow:"De revolutie is incorporated",t7_claim:"REV — Revolutie · Reversal · Revelatie. INCORPORATED — in het lichaam, belichaamd.",t7_body:"Dit is geen beweging die om je geloof vraagt. Ze vraagt om je zenuwstelsel. De oscillatie van zorg en agency leidt naar lushness — in het lichaam, in de commons, in de bodem. De stroom was altijd al de jouwe. Wij helpen je haar enkel opnieuw te voelen.",
+        close_line:"Je hebt het je hele leven gevoeld. De kloof tussen de lading die je draagt en de lading die je uitdrukt. Betreed het circuit.",
+        cta_book:"Boek een sessie",cta_home:"← Terug naar REV.INC",
+        footer_copy:"© 2026 REV.INC — Aimé Schrauwen · Antwerpen"
+      }
+    };
+
+    let currentLang = 'EN';
+    function applyLanguage(lang) {
+      const data = copy[lang];
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (data[key]) el.textContent = data[key];
+      });
+      document.documentElement.lang = lang.toLowerCase();
+    }
+    document.getElementById('langToggle').addEventListener('click', () => {
+      currentLang = currentLang === 'EN' ? 'NL' : 'EN';
+      applyLanguage(currentLang);
+      document.getElementById('langToggle').textContent = currentLang === 'EN' ? 'EN / NL' : 'NL / EN';
+    });
+
+    // Fade-in observer
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
