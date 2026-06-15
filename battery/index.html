@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Body as Battery — REV.INC</title>
+  <meta name="description" content="Salts, minerals, metals and alkaline terrain — the free maps for charging the body as a battery. No mysticism. The maps belong to everyone." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://therevolutionincorporated.com/battery/" />
+  <meta property="og:title" content="The Body as Battery — REV.INC" />
+  <meta property="og:description" content="Copper and steel, electrolytes and alkaline terrain. The free protocols behind ZZAPP's BioSpark." />
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black:#090909; --obsidian:#0A0A0A; --surface:#111111;
+      --gold:#C8903A; --gold-bright:#E8B82E; --gold-dim:#8B6E1A;
+      --copper:#B07040; --steel:#8A95A0; --green-lush:#3A7A3A; --electric:#4A9FD4;
+      --cream:#E8D5A3; --cream-dim:rgba(232,213,163,0.7); --white:#F2DEB0;
+      --font-display:'Unbounded',sans-serif; --font-body:'Cormorant Garamond',serif; --font-mono:'DM Mono',monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--obsidian); color: var(--cream); font-family: var(--font-body); font-size: 18px; line-height: 1.7; overflow-x: hidden; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 2.5rem; background: rgba(9,9,9,0.92); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(200,144,58,0.1); }
+    .nav-logo { font-family: var(--font-display); font-size: 1rem; font-weight: 900; color: var(--gold); letter-spacing: 0.04em; text-decoration: none; }
+    .nav-logo span { color: var(--copper); }
+    .nav-right { display: flex; align-items: center; gap: 2rem; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--font-mono); font-size: 0.72rem; font-weight: 300; color: var(--cream); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6; transition: opacity 0.2s, color 0.2s; }
+    .nav-links a:hover { opacity: 1; color: var(--gold); }
+    .nav-links a.active { opacity: 1; color: var(--gold); }
+    .lang-toggle { font-family: var(--font-mono); font-size: 0.7rem; font-weight: 300; background: none; border: 1px solid rgba(200,144,58,0.3); color: var(--gold); padding: 0.3rem 0.75rem; border-radius: 2px; cursor: pointer; letter-spacing: 0.1em; transition: background 0.2s; }
+    .lang-toggle:hover { background: rgba(200,144,58,0.1); }
+
+    /* HERO */
+    .b-hero { position: relative; min-height: 56vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 9rem 2.5rem 3rem; overflow: hidden; }
+    .b-hero-bg { position: absolute; inset: 0; background:
+      radial-gradient(ellipse at 22% 78%, rgba(176,112,64,0.18) 0%, transparent 55%),
+      radial-gradient(ellipse at 78% 26%, rgba(138,149,160,0.12) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 50%, rgba(200,144,58,0.06) 0%, transparent 60%),
+      linear-gradient(180deg, var(--obsidian) 0%, rgba(13,36,24,0.18) 55%, var(--obsidian) 100%);
+      z-index: 0; }
+    .b-hero-content { position: relative; z-index: 2; max-width: 760px; }
+    .b-hero-label { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--copper); margin-bottom: 1.6rem; }
+    .b-hero-title { font-family: var(--font-display); font-size: clamp(2rem, 5.2vw, 3.6rem); font-weight: 900; line-height: 1.1; color: var(--white); margin-bottom: 1.6rem; }
+    .b-hero-title .gold { color: var(--gold); }
+    .b-hero-sub { font-family: var(--font-body); font-style: italic; font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 300; color: var(--cream); line-height: 1.8; max-width: 600px; margin: 0 auto; }
+
+    /* INTRO (anti-guru) */
+    .b-intro { max-width: 700px; margin: 0 auto; padding: 2rem 2.5rem 1rem; text-align: center; }
+    .b-intro-line { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 0 auto 1.5rem; }
+    .b-intro p { font-family: var(--font-body); font-size: 1.1rem; font-weight: 300; color: var(--cream-dim); line-height: 1.85; }
+
+    /* SECTIONS */
+    .b-section { max-width: 1000px; margin: 0 auto; padding: 4rem 2.5rem; }
+    .b-section-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+    .b-section-grid.reverse .b-text { order: 2; }
+    .section-label { font-family: var(--font-mono); font-size: 0.62rem; font-weight: 300; letter-spacing: 0.2em; text-transform: uppercase; color: var(--copper); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
+    .section-label::before { content: ''; display: inline-block; width: 24px; height: 1px; background: currentColor; opacity: 0.5; }
+    .b-title { font-family: var(--font-display); font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 700; line-height: 1.18; color: var(--white); margin-bottom: 1.2rem; }
+    .b-body { font-family: var(--font-body); font-size: 1.05rem; font-weight: 300; color: var(--cream-dim); line-height: 1.85; }
+    .b-body strong { color: var(--gold); font-weight: 400; }
+    .divider { width: 100%; height: 1px; background: linear-gradient(90deg, transparent, rgba(200,144,58,0.12), transparent); max-width: 1000px; margin: 0 auto; }
+
+    /* IMAGE PLACEHOLDER — drop real photo later, replace block with <img> */
+    .img-ph { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.9rem; min-height: 300px; padding: 2rem; border: 1px dashed rgba(200,144,58,0.3); border-radius: 4px; background:
+      repeating-linear-gradient(45deg, rgba(200,144,58,0.015) 0px, rgba(200,144,58,0.015) 12px, transparent 12px, transparent 24px),
+      radial-gradient(ellipse at center, rgba(176,112,64,0.05) 0%, transparent 70%); text-align: center; }
+    .img-ph-glyph { width: 40px; height: 40px; opacity: 0.5; }
+    .img-ph-label { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); max-width: 260px; line-height: 1.6; }
+    .img-ph-file { font-family: var(--font-mono); font-size: 0.52rem; letter-spacing: 0.08em; color: rgba(232,213,163,0.3); }
+    .img-ph-tag { font-family: var(--font-mono); font-size: 0.48rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--copper); border: 1px solid rgba(176,112,64,0.3); padding: 0.2rem 0.6rem; border-radius: 20px; }
+
+    /* RECIPE CARD */
+    .recipe { max-width: 760px; margin: 0 auto; padding: 3rem 2.5rem; }
+    .recipe-card { border: 1px solid rgba(200,144,58,0.2); border-radius: 6px; background: linear-gradient(180deg, rgba(200,144,58,0.05) 0%, rgba(176,112,64,0.03) 100%); padding: 2.5rem 2.2rem; }
+    .recipe-eyebrow { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
+    .recipe-title { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: var(--white); margin-bottom: 0.4rem; }
+    .recipe-sub { font-family: var(--font-body); font-style: italic; font-size: 0.98rem; color: var(--cream-dim); margin-bottom: 1.8rem; }
+    .recipe-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem 1.5rem; margin-bottom: 1.8rem; }
+    .recipe-list li { font-family: var(--font-body); font-size: 1rem; color: var(--cream); padding-left: 1.1rem; position: relative; }
+    .recipe-list li::before { content: '·'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+    .recipe-why { font-family: var(--font-body); font-size: 1rem; font-weight: 300; color: var(--cream-dim); line-height: 1.8; border-top: 1px solid rgba(200,144,58,0.12); padding-top: 1.4rem; }
+    .recipe-why strong { color: var(--gold); font-weight: 400; }
+
+    /* GATE */
+    .b-gate { max-width: 820px; margin: 0 auto; padding: 4rem 2.5rem; text-align: center; }
+    .b-gate-line { font-family: var(--font-body); font-style: italic; font-size: 1.25rem; color: var(--cream); line-height: 1.7; margin-bottom: 2.5rem; }
+    .b-gate-line strong { color: var(--gold); font-style: normal; font-weight: 400; }
+    .b-gate-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; text-align: left; }
+    .b-gate-card { border: 1px solid rgba(200,144,58,0.12); border-radius: 4px; padding: 1.8rem; background: rgba(0,0,0,0.25); }
+    .b-gate-card .gc-label { font-family: var(--font-mono); font-size: 0.55rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--green-lush); margin-bottom: 0.6rem; }
+    .b-gate-card .gc-title { font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 0.6rem; }
+    .b-gate-card .gc-body { font-family: var(--font-body); font-size: 0.95rem; font-weight: 300; color: var(--cream-dim); line-height: 1.7; margin-bottom: 1rem; }
+    .b-gate-card a { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(200,144,58,0.3); padding-bottom: 0.2rem; }
+
+    /* CTA */
+    .b-cta { text-align: center; padding: 4rem 2.5rem 2rem; }
+    .b-cta-text { font-family: var(--font-body); font-style: italic; font-size: 1.15rem; color: var(--cream); max-width: 500px; margin: 0 auto 2rem; line-height: 1.8; }
+    .cta-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: var(--black); background: var(--gold); padding: 0.9rem 1.8rem; border-radius: 2px; transition: background 0.2s, transform 0.2s; display: inline-block; }
+    .btn-primary:hover { background: var(--gold-bright); transform: translateY(-2px); }
+    .btn-ghost { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: var(--cream-dim); border: 1px solid rgba(232,213,163,0.15); padding: 0.85rem 1.4rem; border-radius: 2px; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* FOOTER */
+    footer { padding: 3rem 2.5rem; border-top: 1px solid rgba(200,144,58,0.08); max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 0.85rem; font-weight: 900; color: var(--gold); text-decoration: none; }
+    .footer-copy { font-family: var(--font-mono); font-size: 0.55rem; color: rgba(232,213,163,0.18); letter-spacing: 0.08em; }
+
+    /* FADE IN */
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .b-hero { padding: 7rem 1.5rem 2.5rem; min-height: 48vh; }
+      .b-section { padding: 3rem 1.5rem; }
+      .b-section-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      .b-section-grid.reverse .b-text { order: 0; }
+      .recipe-list { grid-template-columns: 1fr; }
+      .b-gate-cards { grid-template-columns: 1fr; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="../" class="nav-logo">REV<span>.</span>INC</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="../#zzapp">ZZAPP</a></li>
+        <li><a href="../science/" data-key="nav_science">Science</a></li>
+        <li><a href="./" class="active" data-key="nav_battery">Battery</a></li>
+        <li><a href="../manifesto/" data-key="nav_manifesto">Manifesto</a></li>
+        <li><a href="../#book" data-key="nav_book_link">Book</a></li>
+      </ul>
+      <button class="lang-toggle" id="langToggle">EN / NL</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="b-hero">
+    <div class="b-hero-bg"></div>
+    <div class="b-hero-content fade-in">
+      <div class="b-hero-label" data-key="hero_label">Body-as-Battery · Free Protocols</div>
+      <h1 class="b-hero-title"><span data-key="hero_title_1">The body is a battery.</span><br/><span class="gold" data-key="hero_title_2">Here is how to charge it.</span></h1>
+      <p class="b-hero-sub" data-key="hero_sub">Salts, minerals, metals, terrain. The maps we work with — given freely. No mysticism required.</p>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <div class="b-intro fade-in">
+    <div class="b-intro-line"></div>
+    <p data-key="intro_body">We project nothing onto you. In every session we explain the maps — and the maps belong to everyone. What follows is the free layer: enough to understand your own charge and begin. The deeper applied practice lives in the session and the school. But you should never leave here with less agency than you arrived.</p>
+  </div>
+
+  <!-- SECTION 1: TERRAIN -->
+  <section class="b-section">
+    <div class="b-section-grid fade-in">
+      <div class="b-text">
+        <div class="section-label" data-key="s1_label">01 — The Terrain</div>
+        <h2 class="b-title" data-key="s1_title">A battery only charges in the right medium.</h2>
+        <p class="b-body" data-key="s1_body">Before current, terrain. An acidic, dehydrated body resists its own charge. <strong>Lime juice and apple cider vinegar</strong> shift the stomach toward alkaline. <strong>Himalayan salt and coconut water</strong> rehydrate at the cellular level. <strong>Collagen peptides</strong> feed myelin — the insulation that lets a nerve signal travel clean instead of leaking. Alkalise, hydrate, insulate. Then the body receives current instead of fighting it.</p>
+      </div>
+      <div class="img-ph" role="img" aria-label="Image placeholder: BioSpark juice and jars">
+        <svg class="img-ph-glyph" viewBox="0 0 24 24" fill="none" stroke="#C8903A" stroke-width="1.2" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+        <div class="img-ph-label" data-key="ph1_label">BioSpark — juice &amp; jars on the tool-table</div>
+        <div class="img-ph-file">battery-terrain.jpg · TRYP tooltable</div>
+        <div class="img-ph-tag" data-key="ph_tag">image placeholder</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 2: MINERALS -->
+  <section class="b-section">
+    <div class="b-section-grid reverse fade-in">
+      <div class="img-ph" role="img" aria-label="Image placeholder: salts and minerals flatlay">
+        <svg class="img-ph-glyph" viewBox="0 0 24 24" fill="none" stroke="#C8903A" stroke-width="1.2" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+        <div class="img-ph-label" data-key="ph2_label">Salts &amp; minerals — flatlay</div>
+        <div class="img-ph-file">battery-minerals.jpg</div>
+        <div class="img-ph-tag" data-key="ph_tag2">image placeholder</div>
+      </div>
+      <div class="b-text">
+        <div class="section-label" data-key="s2_label">02 — The Minerals</div>
+        <h2 class="b-title" data-key="s2_title">Electrolytes are the wires.</h2>
+        <p class="b-body" data-key="s2_body">Every nerve impulse is mineral ions moving across a membrane. <strong>Potassium, magnesium, sodium, calcium</strong> — these are not supplements, they are the conductive medium. Low minerals, low conductivity: the signal weakens not because you lack willpower but because the wire is thin. Restore the four salts and the body's own electricity flows again. <strong>Creatine</strong> then fuels the ATP cycle that turns charge into work.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 3: METALS -->
+  <section class="b-section">
+    <div class="b-section-grid fade-in">
+      <div class="b-text">
+        <div class="section-label" data-key="s3_label">03 — The Metals</div>
+        <h2 class="b-title" data-key="s3_title">Copper, steel, and the galvanic gap.</h2>
+        <p class="b-body" data-key="s3_body">Copper and steel sit at different points on the galvanic series. Hold one in each hand and the difference between them creates a measurable potential — a tiny battery, with you as the circuit. This is a different mechanism from the microvolt of bio-electricity: <strong>galvanic potential plus magnetism</strong>, not nerve current. The pharaonic rods let you hold both metals and become <strong>your own inner interface</strong> while in circuit — feeling the charge move rather than being told it does.</p>
+      </div>
+      <div class="img-ph" role="img" aria-label="Image placeholder: pharaonic rods close-up">
+        <svg class="img-ph-glyph" viewBox="0 0 24 24" fill="none" stroke="#C8903A" stroke-width="1.2" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+        <div class="img-ph-label" data-key="ph3_label">Pharaonic rods — copper &amp; steel, close-up</div>
+        <div class="img-ph-file">battery-rods.jpg · TRYP tooltable</div>
+        <div class="img-ph-tag" data-key="ph_tag3">image placeholder</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECIPE: the free, fully-given thing -->
+  <section class="recipe fade-in">
+    <div class="recipe-card">
+      <div class="recipe-eyebrow" data-key="recipe_eyebrow">Given freely · the base recipe</div>
+      <h3 class="recipe-title" data-key="recipe_title">BioSpark — prepare the vessel</h3>
+      <p class="recipe-sub" data-key="recipe_sub">The pre-session preparation. Drink before bio-electric work, or on any morning you want to conduct.</p>
+      <ul class="recipe-list">
+        <li data-key="ri1">Juice of one lime</li>
+        <li data-key="ri2">1 tbsp apple cider vinegar</li>
+        <li data-key="ri3">Pinch of Himalayan salt</li>
+        <li data-key="ri4">Electrolytes: K · Mg · Na · Ca</li>
+        <li data-key="ri5">1 scoop collagen peptides</li>
+        <li data-key="ri6">Creatine (small dose)</li>
+        <li data-key="ri7">Water</li>
+        <li data-key="ri8">A splash of coconut water</li>
+      </ul>
+      <p class="recipe-why" data-key="recipe_why"><strong>Why it works:</strong> lime and vinegar alkalise the terrain; salt and coconut water rehydrate; the four electrolytes restore conductivity; collagen supports the myelin that insulates your nerves; creatine fuels the ATP cycle. This is not a smoothie. It is electrical preparation.</p>
+    </div>
+  </section>
+
+  <!-- GATE -->
+  <section class="b-gate fade-in">
+    <p class="b-gate-line" data-key="gate_line">The recipe is free. <strong>The application goes deeper.</strong> Dosing, sequencing, the rod work in circuit, the contraindications — these live where there is a body in the room, or a school around you.</p>
+    <div class="b-gate-cards">
+      <div class="b-gate-card">
+        <div class="gc-label" data-key="gate_c1_label">In the room</div>
+        <div class="gc-title" data-key="gate_c1_title">The ZZAPP session</div>
+        <div class="gc-body" data-key="gate_c1_body">The applied practice — terrain, charge, and rod work guided in person. Where the maps become territory.</div>
+        <a href="../#book" data-key="gate_c1_link">Book a session →</a>
+      </div>
+      <div class="b-gate-card">
+        <div class="gc-label" data-key="gate_c2_label">The deeper lineage</div>
+        <div class="gc-title" data-key="gate_c2_title">A school is forming</div>
+        <div class="gc-body" data-key="gate_c2_body">For those drawn to the full esoterics — metals, minerals and alkaline terrain as initiation, not just protocol. Opening when called for.</div>
+        <a href="../manifesto/" data-key="gate_c2_link">Read the manifesto →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="b-cta fade-in">
+    <p class="b-cta-text" data-key="cta_text">The maps are yours. When you want a hand holding the territory, the invitation is open.</p>
+    <div class="cta-row">
+      <a href="../#book" class="btn-primary" data-key="cta_book">Book a session</a>
+      <a href="../" class="btn-ghost" data-key="cta_home">← Back to REV.INC</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="../" class="footer-logo">REV.INC</a>
+    <div class="footer-copy" data-key="footer_copy">© 2026 REV.INC — Aimé Schrauwen · Antwerp</div>
+  </footer>
+
+  <script>
+    const copy = {
+      EN: {
+        nav_science:"Science",nav_battery:"Battery",nav_manifesto:"Manifesto",nav_book_link:"Book",
+        hero_label:"Body-as-Battery · Free Protocols",
+        hero_title_1:"The body is a battery.",hero_title_2:"Here is how to charge it.",
+        hero_sub:"Salts, minerals, metals, terrain. The maps we work with — given freely. No mysticism required.",
+        intro_body:"We project nothing onto you. In every session we explain the maps — and the maps belong to everyone. What follows is the free layer: enough to understand your own charge and begin. The deeper applied practice lives in the session and the school. But you should never leave here with less agency than you arrived.",
+        s1_label:"01 — The Terrain",s1_title:"A battery only charges in the right medium.",s1_body:"Before current, terrain. An acidic, dehydrated body resists its own charge. Lime juice and apple cider vinegar shift the stomach toward alkaline. Himalayan salt and coconut water rehydrate at the cellular level. Collagen peptides feed myelin — the insulation that lets a nerve signal travel clean instead of leaking. Alkalise, hydrate, insulate. Then the body receives current instead of fighting it.",
+        ph1_label:"BioSpark — juice & jars on the tool-table",ph_tag:"image placeholder",
+        s2_label:"02 — The Minerals",s2_title:"Electrolytes are the wires.",s2_body:"Every nerve impulse is mineral ions moving across a membrane. Potassium, magnesium, sodium, calcium — these are not supplements, they are the conductive medium. Low minerals, low conductivity: the signal weakens not because you lack willpower but because the wire is thin. Restore the four salts and the body's own electricity flows again. Creatine then fuels the ATP cycle that turns charge into work.",
+        ph2_label:"Salts & minerals — flatlay",ph_tag2:"image placeholder",
+        s3_label:"03 — The Metals",s3_title:"Copper, steel, and the galvanic gap.",s3_body:"Copper and steel sit at different points on the galvanic series. Hold one in each hand and the difference between them creates a measurable potential — a tiny battery, with you as the circuit. This is a different mechanism from the microvolt of bio-electricity: galvanic potential plus magnetism, not nerve current. The pharaonic rods let you hold both metals and become your own inner interface while in circuit — feeling the charge move rather than being told it does.",
+        ph3_label:"Pharaonic rods — copper & steel, close-up",ph_tag3:"image placeholder",
+        recipe_eyebrow:"Given freely · the base recipe",recipe_title:"BioSpark — prepare the vessel",recipe_sub:"The pre-session preparation. Drink before bio-electric work, or on any morning you want to conduct.",
+        ri1:"Juice of one lime",ri2:"1 tbsp apple cider vinegar",ri3:"Pinch of Himalayan salt",ri4:"Electrolytes: K · Mg · Na · Ca",ri5:"1 scoop collagen peptides",ri6:"Creatine (small dose)",ri7:"Water",ri8:"A splash of coconut water",
+        recipe_why:"Why it works: lime and vinegar alkalise the terrain; salt and coconut water rehydrate; the four electrolytes restore conductivity; collagen supports the myelin that insulates your nerves; creatine fuels the ATP cycle. This is not a smoothie. It is electrical preparation.",
+        gate_line:"The recipe is free. The application goes deeper. Dosing, sequencing, the rod work in circuit, the contraindications — these live where there is a body in the room, or a school around you.",
+        gate_c1_label:"In the room",gate_c1_title:"The ZZAPP session",gate_c1_body:"The applied practice — terrain, charge, and rod work guided in person. Where the maps become territory.",gate_c1_link:"Book a session →",
+        gate_c2_label:"The deeper lineage",gate_c2_title:"A school is forming",gate_c2_body:"For those drawn to the full esoterics — metals, minerals and alkaline terrain as initiation, not just protocol. Opening when called for.",gate_c2_link:"Read the manifesto →",
+        cta_text:"The maps are yours. When you want a hand holding the territory, the invitation is open.",
+        cta_book:"Book a session",cta_home:"← Back to REV.INC",
+        footer_copy:"© 2026 REV.INC — Aimé Schrauwen · Antwerp"
+      },
+      NL: {
+        nav_science:"Wetenschap",nav_battery:"Batterij",nav_manifesto:"Manifest",nav_book_link:"Boek",
+        hero_label:"Lichaam-als-Batterij · Gratis Protocollen",
+        hero_title_1:"Het lichaam is een batterij.",hero_title_2:"Zo laad je het op.",
+        hero_sub:"Zouten, mineralen, metalen, terrein. De kaarten waarmee we werken — vrij gegeven. Geen mystiek vereist.",
+        intro_body:"We projecteren niets op jou. In elke sessie leggen we de kaarten uit — en de kaarten behoren iedereen toe. Wat volgt is de gratis laag: genoeg om je eigen lading te begrijpen en te beginnen. De diepere toegepaste praktijk leeft in de sessie en de school. Maar je zou hier nooit met minder agency mogen vertrekken dan waarmee je kwam.",
+        s1_label:"01 — Het Terrein",s1_title:"Een batterij laadt alleen op in het juiste medium.",s1_body:"Vóór stroom: terrein. Een zuur, gedehydrateerd lichaam weerstaat zijn eigen lading. Limoensap en appelciderazijn verschuiven de maag richting alkalisch. Himalayazout en kokoswater hydrateren op celniveau. Collageenpeptiden voeden myeline — de isolatie die een zenuwsignaal schoon laat reizen in plaats van te lekken. Alkaliseer, hydrateer, isoleer. Dan ontvangt het lichaam stroom in plaats van die te bevechten.",
+        ph1_label:"BioSpark — sap & potten op de tool-table",ph_tag:"beeld-placeholder",
+        s2_label:"02 — De Mineralen",s2_title:"Elektrolyten zijn de draden.",s2_body:"Elke zenuwimpuls is een beweging van mineraalionen over een membraan. Kalium, magnesium, natrium, calcium — dit zijn geen supplementen, het is het geleidende medium. Lage mineralen, lage geleiding: het signaal verzwakt niet omdat je wilskracht mist maar omdat de draad dun is. Herstel de vier zouten en de eigen elektriciteit van het lichaam stroomt weer. Creatine voedt vervolgens de ATP-cyclus die lading omzet in werk.",
+        ph2_label:"Zouten & mineralen — flatlay",ph_tag2:"beeld-placeholder",
+        s3_label:"03 — De Metalen",s3_title:"Koper, staal en de galvanische kloof.",s3_body:"Koper en staal staan op verschillende punten in de galvanische reeks. Houd er één in elke hand en het verschil tussen beide creëert een meetbaar potentiaal — een kleine batterij, met jou als circuit. Dit is een ander mechanisme dan de microvolt van bio-elektriciteit: galvanisch potentiaal plus magnetisme, geen zenuwstroom. De faraonische staven laten je beide metalen vasthouden en je eigen innerlijke interface worden terwijl je in circuit bent — de lading voelen bewegen in plaats van te horen dat ze beweegt.",
+        ph3_label:"Faraonische staven — koper & staal, close-up",ph_tag3:"beeld-placeholder",
+        recipe_eyebrow:"Vrij gegeven · het basisrecept",recipe_title:"BioSpark — bereid het vat",recipe_sub:"De pre-sessie voorbereiding. Drink vóór bio-elektrisch werk, of op elke ochtend dat je wilt geleiden.",
+        ri1:"Sap van één limoen",ri2:"1 el appelciderazijn",ri3:"Snufje Himalayazout",ri4:"Elektrolyten: K · Mg · Na · Ca",ri5:"1 schep collageenpeptiden",ri6:"Creatine (kleine dosis)",ri7:"Water",ri8:"Scheutje kokoswater",
+        recipe_why:"Waarom het werkt: limoen en azijn alkaliseren het terrein; zout en kokoswater hydrateren; de vier elektrolyten herstellen geleiding; collageen ondersteunt de myeline die je zenuwen isoleert; creatine voedt de ATP-cyclus. Dit is geen smoothie. Het is elektrische voorbereiding.",
+        gate_line:"Het recept is gratis. De toepassing gaat dieper. Dosering, sequencing, het staafwerk in circuit, de contra-indicaties — die leven waar er een lichaam in de kamer is, of een school om je heen.",
+        gate_c1_label:"In de kamer",gate_c1_title:"De ZZAPP-sessie",gate_c1_body:"De toegepaste praktijk — terrein, lading en staafwerk persoonlijk begeleid. Waar de kaarten terrein worden.",gate_c1_link:"Boek een sessie →",
+        gate_c2_label:"De diepere lijn",gate_c2_title:"Een school vormt zich",gate_c2_body:"Voor wie aangetrokken wordt tot de volledige esoterie — metalen, mineralen en alkalisch terrein als initiatie, niet enkel protocol. Opent wanneer geroepen.",gate_c2_link:"Lees het manifest →",
+        cta_text:"De kaarten zijn van jou. Wanneer je een hand wilt op het terrein, staat de uitnodiging open.",
+        cta_book:"Boek een sessie",cta_home:"← Terug naar REV.INC",
+        footer_copy:"© 2026 REV.INC — Aimé Schrauwen · Antwerpen"
+      }
+    };
+    let currentLang = 'EN';
+    function applyLanguage(lang) {
+      const data = copy[lang];
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (data[key]) el.textContent = data[key];
+      });
+      document.documentElement.lang = lang.toLowerCase();
+    }
+    document.getElementById('langToggle').addEventListener('click', () => {
+      currentLang = currentLang === 'EN' ? 'NL' : 'EN';
+      applyLanguage(currentLang);
+      document.getElementById('langToggle').textContent = currentLang === 'EN' ? 'EN / NL' : 'NL / EN';
+    });
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
