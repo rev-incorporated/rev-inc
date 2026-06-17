@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rewilding — REV.INC</title>
+  <meta name="description" content="Autonomic rewilding: back to the body and its functions, beyond shame, guilt and the mind-body split. Wildness equals freedom — nature without, nature within. Retreats with REV.INC." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://therevolutionincorporated.com/rewilding/" />
+  <meta property="og:title" content="Rewilding — REV.INC" />
+  <meta property="og:description" content="Wildness equals freedom. We help people liberate their vital force and reconnect with nature within and without." />
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black:#090909; --obsidian:#0A0A0A; --surface:#111111;
+      --gold:#C8903A; --gold-bright:#E8B82E; --gold-dim:#8B6E1A;
+      --copper:#B07040; --green:#1B3A2D; --green-deep:#0D2418; --green-lush:#3A7A3A;
+      --cream:#E8D5A3; --cream-dim:rgba(232,213,163,0.7); --white:#F2DEB0;
+      --font-display:'Unbounded',sans-serif; --font-body:'Cormorant Garamond',serif; --font-mono:'DM Mono',monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--obsidian); color: var(--cream); font-family: var(--font-body); font-size: 18px; line-height: 1.7; overflow-x: hidden; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 2.5rem; background: rgba(9,9,9,0.92); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(200,144,58,0.1); }
+    .nav-logo { font-family: var(--font-display); font-size: 1rem; font-weight: 900; color: var(--gold); letter-spacing: 0.04em; text-decoration: none; }
+    .nav-logo span { color: var(--copper); }
+    .nav-right { display: flex; align-items: center; gap: 2rem; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--font-mono); font-size: 0.72rem; font-weight: 300; color: var(--cream); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6; transition: opacity 0.2s, color 0.2s; }
+    .nav-links a:hover { opacity: 1; color: var(--gold); }
+    .nav-links a.active { opacity: 1; color: var(--gold); }
+    .lang-toggle { font-family: var(--font-mono); font-size: 0.7rem; font-weight: 300; background: none; border: 1px solid rgba(200,144,58,0.3); color: var(--gold); padding: 0.3rem 0.75rem; border-radius: 2px; cursor: pointer; letter-spacing: 0.1em; transition: background 0.2s; }
+    .lang-toggle:hover { background: rgba(200,144,58,0.1); }
+
+    .r-hero { position: relative; min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 9rem 2.5rem 3rem; overflow: hidden; }
+    .r-hero-bg { position: absolute; inset: 0; background:
+      radial-gradient(ellipse at 25% 75%, rgba(58,122,58,0.28) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 28%, rgba(27,58,45,0.5) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 50%, rgba(200,144,58,0.05) 0%, transparent 60%),
+      linear-gradient(180deg, var(--obsidian) 0%, rgba(13,36,24,0.35) 55%, var(--obsidian) 100%);
+      z-index: 0; }
+    .r-hero-content { position: relative; z-index: 2; max-width: 760px; }
+    .r-hero-label { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--green-lush); margin-bottom: 1.6rem; }
+    .r-hero-title { font-family: var(--font-display); font-size: clamp(2.1rem, 5.5vw, 3.8rem); font-weight: 900; line-height: 1.08; color: var(--white); margin-bottom: 0.6rem; }
+    .r-hero-title .gold { color: var(--gold); }
+    .r-hero-sub { font-family: var(--font-body); font-style: italic; font-size: clamp(1.05rem, 2vw, 1.35rem); font-weight: 300; color: var(--cream); line-height: 1.8; max-width: 600px; margin: 1.4rem auto 0; }
+
+    .r-def { max-width: 720px; margin: 0 auto; padding: 3rem 2.5rem 1rem; text-align: center; }
+    .r-def-line { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 0 auto 1.6rem; }
+    .r-def p { font-family: var(--font-body); font-size: 1.18rem; font-weight: 300; color: var(--cream); line-height: 1.9; font-style: italic; }
+    .r-def strong { color: var(--gold); font-weight: 400; font-style: normal; }
+
+    .r-section { max-width: 1000px; margin: 0 auto; padding: 4rem 2.5rem; }
+    .r-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+    .r-grid.reverse .r-text { order: 2; }
+    .section-label { font-family: var(--font-mono); font-size: 0.62rem; font-weight: 300; letter-spacing: 0.2em; text-transform: uppercase; color: var(--green-lush); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
+    .section-label::before { content: ''; display: inline-block; width: 24px; height: 1px; background: currentColor; opacity: 0.5; }
+    .r-title { font-family: var(--font-display); font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 700; line-height: 1.18; color: var(--white); margin-bottom: 1.2rem; }
+    .r-body { font-family: var(--font-body); font-size: 1.05rem; font-weight: 300; color: var(--cream-dim); line-height: 1.85; }
+    .r-body strong { color: var(--gold); font-weight: 400; }
+    .divider { width: 100%; height: 1px; background: linear-gradient(90deg, transparent, rgba(200,144,58,0.12), transparent); max-width: 1000px; margin: 0 auto; }
+
+    .img-ph { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.9rem; min-height: 320px; padding: 2rem; border: 1px dashed rgba(58,122,58,0.4); border-radius: 4px; background:
+      repeating-linear-gradient(45deg, rgba(58,122,58,0.02) 0px, rgba(58,122,58,0.02) 12px, transparent 12px, transparent 24px),
+      radial-gradient(ellipse at center, rgba(58,122,58,0.06) 0%, transparent 70%); text-align: center; }
+    .img-ph-glyph { width: 40px; height: 40px; opacity: 0.55; }
+    .img-ph-label { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--green-lush); max-width: 260px; line-height: 1.6; }
+    .img-ph-file { font-family: var(--font-mono); font-size: 0.52rem; letter-spacing: 0.08em; color: rgba(232,213,163,0.3); }
+    .img-ph-tag { font-family: var(--font-mono); font-size: 0.48rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--green-lush); border: 1px solid rgba(58,122,58,0.4); padding: 0.2rem 0.6rem; border-radius: 20px; }
+
+    /* BEYOND ROW */
+    .beyond { max-width: 1000px; margin: 0 auto; padding: 2rem 2.5rem 4rem; }
+    .beyond-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; }
+    .beyond-chip { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cream); border: 1px solid rgba(58,122,58,0.3); padding: 0.7rem 1.3rem; border-radius: 30px; background: rgba(58,122,58,0.04); }
+
+    .r-gate { max-width: 760px; margin: 0 auto; padding: 4rem 2.5rem; text-align: center; }
+    .r-gate-line { font-family: var(--font-body); font-style: italic; font-size: 1.25rem; color: var(--cream); line-height: 1.7; margin-bottom: 1rem; }
+    .r-gate-note { font-family: var(--font-mono); font-size: 0.55rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 2.5rem; }
+
+    .btn-primary { font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: var(--black); background: var(--gold); padding: 0.9rem 1.8rem; border-radius: 2px; transition: background 0.2s, transform 0.2s; display: inline-block; }
+    .btn-primary:hover { background: var(--gold-bright); transform: translateY(-2px); }
+    .btn-ghost { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: var(--cream-dim); border: 1px solid rgba(232,213,163,0.15); padding: 0.85rem 1.4rem; border-radius: 2px; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+    .cta-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    footer { padding: 3rem 2.5rem; border-top: 1px solid rgba(200,144,58,0.08); max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 0.85rem; font-weight: 900; color: var(--gold); text-decoration: none; }
+    .footer-copy { font-family: var(--font-mono); font-size: 0.55rem; color: rgba(232,213,163,0.18); letter-spacing: 0.08em; }
+
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .r-hero { padding: 7rem 1.5rem 2.5rem; min-height: 50vh; }
+      .r-section { padding: 3rem 1.5rem; }
+      .r-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      .r-grid.reverse .r-text { order: 0; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../" class="nav-logo">REV<span>.</span>INC</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="../#zzapp">ZZAPP</a></li>
+        <li><a href="../science/" data-key="nav_science">Science</a></li>
+        <li><a href="./" class="active" data-key="nav_rewilding">Rewilding</a></li>
+        <li><a href="../manifesto/" data-key="nav_manifesto">Manifesto</a></li>
+        <li><a href="../#book" data-key="nav_book_link">Book</a></li>
+      </ul>
+      <button class="lang-toggle" id="langToggle">EN / NL</button>
+    </div>
+  </nav>
+
+  <section class="r-hero">
+    <div class="r-hero-bg"></div>
+    <div class="r-hero-content fade-in">
+      <div class="r-hero-label" data-key="hero_label">Autonomic Rewilding</div>
+      <h1 class="r-hero-title"><span data-key="hero_title_1">Wildness equals</span> <span class="gold" data-key="hero_title_2">freedom.</span></h1>
+      <p class="r-hero-sub" data-key="hero_sub">A return to the body and its functions — beyond shame, beyond guilt, beyond the patriarchy and the mind-body split.</p>
+    </div>
+  </section>
+
+  <div class="r-def fade-in">
+    <div class="r-def-line"></div>
+    <p data-key="def_body">To rewild is not to escape into the woods. It is to be <strong>exposed to nature without and nature within</strong> — and to discover they were never separate. We bring people back to the living intelligence of their own body, and help them liberate the vital force that domestication taught them to hold down.</p>
+  </div>
+
+  <!-- SECTION 1: NATURE WITHIN -->
+  <section class="r-section">
+    <div class="r-grid fade-in">
+      <div class="r-text">
+        <div class="section-label" data-key="s1_label">01 — Nature within</div>
+        <h2 class="r-title" data-key="s1_title">Back to the body and its functions.</h2>
+        <p class="r-body" data-key="s1_body">The body has functions a culture of shame taught you to override: to tremble, to make sound, to soften, to want, to rest when tired and move when charged. <strong>None of these need correcting.</strong> Rewilding returns you to them — not as regression, but as remembering. The wild body is not chaotic. It is exquisitely self-regulating, once the holding is released.</p>
+      </div>
+      <div class="img-ph" role="img" aria-label="Image placeholder: bare feet on earth">
+        <svg class="img-ph-glyph" viewBox="0 0 24 24" fill="none" stroke="#3A7A3A" stroke-width="1.2" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+        <div class="img-ph-label" data-key="ph1_label">Bare feet on earth / hands in soil</div>
+        <div class="img-ph-file">rewild-ground.jpg</div>
+        <div class="img-ph-tag" data-key="ph_tag1">image placeholder</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 2: NATURE WITHOUT -->
+  <section class="r-section">
+    <div class="r-grid reverse fade-in">
+      <div class="img-ph" role="img" aria-label="Image placeholder: group in nature, movement on grass">
+        <svg class="img-ph-glyph" viewBox="0 0 24 24" fill="none" stroke="#3A7A3A" stroke-width="1.2" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+        <div class="img-ph-label" data-key="ph2_label">Group in nature — movement on grass (real candidate: TRYP field)</div>
+        <div class="img-ph-file">rewild-field.jpg</div>
+        <div class="img-ph-tag" data-key="ph_tag2">image placeholder</div>
+      </div>
+      <div class="r-text">
+        <div class="section-label" data-key="s2_label">02 — Nature without</div>
+        <h2 class="r-title" data-key="s2_title">Exposed, and part of it.</h2>
+        <p class="r-body" data-key="s2_body">A nervous system evolved outdoors does not fully settle indoors. So we take the work into the field — sun, soil, water, weather, other bodies. Not as scenery, but as the medium the body recognises. <strong>You are not a manager of the living world. You are part of it.</strong> Reconnection with the outer wild and the inner wild happen as one movement.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEYOND -->
+  <section class="beyond fade-in">
+    <div class="section-label" style="justify-content:center;" data-key="beyond_label">Wildness is freedom — beyond</div>
+    <div class="beyond-row">
+      <span class="beyond-chip" data-key="b1">Shame</span>
+      <span class="beyond-chip" data-key="b2">Guilt</span>
+      <span class="beyond-chip" data-key="b3">Patriarchy</span>
+      <span class="beyond-chip" data-key="b4">The mind-body split</span>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 3: RETREATS -->
+  <section class="r-section">
+    <div class="r-grid fade-in">
+      <div class="r-text">
+        <div class="section-label" data-key="s3_label">03 — The retreat</div>
+        <h2 class="r-title" data-key="s3_title">Where the work has room to land.</h2>
+        <p class="r-body" data-key="s3_body">Some thresholds need more than an hour on a table. We organise <strong>rewilding retreats</strong> — time in nature where bio-electric work, somatic release, and reconnection with the living world unfold at the pace the body actually needs. To liberate the vital force, and to let it find its ground. Formats and dates are forming.</p>
+      </div>
+      <div class="img-ph" role="img" aria-label="Image placeholder: retreat setting in nature">
+        <svg class="img-ph-glyph" viewBox="0 0 24 24" fill="none" stroke="#3A7A3A" stroke-width="1.2" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+        <div class="img-ph-label" data-key="ph3_label">Retreat in nature — tent / fire / canopy light</div>
+        <div class="img-ph-file">rewild-retreat.jpg</div>
+        <div class="img-ph-tag" data-key="ph_tag3">image placeholder</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GATE -->
+  <section class="r-gate fade-in">
+    <p class="r-gate-line" data-key="gate_line">Rewilding runs as guided sessions and as retreats in nature.</p>
+    <p class="r-gate-note" data-key="gate_note">Retreat formats &amp; dates forming · enquire to be told first</p>
+    <div class="cta-row">
+      <a href="../#book" class="btn-primary" data-key="cta_book">Enquire / Book</a>
+      <a href="../" class="btn-ghost" data-key="cta_home">← Back to REV.INC</a>
+    </div>
+  </section>
+
+  <footer>
+    <a href="../" class="footer-logo">REV.INC</a>
+    <div class="footer-copy" data-key="footer_copy">© 2026 REV.INC — Aimé Schrauwen · Antwerp</div>
+  </footer>
+
+  <script>
+    const copy = {
+      EN: {
+        nav_science:"Science",nav_rewilding:"Rewilding",nav_manifesto:"Manifesto",nav_book_link:"Book",
+        hero_label:"Autonomic Rewilding",
+        hero_title_1:"Wildness equals",hero_title_2:"freedom.",
+        hero_sub:"A return to the body and its functions — beyond shame, beyond guilt, beyond the patriarchy and the mind-body split.",
+        def_body:"To rewild is not to escape into the woods. It is to be exposed to nature without and nature within — and to discover they were never separate. We bring people back to the living intelligence of their own body, and help them liberate the vital force that domestication taught them to hold down.",
+        s1_label:"01 — Nature within",s1_title:"Back to the body and its functions.",s1_body:"The body has functions a culture of shame taught you to override: to tremble, to make sound, to soften, to want, to rest when tired and move when charged. None of these need correcting. Rewilding returns you to them — not as regression, but as remembering. The wild body is not chaotic. It is exquisitely self-regulating, once the holding is released.",
+        ph1_label:"Bare feet on earth / hands in soil",ph_tag1:"image placeholder",
+        s2_label:"02 — Nature without",s2_title:"Exposed, and part of it.",s2_body:"A nervous system evolved outdoors does not fully settle indoors. So we take the work into the field — sun, soil, water, weather, other bodies. Not as scenery, but as the medium the body recognises. You are not a manager of the living world. You are part of it. Reconnection with the outer wild and the inner wild happen as one movement.",
+        ph2_label:"Group in nature — movement on grass (real candidate: TRYP field)",ph_tag2:"image placeholder",
+        beyond_label:"Wildness is freedom — beyond",b1:"Shame",b2:"Guilt",b3:"Patriarchy",b4:"The mind-body split",
+        s3_label:"03 — The retreat",s3_title:"Where the work has room to land.",s3_body:"Some thresholds need more than an hour on a table. We organise rewilding retreats — time in nature where bio-electric work, somatic release, and reconnection with the living world unfold at the pace the body actually needs. To liberate the vital force, and to let it find its ground. Formats and dates are forming.",
+        ph3_label:"Retreat in nature — tent / fire / canopy light",ph_tag3:"image placeholder",
+        gate_line:"Rewilding runs as guided sessions and as retreats in nature.",
+        gate_note:"Retreat formats & dates forming · enquire to be told first",
+        cta_book:"Enquire / Book",cta_home:"← Back to REV.INC",
+        footer_copy:"© 2026 REV.INC — Aimé Schrauwen · Antwerp"
+      },
+      NL: {
+        nav_science:"Wetenschap",nav_rewilding:"Herwildering",nav_manifesto:"Manifest",nav_book_link:"Boek",
+        hero_label:"Autonome Herwildering",
+        hero_title_1:"Wildheid is",hero_title_2:"vrijheid.",
+        hero_sub:"Een terugkeer naar het lichaam en zijn functies — voorbij schaamte, voorbij schuld, voorbij het patriarchaat en de geest-lichaam-splitsing.",
+        def_body:"Herwilderen is niet vluchten naar het bos. Het is blootgesteld worden aan de natuur buiten en de natuur binnen — en ontdekken dat ze nooit gescheiden waren. We brengen mensen terug naar de levende intelligentie van hun eigen lichaam, en helpen hen de vitale kracht bevrijden die domesticatie hen leerde in te houden.",
+        s1_label:"01 — Natuur binnen",s1_title:"Terug naar het lichaam en zijn functies.",s1_body:"Het lichaam heeft functies die een cultuur van schaamte je leerde overrulen: trillen, geluid maken, verzachten, verlangen, rusten wanneer moe en bewegen wanneer geladen. Geen daarvan hoeft gecorrigeerd te worden. Herwildering brengt je ernaar terug — geen regressie, maar herinnering. Het wilde lichaam is niet chaotisch. Het is voortreffelijk zelfregulerend, zodra het vasthouden loslaat.",
+        ph1_label:"Blote voeten op aarde / handen in grond",ph_tag1:"beeld-placeholder",
+        s2_label:"02 — Natuur buiten",s2_title:"Blootgesteld, en er deel van.",s2_body:"Een zenuwstelsel dat buiten evolueerde komt binnenshuis niet volledig tot rust. Dus brengen we het werk het veld in — zon, aarde, water, weer, andere lichamen. Geen decor, maar het medium dat het lichaam herkent. Je bent geen beheerder van de levende wereld. Je bent er deel van. Herverbinding met het wild buiten en het wild binnen gebeuren als één beweging.",
+        ph2_label:"Groep in natuur — beweging op gras (echte kandidaat: TRYP-veld)",ph_tag2:"beeld-placeholder",
+        beyond_label:"Wildheid is vrijheid — voorbij",b1:"Schaamte",b2:"Schuld",b3:"Patriarchaat",b4:"De geest-lichaam-splitsing",
+        s3_label:"03 — De retraite",s3_title:"Waar het werk ruimte heeft om te landen.",s3_body:"Sommige drempels vragen meer dan een uur op een tafel. We organiseren herwilderings-retraites — tijd in de natuur waar bio-elektrisch werk, somatische ontlading en herverbinding met de levende wereld zich ontvouwen op het tempo dat het lichaam werkelijk nodig heeft. Om de vitale kracht te bevrijden, en haar haar grond te laten vinden. Vormen en data vormen zich.",
+        ph3_label:"Retraite in natuur — tent / vuur / bladerdaklicht",ph_tag3:"beeld-placeholder",
+        gate_line:"Herwildering loopt als begeleide sessies en als retraites in de natuur.",
+        gate_note:"Retraite-vormen & data in vorming · informeer om het eerst te horen",
+        cta_book:"Informeer / Boek",cta_home:"← Terug naar REV.INC",
+        footer_copy:"© 2026 REV.INC — Aimé Schrauwen · Antwerpen"
+      }
+    };
+    let currentLang = 'EN';
+    function applyLanguage(lang) {
+      const data = copy[lang];
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (data[key]) el.textContent = data[key];
+      });
+      document.documentElement.lang = lang.toLowerCase();
+    }
+    document.getElementById('langToggle').addEventListener('click', () => {
+      currentLang = currentLang === 'EN' ? 'NL' : 'EN';
+      applyLanguage(currentLang);
+      document.getElementById('langToggle').textContent = currentLang === 'EN' ? 'EN / NL' : 'NL / EN';
+    });
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

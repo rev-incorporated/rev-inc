@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cybernetic Tantra — REV.INC</title>
+  <meta name="description" content="A REV.INC modality: microvoltage circuit and mirrored movement. Sink in, sync in — charge rises as stuckness, fascia knots and pattern-loops let go. Sensual, spiritual, embodied." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://therevolutionincorporated.com/cybernetic-tantra/" />
+  <meta property="og:title" content="Cybernetic Tantra — REV.INC" />
+  <meta property="og:description" content="Circuit and mirror. Eros as life force, not performance. Charge rises as the body lets go." />
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black:#090909; --obsidian:#0A0A0A; --surface:#111111;
+      --gold:#C8903A; --gold-bright:#E8B82E; --gold-dim:#8B6E1A;
+      --copper:#B07040; --green-lush:#3A7A3A; --electric:#4A9FD4;
+      --purple:#4A1C6E; --purple-lt:#7B3FA0;
+      --cream:#E8D5A3; --cream-dim:rgba(232,213,163,0.7); --white:#F2DEB0;
+      --font-display:'Unbounded',sans-serif; --font-body:'Cormorant Garamond',serif; --font-mono:'DM Mono',monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--obsidian); color: var(--cream); font-family: var(--font-body); font-size: 18px; line-height: 1.7; overflow-x: hidden; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 2.5rem; background: rgba(9,9,9,0.92); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(200,144,58,0.1); }
+    .nav-logo { font-family: var(--font-display); font-size: 1rem; font-weight: 900; color: var(--gold); letter-spacing: 0.04em; text-decoration: none; }
+    .nav-logo span { color: var(--copper); }
+    .nav-right { display: flex; align-items: center; gap: 2rem; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--font-mono); font-size: 0.72rem; font-weight: 300; color: var(--cream); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6; transition: opacity 0.2s, color 0.2s; }
+    .nav-links a:hover { opacity: 1; color: var(--gold); }
+    .nav-links a.active { opacity: 1; color: var(--gold); }
+    .lang-toggle { font-family: var(--font-mono); font-size: 0.7rem; font-weight: 300; background: none; border: 1px solid rgba(200,144,58,0.3); color: var(--gold); padding: 0.3rem 0.75rem; border-radius: 2px; cursor: pointer; letter-spacing: 0.1em; transition: background 0.2s; }
+    .lang-toggle:hover { background: rgba(200,144,58,0.1); }
+
+    .ct-hero { position: relative; min-height: 62vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 9rem 2.5rem 3rem; overflow: hidden; }
+    .ct-hero-bg { position: absolute; inset: 0; background:
+      radial-gradient(ellipse at 22% 78%, rgba(74,28,110,0.3) 0%, transparent 55%),
+      radial-gradient(ellipse at 78% 26%, rgba(176,112,64,0.16) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 50%, rgba(200,144,58,0.06) 0%, transparent 60%),
+      linear-gradient(180deg, var(--obsidian) 0%, rgba(36,16,52,0.2) 55%, var(--obsidian) 100%);
+      z-index: 0; }
+    .ct-hero-content { position: relative; z-index: 2; max-width: 760px; }
+    .ct-hero-label { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--purple-lt); margin-bottom: 1.6rem; }
+    .ct-hero-title { font-family: var(--font-display); font-size: clamp(2.1rem, 5.5vw, 3.8rem); font-weight: 900; line-height: 1.08; color: var(--white); margin-bottom: 0.6rem; }
+    .ct-hero-title .gold { color: var(--gold); }
+    .ct-tm { font-family: var(--font-mono); font-size: 0.5rem; vertical-align: super; color: var(--gold-dim); letter-spacing: 0.1em; }
+    .ct-hero-sub { font-family: var(--font-body); font-style: italic; font-size: clamp(1.05rem, 2vw, 1.35rem); font-weight: 300; color: var(--cream); line-height: 1.8; max-width: 620px; margin: 1.4rem auto 0; }
+
+    .ct-def { max-width: 720px; margin: 0 auto; padding: 3rem 2.5rem 1rem; text-align: center; }
+    .ct-def-line { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 0 auto 1.6rem; }
+    .ct-def p { font-family: var(--font-body); font-size: 1.15rem; font-weight: 300; color: var(--cream-dim); line-height: 1.9; }
+    .ct-def strong { color: var(--gold); font-weight: 400; }
+
+    .ct-section { max-width: 1000px; margin: 0 auto; padding: 4rem 2.5rem; }
+    .ct-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+    .ct-grid.reverse .ct-text { order: 2; }
+    .section-label { font-family: var(--font-mono); font-size: 0.62rem; font-weight: 300; letter-spacing: 0.2em; text-transform: uppercase; color: var(--purple-lt); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
+    .section-label::before { content: ''; display: inline-block; width: 24px; height: 1px; background: currentColor; opacity: 0.5; }
+    .ct-title { font-family: var(--font-display); font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 700; line-height: 1.18; color: var(--white); margin-bottom: 1.2rem; }
+    .ct-body { font-family: var(--font-body); font-size: 1.05rem; font-weight: 300; color: var(--cream-dim); line-height: 1.85; }
+    .ct-body strong { color: var(--gold); font-weight: 400; }
+    .divider { width: 100%; height: 1px; background: linear-gradient(90deg, transparent, rgba(200,144,58,0.12), transparent); max-width: 1000px; margin: 0 auto; }
+
+    .img-ph { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.9rem; min-height: 320px; padding: 2rem; border: 1px dashed rgba(123,63,160,0.35); border-radius: 4px; background:
+      repeating-linear-gradient(45deg, rgba(123,63,160,0.02) 0px, rgba(123,63,160,0.02) 12px, transparent 12px, transparent 24px),
+      radial-gradient(ellipse at center, rgba(123,63,160,0.06) 0%, transparent 70%); text-align: center; }
+    .img-ph-glyph { width: 40px; height: 40px; opacity: 0.55; }
+    .img-ph-label { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--purple-lt); max-width: 260px; line-height: 1.6; }
+    .img-ph-file { font-family: var(--font-mono); font-size: 0.52rem; letter-spacing: 0.08em; color: rgba(232,213,163,0.3); }
+    .img-ph-tag { font-family: var(--font-mono); font-size: 0.48rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--purple-lt); border: 1px solid rgba(123,63,160,0.35); padding: 0.2rem 0.6rem; border-radius: 20px; }
+
+    /* QUALITIES */
+    .qualities { max-width: 1000px; margin: 0 auto; padding: 2rem 2.5rem 4rem; }
+    .qualities-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; }
+    .quality { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cream); border: 1px solid rgba(200,144,58,0.25); padding: 0.7rem 1.3rem; border-radius: 30px; background: rgba(200,144,58,0.03); }
+
+    .ct-gate { max-width: 760px; margin: 0 auto; padding: 4rem 2.5rem; text-align: center; }
+    .ct-gate-line { font-family: var(--font-body); font-style: italic; font-size: 1.25rem; color: var(--cream); line-height: 1.7; margin-bottom: 1rem; }
+    .ct-gate-note { font-family: var(--font-mono); font-size: 0.55rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 2.5rem; }
+
+    .btn-primary { font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: var(--black); background: var(--gold); padding: 0.9rem 1.8rem; border-radius: 2px; transition: background 0.2s, transform 0.2s; display: inline-block; }
+    .btn-primary:hover { background: var(--gold-bright); transform: translateY(-2px); }
+    .btn-ghost { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: var(--cream-dim); border: 1px solid rgba(232,213,163,0.15); padding: 0.85rem 1.4rem; border-radius: 2px; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+    .cta-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    footer { padding: 3rem 2.5rem; border-top: 1px solid rgba(200,144,58,0.08); max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 0.85rem; font-weight: 900; color: var(--gold); text-decoration: none; }
+    .footer-copy { font-family: var(--font-mono); font-size: 0.55rem; color: rgba(232,213,163,0.18); letter-spacing: 0.08em; }
+
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .ct-hero { padding: 7rem 1.5rem 2.5rem; min-height: 52vh; }
+      .ct-section { padding: 3rem 1.5rem; }
+      .ct-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      .ct-grid.reverse .ct-text { order: 0; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../" class="nav-logo">REV<span>.</span>INC</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="../#zzapp">ZZAPP</a></li>
+        <li><a href="../science/" data-key="nav_science">Science</a></li>
+        <li><a href="./" class="active" data-key="nav_tantra">Tantra</a></li>
+        <li><a href="../manifesto/" data-key="nav_manifesto">Manifesto</a></li>
+        <li><a href="../#book" data-key="nav_book_link">Book</a></li>
+      </ul>
+      <button class="lang-toggle" id="langToggle">EN / NL</button>
+    </div>
+  </nav>
+
+  <section class="ct-hero">
+    <div class="ct-hero-bg"></div>
+    <div class="ct-hero-content fade-in">
+      <div class="ct-hero-label" data-key="hero_label">A REV.INC Modality</div>
+      <h1 class="ct-hero-title"><span data-key="hero_title_1">Cybernetic</span> <span class="gold" data-key="hero_title_2">Tantra</span><span class="ct-tm">™ pending</span></h1>
+      <p class="ct-hero-sub" data-key="hero_sub">Circuit and mirror. You sink in, you sync in — and by being that connected, the charge rises while what was stuck lets go.</p>
+    </div>
+  </section>
+
+  <div class="ct-def fade-in">
+    <div class="ct-def-line"></div>
+    <p data-key="def_body">Cybernetic Tantra couples <strong>microvoltage</strong> with <strong>mirrored, polarised movement</strong>. In circuit, in reflection, the nervous system drops into awareness, allowance, and being. Not performance. Not technique. The deeper the connection, the more energy the body builds — and the more it releases: emotions, stuckness, fascia knots, the pattern-loops that run on their own.</p>
+  </div>
+
+  <!-- SECTION 1: SINK IN / SYNC IN -->
+  <section class="ct-section">
+    <div class="ct-grid fade-in">
+      <div class="ct-text">
+        <div class="section-label" data-key="s1_label">01 — Sink in · Sync in</div>
+        <h2 class="ct-title" data-key="s1_title">Connection as a charging circuit.</h2>
+        <p class="ct-body" data-key="s1_body">Two bodies in mirrored movement, low current running between them. As the mirroring deepens, the autonomic systems begin to synchronise — breath, rhythm, attention. This is the cybernetic part: a feedback loop where presence amplifies charge, and charge deepens presence. You are not performing intimacy. <strong>You are completing a circuit that was waiting to close.</strong></p>
+      </div>
+      <div class="img-ph" role="img" aria-label="Image placeholder: two figures in mirrored movement">
+        <svg class="img-ph-glyph" viewBox="0 0 24 24" fill="none" stroke="#7B3FA0" stroke-width="1.2" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+        <div class="img-ph-label" data-key="ph1_label">Two figures in mirrored movement — low light</div>
+        <div class="img-ph-file">tantra-mirror.jpg</div>
+        <div class="img-ph-tag" data-key="ph_tag1">image placeholder</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 2: EROS -->
+  <section class="ct-section">
+    <div class="ct-grid reverse fade-in">
+      <div class="img-ph" role="img" aria-label="Image placeholder: hands and copper in circuit">
+        <svg class="img-ph-glyph" viewBox="0 0 24 24" fill="none" stroke="#7B3FA0" stroke-width="1.2" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+        <div class="img-ph-label" data-key="ph2_label">Hands &amp; copper in circuit — close-up, warm</div>
+        <div class="img-ph-file">tantra-circuit.jpg</div>
+        <div class="img-ph-tag" data-key="ph_tag2">image placeholder</div>
+      </div>
+      <div class="ct-text">
+        <div class="section-label" data-key="s2_label">02 — Eros as life force</div>
+        <h2 class="ct-title" data-key="s2_title">Not sex. Charge.</h2>
+        <p class="ct-body" data-key="s2_body">Eros here means <strong>life force</strong> — the same current that animates a seed, a wave, a healing wound. Orgiastic capacity is simply the body's full ability to receive and discharge that current without bracing. Cybernetic Tantra works with this directly: sensual and spiritual at once, embodied rather than abstract, and — because charge that flows resolves what charge that's blocked cannot — quietly conflict-resolving.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 3: WHAT RELEASES -->
+  <section class="ct-section">
+    <div class="ct-grid fade-in">
+      <div class="ct-text">
+        <div class="section-label" data-key="s3_label">03 — What lets go</div>
+        <h2 class="ct-title" data-key="s3_title">Charge rises, holding releases.</h2>
+        <p class="ct-body" data-key="s3_body">When the circuit is full and the body feels safe enough to stop bracing, the things it was holding begin to move: <strong>emotions</strong> that had nowhere to go, <strong>stuckness</strong> in breath and posture, <strong>fascia knots</strong> that armored old events, and the <strong>pattern-loops</strong> that replay without permission. Nothing is forced. The body releases what it no longer needs to defend — because there is finally enough charge to feel safe doing so.</p>
+      </div>
+      <div class="img-ph" role="img" aria-label="Image placeholder: body in release, exhale">
+        <svg class="img-ph-glyph" viewBox="0 0 24 24" fill="none" stroke="#7B3FA0" stroke-width="1.2" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+        <div class="img-ph-label" data-key="ph3_label">Body in release — exhale, soft light</div>
+        <div class="img-ph-file">tantra-release.jpg</div>
+        <div class="img-ph-tag" data-key="ph_tag3">image placeholder</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUALITIES -->
+  <section class="qualities fade-in">
+    <div class="section-label" style="justify-content:center;" data-key="q_label">Five qualities</div>
+    <div class="qualities-row">
+      <span class="quality" data-key="q1">Sensual</span>
+      <span class="quality" data-key="q2">Spiritual</span>
+      <span class="quality" data-key="q3">Embodied</span>
+      <span class="quality" data-key="q4">Conflict-resolving</span>
+      <span class="quality" data-key="q5">Energizing</span>
+    </div>
+  </section>
+
+  <!-- GATE -->
+  <section class="ct-gate fade-in">
+    <p class="ct-gate-line" data-key="gate_line">Cybernetic Tantra is offered as guided work — in session, in pairs, and as a retreat format.</p>
+    <p class="ct-gate-note" data-key="gate_note">A REV.INC modality · trademark pending · format on request</p>
+    <div class="cta-row">
+      <a href="../#book" class="btn-primary" data-key="cta_book">Enquire / Book</a>
+      <a href="../" class="btn-ghost" data-key="cta_home">← Back to REV.INC</a>
+    </div>
+  </section>
+
+  <footer>
+    <a href="../" class="footer-logo">REV.INC</a>
+    <div class="footer-copy" data-key="footer_copy">© 2026 REV.INC — Aimé Schrauwen · Antwerp</div>
+  </footer>
+
+  <script>
+    const copy = {
+      EN: {
+        nav_science:"Science",nav_tantra:"Tantra",nav_manifesto:"Manifesto",nav_book_link:"Book",
+        hero_label:"A REV.INC Modality",
+        hero_title_1:"Cybernetic",hero_title_2:"Tantra",
+        hero_sub:"Circuit and mirror. You sink in, you sync in — and by being that connected, the charge rises while what was stuck lets go.",
+        def_body:"Cybernetic Tantra couples microvoltage with mirrored, polarised movement. In circuit, in reflection, the nervous system drops into awareness, allowance, and being. Not performance. Not technique. The deeper the connection, the more energy the body builds — and the more it releases: emotions, stuckness, fascia knots, the pattern-loops that run on their own.",
+        s1_label:"01 — Sink in · Sync in",s1_title:"Connection as a charging circuit.",s1_body:"Two bodies in mirrored movement, low current running between them. As the mirroring deepens, the autonomic systems begin to synchronise — breath, rhythm, attention. This is the cybernetic part: a feedback loop where presence amplifies charge, and charge deepens presence. You are not performing intimacy. You are completing a circuit that was waiting to close.",
+        ph1_label:"Two figures in mirrored movement — low light",ph_tag1:"image placeholder",
+        s2_label:"02 — Eros as life force",s2_title:"Not sex. Charge.",s2_body:"Eros here means life force — the same current that animates a seed, a wave, a healing wound. Orgiastic capacity is simply the body's full ability to receive and discharge that current without bracing. Cybernetic Tantra works with this directly: sensual and spiritual at once, embodied rather than abstract, and — because charge that flows resolves what charge that's blocked cannot — quietly conflict-resolving.",
+        ph2_label:"Hands & copper in circuit — close-up, warm",ph_tag2:"image placeholder",
+        s3_label:"03 — What lets go",s3_title:"Charge rises, holding releases.",s3_body:"When the circuit is full and the body feels safe enough to stop bracing, the things it was holding begin to move: emotions that had nowhere to go, stuckness in breath and posture, fascia knots that armored old events, and the pattern-loops that replay without permission. Nothing is forced. The body releases what it no longer needs to defend — because there is finally enough charge to feel safe doing so.",
+        ph3_label:"Body in release — exhale, soft light",ph_tag3:"image placeholder",
+        q_label:"Five qualities",q1:"Sensual",q2:"Spiritual",q3:"Embodied",q4:"Conflict-resolving",q5:"Energizing",
+        gate_line:"Cybernetic Tantra is offered as guided work — in session, in pairs, and as a retreat format.",
+        gate_note:"A REV.INC modality · trademark pending · format on request",
+        cta_book:"Enquire / Book",cta_home:"← Back to REV.INC",
+        footer_copy:"© 2026 REV.INC — Aimé Schrauwen · Antwerp"
+      },
+      NL: {
+        nav_science:"Wetenschap",nav_tantra:"Tantra",nav_manifesto:"Manifest",nav_book_link:"Boek",
+        hero_label:"Een REV.INC-modaliteit",
+        hero_title_1:"Cybernetische",hero_title_2:"Tantra",
+        hero_sub:"Circuit en spiegel. Je zakt in, je synchroniseert — en juist door zo verbonden te zijn stijgt de lading terwijl wat vastzat loslaat.",
+        def_body:"Cybernetische Tantra koppelt microvoltage aan gespiegelde, gepolariseerde beweging. In circuit, in weerspiegeling, zakt het zenuwstelsel in gewaarzijn, toelaten en zijn. Geen performance. Geen techniek. Hoe dieper de verbinding, hoe meer energie het lichaam bouwt — en hoe meer het loslaat: emoties, vastzittendheid, fascia-knopen, de patroon-loops die vanzelf draaien.",
+        s1_label:"01 — Inzakken · Synchroniseren",s1_title:"Verbinding als laadcircuit.",s1_body:"Twee lichamen in gespiegelde beweging, lage stroom ertussen. Naarmate het spiegelen verdiept, beginnen de autonome systemen te synchroniseren — adem, ritme, aandacht. Dit is het cybernetische: een feedbacklus waarin aanwezigheid lading versterkt, en lading aanwezigheid verdiept. Je speelt geen intimiteit. Je sluit een circuit dat wachtte om te sluiten.",
+        ph1_label:"Twee figuren in gespiegelde beweging — gedempt licht",ph_tag1:"beeld-placeholder",
+        s2_label:"02 — Eros als levenskracht",s2_title:"Geen seks. Lading.",s2_body:"Eros betekent hier levenskracht — dezelfde stroom die een zaad, een golf, een genezende wond bezielt. Orgiastische capaciteit is simpelweg het volle vermogen van het lichaam om die stroom te ontvangen en te ontladen zonder te verkrampen. Cybernetische Tantra werkt hier direct mee: sensueel en spiritueel tegelijk, belichaamd in plaats van abstract, en — omdat stromende lading oplost wat geblokkeerde lading niet kan — stilletjes conflict-oplossend.",
+        ph2_label:"Handen & koper in circuit — close-up, warm",ph_tag2:"beeld-placeholder",
+        s3_label:"03 — Wat loslaat",s3_title:"Lading stijgt, het vasthouden lost op.",s3_body:"Wanneer het circuit vol is en het lichaam zich veilig genoeg voelt om te stoppen met verkrampen, beginnen de dingen die het vasthield te bewegen: emoties die nergens heen konden, vastzittendheid in adem en houding, fascia-knopen die oude gebeurtenissen bepantserden, en de patroon-loops die zonder toestemming herhalen. Niets wordt geforceerd. Het lichaam laat los wat het niet langer hoeft te verdedigen — omdat er eindelijk genoeg lading is om dat veilig te doen.",
+        ph3_label:"Lichaam in loslaten — uitademing, zacht licht",ph_tag3:"beeld-placeholder",
+        q_label:"Vijf kwaliteiten",q1:"Sensueel",q2:"Spiritueel",q3:"Belichaamd",q4:"Conflict-oplossend",q5:"Energiegevend",
+        gate_line:"Cybernetische Tantra wordt aangeboden als begeleid werk — in sessie, in paren, en als retraite-vorm.",
+        gate_note:"Een REV.INC-modaliteit · trademark in aanvraag · vorm op aanvraag",
+        cta_book:"Informeer / Boek",cta_home:"← Terug naar REV.INC",
+        footer_copy:"© 2026 REV.INC — Aimé Schrauwen · Antwerpen"
+      }
+    };
+    let currentLang = 'EN';
+    function applyLanguage(lang) {
+      const data = copy[lang];
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (data[key]) el.textContent = data[key];
+      });
+      document.documentElement.lang = lang.toLowerCase();
+    }
+    document.getElementById('langToggle').addEventListener('click', () => {
+      currentLang = currentLang === 'EN' ? 'NL' : 'EN';
+      applyLanguage(currentLang);
+      document.getElementById('langToggle').textContent = currentLang === 'EN' ? 'EN / NL' : 'NL / EN';
+    });
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
