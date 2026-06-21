@@ -89,7 +89,7 @@
       z-index: 0; }
     .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, var(--obsidian) 100%); }
     .hero-content { position: relative; z-index: 2; max-width: 780px; }
-    .hero-badge { display: inline-block; font-family: var(--font-mono); font-size: 0.58rem; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase; color: #5AE05A; border: 1px solid rgba(90,224,90,0.5); padding: 0.5rem 1.2rem; border-radius: 2px; margin-bottom: 2rem; background: rgba(27,58,45,0.5); backdrop-filter: blur(6px); text-shadow: 0 0 20px rgba(90,224,90,0.3); white-space: nowrap; }
+    .hero-badge { display: inline-block; font-family: var(--font-mono); font-size: 0.58rem; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase; color: #5AE05A; border: 1px solid rgba(90,224,90,0.5); padding: 0.5rem 1.2rem; border-radius: 2px; margin-bottom: 2rem; background: rgba(27,58,45,0.5); backdrop-filter: blur(6px); text-shadow: 0 0 20px rgba(90,224,90,0.3); }
     .hero-title { font-family: var(--font-display); font-size: clamp(2.2rem, 5.5vw, 4.2rem); font-weight: 900; line-height: 1.1; letter-spacing: -0.02em; color: var(--white); margin-bottom: 1.5rem; }
     .hero-title .gold { color: var(--gold); }
     .hero-title .green { color: var(--green-lush); }
@@ -291,13 +291,13 @@
   <section class="hero" id="top">
     <div class="hero-bg"></div>
     <div class="hero-content fade-in">
-      <div class="hero-badge" data-key="hero_badge">A Solarpunk Bio-Electric Laboratory · A movement in the form of a practice · Antwerp + EU</div>
+      <div class="hero-badge" data-key="hero_badge">Your personal R&amp;D for the electric body · the house of ZZAPP · REROOT · INTEGRATE</div>
       <h1 class="hero-title">
         <span data-key="hero_title_1">Your body already knows</span><br/>
         <span class="gold" data-key="hero_title_2">the frequency.</span><br/>
         <span class="green" data-key="hero_title_3">We grow it.</span>
       </h1>
-      <p class="hero-sub" data-key="hero_sub">REV.INC is a living laboratory of human bio-electricity — recovering suppressed science and indigenous lineages, and testing them in the body. Not a clinic. Not a wellness brand. A movement operating through the form of a practice.</p>
+      <p class="hero-sub" data-key="hero_sub">REV.INC doesn't just do bodywork. We design the space between — bio-electric science, somatics, ancient lineage, rhythm — into one current, tuned to your body. Think of us as your personal R&D for being fully alive.</p>
       <div class="hero-analogy" data-key="hero_analogy">Electroculture grows lushness in soil by running microvolt through the earth. We run the same experiment — in the human nervous system. Solarpunk in practice.</div>
       <div class="hero-ctas">
         <a href="#lab" class="btn-primary" data-key="cta_book">Enter the lab</a>
@@ -316,8 +316,9 @@
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;" class="lab-grid">
         <div>
           <div class="section-label" data-key="label_lab">What REV.INC is</div>
-          <h2 class="section-title" data-key="lab_title">A laboratory, not a clinic.</h2>
-          <p class="section-body" data-key="lab_body">REV.INC is a bio-electric research practice — a working lab where suppressed science meets indigenous lineage, tested in real bodies. We don't sell wellness. We run experiments in being fully alive, and we open the doors: sessions, festivals, retreats, and protocols given freely. The organization is a movement operating through the form of a practice.</p>
+          <h2 class="section-title" data-key="lab_title">Your personal R&D.</h2>
+          <p class="section-body" data-key="lab_body">REV.INC is the house of ZZAPP, REROOT and INTEGRATE — a holding platform at the intersection of bio-electric science, somatic practice and cultural emancipation. We don't just do bodywork: we design the space between disciplines into one current, tuned to your body. Bio-electricity isn't Edison's or Pfizer's — it already lives in the body, and it can be given back.</p>
+          <p class="section-body" style="margin-top:1.4rem;font-style:italic;color:var(--gold);" data-key="lab_tagline">Step into a higher charge.</p>
           <p class="section-body" style="margin-top:1.2rem;color:var(--cream-dim);" data-key="lab_areas_intro">The research areas:</p>
           <div style="display:flex;flex-wrap:wrap;gap:0.7rem;margin-top:1rem;">
             <a href="/science/" style="font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--green-lush);border:1px solid rgba(58,122,58,0.3);padding:0.55rem 1rem;border-radius:30px;text-decoration:none;background:rgba(58,122,58,0.04);" data-key="lab_a_science">The Science</a>
@@ -804,10 +805,10 @@
     const copy = {
       EN: {
         nav_zzapp:"ZZAPP",nav_science:"Science",nav_manifesto:"Manifesto",nav_services:"Pillars",nav_events:"Events",nav_about:"About",nav_book:"Book a session",
-        hero_badge:"A Solarpunk Bio-Electric Laboratory · A movement in the form of a practice · Antwerp + EU",
-        label_lab:"What REV.INC is",lab_title:"A laboratory, not a clinic.",lab_body:"REV.INC is a bio-electric research practice — a working lab where suppressed science meets indigenous lineage, tested in real bodies. We don't sell wellness. We run experiments in being fully alive, and we open the doors: sessions, festivals, retreats, and protocols given freely. The organization is a movement operating through the form of a practice.",lab_areas_intro:"The research areas:",lab_a_science:"The Science",lab_a_battery:"Body-as-Battery",lab_a_tantra:"Cybernetic Tantra",lab_a_rewild:"Rewilding",lab_a_manifesto:"The Manifesto",lab_ph_label:"The lab in the field — practitioner, rods, tool-table altar",lab_ph_tag:"image placeholder",
+        hero_badge:"Your personal R&D for the electric body · the house of ZZAPP · REROOT · INTEGRATE",
+        label_lab:"What REV.INC is",lab_title:"Your personal R&D.",lab_body:"REV.INC is the house of ZZAPP, REROOT and INTEGRATE — a holding platform at the intersection of bio-electric science, somatic practice and cultural emancipation. We don't just do bodywork: we design the space between disciplines into one current, tuned to your body. Bio-electricity isn't Edison's or Pfizer's — it already lives in the body, and it can be given back.",lab_tagline:"Step into a higher charge.",lab_areas_intro:"The research areas:",lab_a_science:"The Science",lab_a_battery:"Body-as-Battery",lab_a_tantra:"Cybernetic Tantra",lab_a_rewild:"Rewilding",lab_a_manifesto:"The Manifesto",lab_ph_label:"The lab in the field — practitioner, rods, tool-table altar",lab_ph_tag:"image placeholder",
         hero_title_1:"Your body already knows",hero_title_2:"the frequency.",hero_title_3:"We grow it.",
-        hero_sub:"REV.INC is a living laboratory of human bio-electricity — recovering suppressed science and indigenous lineages, and testing them in the body. Not a clinic. Not a wellness brand. A movement operating through the form of a practice.",
+        hero_sub:"REV.INC doesn't just do bodywork. We design the space between — bio-electric science, somatics, ancient lineage, rhythm — into one current, tuned to your body. Think of us as your personal R&D for being fully alive.",
         hero_analogy:"Electroculture grows lushness in soil by running microvolt through the earth. We run the same experiment — in the human nervous system. Solarpunk in practice.",
         cta_book:"Enter the lab",cta_discover:"Start with ZZAPP",
         label_problem:"The Hypothesis",
@@ -891,10 +892,10 @@
       },
       NL: {
         nav_zzapp:"ZZAPP",nav_science:"Wetenschap",nav_manifesto:"Manifest",nav_services:"Zuilen",nav_events:"Events",nav_about:"Over",nav_book:"Boek een sessie",
-        hero_badge:"Een Solarpunk Bio-Elektrisch Laboratorium · Een beweging in de vorm van een praktijk · Antwerpen + EU",
-        label_lab:"Wat REV.INC is",lab_title:"Een laboratorium, geen kliniek.",lab_body:"REV.INC is een bio-elektrische onderzoekspraktijk — een werkend lab waar onderdrukte wetenschap inheemse lijn ontmoet, getest in echte lichamen. We verkopen geen wellness. We voeren experimenten uit in volledig levend zijn, en we openen de deuren: sessies, festivals, retraites, en gratis gegeven protocollen. De organisatie is een beweging in de vorm van een praktijk.",lab_areas_intro:"De onderzoeksgebieden:",lab_a_science:"De Wetenschap",lab_a_battery:"Lichaam-als-Batterij",lab_a_tantra:"Cybernetische Tantra",lab_a_rewild:"Herwildering",lab_a_manifesto:"Het Manifest",lab_ph_label:"Het lab in het veld — practitioner, staven, tool-table altaar",lab_ph_tag:"beeld-placeholder",
+        hero_badge:"Jouw persoonlijke R&D voor het elektrische lichaam · het huis van ZZAPP · REROOT · INTEGRATE",
+        label_lab:"Wat REV.INC is",lab_title:"Jouw persoonlijke R&D.",lab_body:"REV.INC is het huis van ZZAPP, REROOT en INTEGRATE — een holding platform op het snijvlak van bio-elektrische wetenschap, somatische praktijk en culturele emancipatie. We doen niet alleen lichaamswerk: we ontwerpen de tussenruimte tussen disciplines tot één stroom, afgestemd op jouw lichaam. Bio-elektriciteit is niet van Edison, niet van Pfizer — ze leeft al in het lichaam, en ze kan worden teruggegeven.",lab_tagline:"Belichaam de revolutie.",lab_areas_intro:"De onderzoeksgebieden:",lab_a_science:"De Wetenschap",lab_a_battery:"Lichaam-als-Batterij",lab_a_tantra:"Cybernetische Tantra",lab_a_rewild:"Herwildering",lab_a_manifesto:"Het Manifest",lab_ph_label:"Het lab in het veld — practitioner, staven, tool-table altaar",lab_ph_tag:"beeld-placeholder",
         hero_title_1:"Jouw lichaam kent",hero_title_2:"de frequentie al.",hero_title_3:"Wij laten het groeien.",
-        hero_sub:"REV.INC is een levend laboratorium van menselijke bio-elektriciteit — onderdrukte wetenschap en inheemse lijnen herstellen, en ze testen in het lichaam. Geen kliniek. Geen wellness-merk. Een beweging in de vorm van een praktijk.",
+        hero_sub:"REV.INC doet niet alleen lichaamswerk. We ontwerpen de tussenruimte — bio-elektrische wetenschap, somatiek, oude lijnen, ritme — tot één stroom, afgestemd op jouw lichaam. Zie ons als jouw persoonlijke R&D voor volledig levend zijn.",
         hero_analogy:"Electrocultuur laat lusheid groeien in de bodem door microvolt door de aarde te sturen. Wij voeren hetzelfde experiment uit — in het menselijke zenuwstelsel. Solarpunk in de praktijk.",
         cta_book:"Betreed het lab",cta_discover:"Begin met ZZAPP",
         label_problem:"De Hypothese",
